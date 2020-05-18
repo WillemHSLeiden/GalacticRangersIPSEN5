@@ -233,6 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   lifeDuration: 2
+  lifeTimer: 0
 --- !u!1 &293937622
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   lifeDuration: 2
+  lifeTimer: 0
 --- !u!1 &492601339
 GameObject:
   m_ObjectHideFlags: 0
