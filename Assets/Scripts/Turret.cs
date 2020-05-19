@@ -16,8 +16,7 @@ public class Turret : MonoBehaviour{
         
         if (Input.GetKeyDown(KeyCode.Space)){
             Debug.Log("Pressed Space so fire?");
-            GameObject laserObject = Instantiate(laserPrefab);
-            laserObject.transform.position = this.transform.position + transform.forward;
+            Instantiate(laserPrefab, transform.position, transform.localRotation);
         }
 
        
