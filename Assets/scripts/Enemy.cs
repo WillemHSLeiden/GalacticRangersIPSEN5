@@ -11,6 +11,10 @@ public class Enemy
     public GameObject body;
     public float health;
 
+    public TimedEvent enemyEvent;
+    
+     public float IdleTime = 5;
+
 }
 
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using System;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -36,7 +37,9 @@ public class WaveSpawner : MonoBehaviour
 
     void Start(){
         waveCountdown = timeBetweenWaves;
+        timedEvent();
     }
+    
 
     void Update(){
 
@@ -44,6 +47,7 @@ public class WaveSpawner : MonoBehaviour
             //Check if enemies are despawned
             if(despawnEnemy(waves[nextWave])){
                 //Begin a new wave, previous wave is done.
+                timedEvent();
                 waveCompleted();
             }else{
                 //Prevent spawning a new wave
@@ -65,6 +69,25 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
+    void timedEvent(){
+        for(int i = 0; i < waves[nextWave].enemies.Length; i++){
+            //Ombouwen naar switch
+            TimedEvent timedEvent = new TimedEvent();
+            if(waves[nextWave].enemies[i].enemyEvent.eventType == EventType.ATTACK){
+                StartCoroutine(callTimedEvent(waves[nextWave].enemies[i].enemyEvent.eventStart, timedEvent.attackEvent ));
+            }else{
+                StartCoroutine(callTimedEvent(waves[nextWave].enemies[i].enemyEvent.eventStart, timedEvent.chatEvent ));
+            }
+        }
+    }
+
+    IEnumerator callTimedEvent(float delay, Action action){
+        yield return new WaitForSeconds(delay);
+        action();
+    
+    }
+
+
     void waveCompleted(){
         Debug.Log("Wave completed");
         state = SpawnState.COUNTING;
@@ -84,7 +107,7 @@ public class WaveSpawner : MonoBehaviour
         _wave.despawnTimer -= Time.deltaTime;
         if(_wave.despawnTimer <= 0){
             _wave.despawnTimer = 6f;
-            foreach(Object enemy in spawnedEnemies){
+            foreach(UnityEngine.Object enemy in spawnedEnemies){
                 DestroyImmediate(enemy, true);
             }
             return true;
@@ -112,7 +135,7 @@ public class WaveSpawner : MonoBehaviour
         if(_spawnPoint.Length == 0){
             Debug.LogError("Geen spawnpoint gegeven");
         }else{
-            Transform _sp = _spawnPoint[Random.Range(0, _spawnPoint.Length)];
+            Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
             GameObject spawnedEnemy = (GameObject) Instantiate(_enemy.body, _sp.position, _sp.rotation);
             pathFollower = new FollowPath(spawnedEnemy, _enemy, path);            
  
