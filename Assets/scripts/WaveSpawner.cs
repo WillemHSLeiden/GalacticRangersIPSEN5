@@ -42,8 +42,8 @@ public class WaveSpawner : MonoBehaviour
     
 
     void Update(){
-
-        if(state == SpawnState.WAITING){
+        Debug.Log(state);
+        if(state == SpawnState.SPAWNING){
             //Check if enemies are despawned
             if(despawnEnemy(waves[nextWave])){
                 //Begin a new wave, previous wave is done.
@@ -89,7 +89,6 @@ public class WaveSpawner : MonoBehaviour
 
 
     void waveCompleted(){
-        Debug.Log("Wave completed");
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
         pathFollower = null;
