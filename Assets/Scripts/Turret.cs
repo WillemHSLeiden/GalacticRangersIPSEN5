@@ -29,7 +29,7 @@ public class Turret : MonoBehaviour{
             controller.Rotate(1, 0, 0);
         }
         //Move left or right for test
-        else if (Input.GetKey(KeyCode.A)){
+        if (Input.GetKey(KeyCode.A)){
             controller.Rotate(0, -1, 0);
         }
 
