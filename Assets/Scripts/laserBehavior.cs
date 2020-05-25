@@ -23,9 +23,7 @@ public class laserBehavior : MonoBehaviour {
 
         // Remove the lifetime to see if the bullet should be removed.
         lifeTimer -= Time.deltaTime;
-        if (lifeTimer <= 0f)
-        {
-            Debug.Log("Object destroyed");
+        if (lifeTimer <= 0f){
             Destroy(gameObject);
         }
     }
