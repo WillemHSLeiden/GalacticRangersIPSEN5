@@ -27,9 +27,9 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boss.speed = 3;
-        _bossObject = Instantiate(bossObject);
-        pathFollower = new FollowPath(_bossObject, boss, paths[0]);
+        boss.speed = 5;
+        //_bossObject = Instantiate(bossObject);
+        pathFollower = new FollowPath(bossObject, boss, paths[0]);
     }
 
     // Update is called once per frame
@@ -41,8 +41,8 @@ public class Boss : MonoBehaviour
 
             case BossState.EVADING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(_bossObject, boss, paths[0]);
-                    StartCoroutine(switchState(BossState.ATTACKING, 13f));
+                    pathFollower = new FollowPath(bossObject, boss, paths[0]);
+                    StartCoroutine(switchState(BossState.ATTACKING, 5f));
                     invoked = true;
                 }
 
@@ -52,15 +52,15 @@ public class Boss : MonoBehaviour
 
             case BossState.ATTACKING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(_bossObject, boss, paths[1]);
+                    pathFollower = new FollowPath(bossObject, boss, paths[1]);
                     Invoke("fireAsteroid", 5);
                     Invoke("fireAsteroid", 10.1f);
 
-                    StartCoroutine(switchState(BossState.EVADING, 13f));
+                    StartCoroutine(switchState(BossState.EVADING, 26f));
                     invoked = true;
                 }
 
-                pathFollower.followLookAt(cameraTransform);
+                pathFollower.follow();
 
                 break;
 
