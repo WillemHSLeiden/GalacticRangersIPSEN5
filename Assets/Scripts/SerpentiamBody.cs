@@ -2,31 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SerpentiamBody : MonoBehaviour {
+public class DynamicFollower : MonoBehaviour {
     public List<Transform> bodyParts = new List<Transform>();
 
     [SerializeField]
     private float minDist = 0.25f, speed = 1, rotationSpeed = 50;
-
-    [SerializeField]
-    private int startingSize;
 
     public GameObject bodyPrefab;
 
     private float dist;
     private Transform currBodyPart;
     private Transform prevBodyPart;
-
-    void Start() {
-
-        for (int i = 0; i < startingSize - 1; i++) {
-            AddBodyPart();
-        }
-    }
-
-    void Update() {
-        
-    }
 
     public void Move() {
         float currSpeed = speed;
