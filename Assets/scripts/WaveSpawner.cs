@@ -7,7 +7,7 @@ using System;
 public class WaveSpawner : MonoBehaviour
 {
 
-    public enum SpawnState{SPAWNING, WAITING, COUNTING}
+    public enum SpawnState{SPAWNING, WAITING, COUNTING, FINISHED}
 
     [System.Serializable]
     public class Wave
@@ -18,7 +18,7 @@ public class WaveSpawner : MonoBehaviour
         //De rate waarop enemies spawnen
         public float rate;
         public Transform[] spawnPoints;
-        public float despawnTimer = 6f;
+        // public float despawnTimer = 6f;
 
         public PathCreator pathCreator;
     }
@@ -36,32 +36,30 @@ public class WaveSpawner : MonoBehaviour
     private FollowPath pathFollower;
 
     void Start(){
+        pathFollower = new FollowPath();       
         waveCountdown = timeBetweenWaves;
-        timedEvent();
+        
     }
     
 
     void Update(){
-        Debug.Log(state);
-        if(state == SpawnState.SPAWNING){
+        if(pathFollower != null){
+            pathFollower.follow();
+        }
+
+        if(state == SpawnState.WAITING){
             //Check if enemies are despawned
             if(despawnEnemy(waves[nextWave])){
                 //Begin a new wave, previous wave is done.
-                timedEvent();
                 waveCompleted();
-            }else{
-                //Prevent spawning a new wave
-                if(pathFollower != null){
-                    pathFollower.follow();
-                }
-                return;
             }
+            return;
         }
 
         if (waveCountdown <= 0){
-            if(state != SpawnState.SPAWNING){
+            if(state != SpawnState.SPAWNING && state != SpawnState.FINISHED){
                 //Start spawning wave
-
+                Debug.Log("Wave is klaar");
                 StartCoroutine( SpawnWave(waves[nextWave]) );
             }
         }else{
@@ -69,17 +67,15 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    void timedEvent(){
-        for(int i = 0; i < waves[nextWave].enemies.Length; i++){
-            //Ombouwen naar switch
-            TimedEvent timedEvent = new TimedEvent();
-            if(waves[nextWave].enemies[i].enemyEvent.eventType == EventType.ATTACK){
-                StartCoroutine(callTimedEvent(waves[nextWave].enemies[i].enemyEvent.eventStart, timedEvent.attackEvent ));
-            }else{
-                StartCoroutine(callTimedEvent(waves[nextWave].enemies[i].enemyEvent.eventStart, timedEvent.chatEvent ));
-            }
+    void timedEvent(Enemy enemy){
+        //Ombouwen naar switch
+        TimedEvent timedEvent = new TimedEvent();
+        if(enemy.enemyEvent.eventType == EventType.ATTACK){
+            StartCoroutine(callTimedEvent(enemy.enemyEvent.eventStart, timedEvent.attackEvent ));
+        }else{
+            StartCoroutine(callTimedEvent(enemy.enemyEvent.eventStart, timedEvent.chatEvent ));
         }
-    }
+}
 
     IEnumerator callTimedEvent(float delay, Action action){
         yield return new WaitForSeconds(delay);
@@ -94,8 +90,7 @@ public class WaveSpawner : MonoBehaviour
         pathFollower = null;
 
         if(nextWave + 1 > waves.Length -1  ){
-            nextWave = 0;
-            Debug.Log("Completed all waves. RESTART...");
+            state = SpawnState.FINISHED;
 
         }else{
             nextWave++;
@@ -103,9 +98,14 @@ public class WaveSpawner : MonoBehaviour
     }
 
     bool despawnEnemy(Wave _wave){
-        _wave.despawnTimer -= Time.deltaTime;
-        if(_wave.despawnTimer <= 0){
-            _wave.despawnTimer = 6f;
+        // _wave.despawnTimer -= Time.deltaTime;
+        // if(_wave.despawnTimer <= 0){
+        //     _wave.despawnTimer = 6f;
+        //     foreach(UnityEngine.Object enemy in spawnedEnemies){
+        //         DestroyImmediate(enemy, true);
+        //     }
+        //     return true;
+        if(pathFollower != null && pathFollower.pathFinished()){
             foreach(UnityEngine.Object enemy in spawnedEnemies){
                 DestroyImmediate(enemy, true);
             }
@@ -117,14 +117,14 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave(Wave _wave){
         state = SpawnState.SPAWNING;
-       
+
         //Spawn
         for(int i = 0; i < _wave.enemies.Length; i++){
             SpawnEnemy(_wave.enemies[i], _wave.spawnPoints, _wave.pathCreator);
             yield return new WaitForSeconds(1f/_wave.rate);
         }
 
-        state= SpawnState.WAITING;
+        state = SpawnState.WAITING;
 
         yield break;
     }
@@ -136,9 +136,9 @@ public class WaveSpawner : MonoBehaviour
         }else{
             Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
             GameObject spawnedEnemy = (GameObject) Instantiate(_enemy.body, _sp.position, _sp.rotation);
-            pathFollower = new FollowPath(spawnedEnemy, _enemy, path);            
- 
+            pathFollower.addEnemy(spawnedEnemy, _enemy, path);            
             spawnedEnemies.Add(spawnedEnemy);
+            timedEvent(_enemy);
         }
     }
 

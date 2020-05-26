@@ -13,7 +13,7 @@ public class Enemy
 
     public TimedEvent enemyEvent;
     
-     public float IdleTime = 5;
+    //  public float IdleTime = 5;
 
 }
 
