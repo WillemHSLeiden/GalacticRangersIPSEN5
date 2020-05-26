@@ -9,7 +9,7 @@ public class SerpentiamBody : MonoBehaviour {
     private float minDist = 0.25f, speed = 1, rotationSpeed = 2;
 
     [SerializeField]
-    private int startingSize;
+    private int startingSize, bodyHits = 0;
 
     public GameObject bodyPrefab;
 
@@ -74,6 +74,10 @@ public class SerpentiamBody : MonoBehaviour {
         newPart.SetParent(transform);
 
         bodyParts.Add(newPart);
+    }
+
+    public void AddBodyHit() {
+        bodyHits++;
     }
 
     public void Fire(float timeStamp) {
