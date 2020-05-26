@@ -10,7 +10,7 @@ public class Boss : MonoBehaviour
 
     public enum BossState { STARTUP, EVADING, ATTACKING, DYING }
 
-    private BossState state = BossState.EVADING;
+    private BossState state = BossState.STARTUP;
 
     private FollowPath pathFollower;
 
@@ -26,7 +26,7 @@ public class Boss : MonoBehaviour
     public bossEvent evadingEvents, attackingEvents;
 
     [SerializeField]
-    private float evasionPhaseLength = 10, attackPhaseLength = 10;
+    private float evasionPhaseLength = 10, attackPhaseLength = 10, startUpPhaseLength = 5;
 
     public Enemy boss = new Enemy();
 
@@ -38,8 +38,6 @@ public class Boss : MonoBehaviour
     void Start()
     {
         boss.speed = 5;
-        //_bossObject = Instantiate(bossObject);
-        pathFollower = new FollowPath(bossObject, boss, paths[0]);
     }
 
     // Update is called once per frame
@@ -47,11 +45,18 @@ public class Boss : MonoBehaviour
     {
         switch (state) {
             case BossState.STARTUP:
+                if (!invoked) {
+                    pathFollower = new FollowPath(bossObject, boss, paths[0]);
+                    StartCoroutine(switchState(BossState.EVADING, startUpPhaseLength));
+                    invoked = true;
+                }
+
+                pathFollower.follow();
                 break;
 
             case BossState.EVADING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[0], 15);
+                    pathFollower = new FollowPath(bossObject, boss, paths[1], 25);
                     evadingEvents.Invoke();
                     StartCoroutine(switchState(BossState.ATTACKING, evasionPhaseLength));
                     invoked = true;
@@ -63,7 +68,7 @@ public class Boss : MonoBehaviour
 
             case BossState.ATTACKING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[1]);
+                    pathFollower = new FollowPath(bossObject, boss, paths[2]);
                     attackingEvents.Invoke();
                     StartCoroutine(switchState(BossState.EVADING, attackPhaseLength));
                     invoked = true;
