@@ -17,7 +17,7 @@ public class Boss : MonoBehaviour
     public PathCreator[] paths;
 
     [SerializeField]
-    private GameObject bossObject;
+    private GameObject bossObject = null;
 
     [System.Serializable]
     public class bossEvent : UnityEvent { }

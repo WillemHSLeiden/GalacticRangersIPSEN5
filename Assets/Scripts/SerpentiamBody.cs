@@ -9,13 +9,11 @@ public class SerpentiamBody : MonoBehaviour {
     private float minDist = 0.25f, speed = 1, rotationSpeed = 2;
 
     [SerializeField]
-    private int startingSize, bodyHits = 0;
+    private int startingSize = 10, bodyHits = 0;
 
     public GameObject bodyPrefab;
 
     public Boss boss;
-
-    private bool attacking = false;
 
     private float dist;
 
@@ -70,6 +68,8 @@ public class SerpentiamBody : MonoBehaviour {
 
     public void AddBodyPart() {
         Transform newPart = Instantiate(bodyPrefab, bodyParts[bodyParts.Count - 1].position, bodyParts[bodyParts.Count - 1].rotation).transform;
+        float size = ((startingSize - bodyParts.Count) * 0.2f) + 1;
+        newPart.localScale = new Vector3(size, size, size);
 
         newPart.SetParent(transform);
 

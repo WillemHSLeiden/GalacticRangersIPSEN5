@@ -23,6 +23,12 @@ public class CollisionAction : MonoBehaviour
         }
     }
 
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            hitEvent.Invoke();
+        }
+    }
+
     public void hitSwitch() {
         if (hit)
             hit = true;
