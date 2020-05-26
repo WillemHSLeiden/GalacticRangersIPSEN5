@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using PathCreation;
 
 public class Boss : MonoBehaviour
@@ -17,6 +19,15 @@ public class Boss : MonoBehaviour
     [SerializeField]
     private GameObject bossObject;
     private GameObject _bossObject;
+
+    [System.Serializable]
+    public class bossEvent : UnityEvent { }
+
+    [SerializeField]
+    public bossEvent evadingEvents, attackingEvents;
+
+    [SerializeField]
+    private float evasionPhaseLength, attackPhaseLength;
 
     private Enemy boss = new Enemy();
 
@@ -42,7 +53,8 @@ public class Boss : MonoBehaviour
             case BossState.EVADING:
                 if (!invoked) {
                     pathFollower = new FollowPath(bossObject, boss, paths[0]);
-                    StartCoroutine(switchState(BossState.ATTACKING, 5f));
+                    evadingEvents.Invoke();
+                    StartCoroutine(switchState(BossState.ATTACKING, attackPhaseLength));
                     invoked = true;
                 }
 
@@ -53,10 +65,8 @@ public class Boss : MonoBehaviour
             case BossState.ATTACKING:
                 if (!invoked) {
                     pathFollower = new FollowPath(bossObject, boss, paths[1]);
-                    Invoke("fireAsteroid", 5);
-                    Invoke("fireAsteroid", 10.1f);
-
-                    StartCoroutine(switchState(BossState.EVADING, 26f));
+                    attackingEvents.Invoke();
+                    StartCoroutine(switchState(BossState.EVADING, evasionPhaseLength));
                     invoked = true;
                 }
 

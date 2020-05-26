@@ -6,7 +6,7 @@ public class SerpentiamBody : MonoBehaviour {
     public List<Transform> bodyParts = new List<Transform>();
 
     [SerializeField]
-    private float minDist = 0.25f, speed = 1, rotationSpeed = 50;
+    private float minDist = 0.25f, speed = 1;
 
     [SerializeField]
     private int startingSize;
@@ -25,8 +25,6 @@ public class SerpentiamBody : MonoBehaviour {
 
     void Update() {
         Move();
-
-
     }
 
     public void Move() {
@@ -60,4 +58,11 @@ public class SerpentiamBody : MonoBehaviour {
         bodyParts.Add(newPart);
     }
 
+    public void Fire(int delayTime) {
+        fireTimer(delayTime);
+    }
+
+    public IEnumerator fireTimer(int delayTime) {
+        yield return new WaitForSeconds(delayTime);
+    }
 }
