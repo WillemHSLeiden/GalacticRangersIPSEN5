@@ -18,7 +18,6 @@ public class Boss : MonoBehaviour
 
     [SerializeField]
     private GameObject bossObject;
-    private GameObject _bossObject;
 
     [System.Serializable]
     public class bossEvent : UnityEvent { }
@@ -27,9 +26,9 @@ public class Boss : MonoBehaviour
     public bossEvent evadingEvents, attackingEvents;
 
     [SerializeField]
-    private float evasionPhaseLength, attackPhaseLength;
+    private float evasionPhaseLength = 10, attackPhaseLength = 10;
 
-    private Enemy boss = new Enemy();
+    public Enemy boss = new Enemy();
 
     public Transform cameraTransform;
 
@@ -52,9 +51,9 @@ public class Boss : MonoBehaviour
 
             case BossState.EVADING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[0]);
+                    pathFollower = new FollowPath(bossObject, boss, paths[0], 15);
                     evadingEvents.Invoke();
-                    StartCoroutine(switchState(BossState.ATTACKING, attackPhaseLength));
+                    StartCoroutine(switchState(BossState.ATTACKING, evasionPhaseLength));
                     invoked = true;
                 }
 
@@ -66,7 +65,7 @@ public class Boss : MonoBehaviour
                 if (!invoked) {
                     pathFollower = new FollowPath(bossObject, boss, paths[1]);
                     attackingEvents.Invoke();
-                    StartCoroutine(switchState(BossState.EVADING, evasionPhaseLength));
+                    StartCoroutine(switchState(BossState.EVADING, attackPhaseLength));
                     invoked = true;
                 }
 

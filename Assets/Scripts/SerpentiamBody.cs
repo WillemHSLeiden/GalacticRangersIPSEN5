@@ -6,16 +6,21 @@ public class SerpentiamBody : MonoBehaviour {
     public List<Transform> bodyParts = new List<Transform>();
 
     [SerializeField]
-    private float minDist = 0.25f, speed = 1;
+    private float minDist = 0.25f, speed = 1, rotationSpeed = 2;
 
     [SerializeField]
     private int startingSize;
 
     public GameObject bodyPrefab;
 
+    public Boss boss;
+
     private float dist;
-    private Transform currBodyPart;
-    private Transform prevBodyPart;
+
+    private Transform currBodyPart, prevBodyPart;
+    public Transform playerPos;
+
+    public GameObject projectile;
 
     private void Start() {
         for(int i = 0; i < startingSize - 1; i++) {
@@ -46,8 +51,12 @@ public class SerpentiamBody : MonoBehaviour {
                 T = 0.5f;
 
             currBodyPart.position = Vector3.Slerp(currBodyPart.position, newPos, T);
-            currBodyPart.rotation = Quaternion.Slerp(currBodyPart.rotation, prevBodyPart.rotation, T);
+            //currBodyPart.rotation = Quaternion.Slerp(currBodyPart.rotation, prevBodyPart.rotation, T);
+            currBodyPart.LookAt(prevBodyPart);
+            float rotMultiplier = (bodyParts.Count - i + 1) / 2; 
+            currBodyPart.GetChild(0).gameObject.transform.Rotate(Vector3.forward * rotationSpeed * rotMultiplier * Time.deltaTime);
         }
+
     }
 
     public void AddBodyPart() {
@@ -58,11 +67,26 @@ public class SerpentiamBody : MonoBehaviour {
         bodyParts.Add(newPart);
     }
 
-    public void Fire(int delayTime) {
-        fireTimer(delayTime);
+    public void Fire(float timeStamp) {
+        StartCoroutine(fireTimer(timeStamp));
     }
 
-    public IEnumerator fireTimer(int delayTime) {
-        yield return new WaitForSeconds(delayTime);
+    IEnumerator fireTimer(float timeStamp) {
+        yield return new WaitForSeconds(timeStamp);
+        boss.boss.speed = 2;
+
+        for (int i = 0; i < bodyParts.Count - 1; i++) {
+            rotationSpeed = Mathf.Lerp(rotationSpeed, 300, 0.1f);
+        }
+
+        for (int i = 0; i < 3; i++) {
+            yield return new WaitForSeconds(1f);
+            int index = Random.Range(0, bodyParts.Count);
+            GameObject _projectile = Instantiate(projectile, bodyParts[index].position, bodyParts[index].rotation);
+            _projectile.GetComponent<homingProjectile>().target = playerPos;
+        }
+
+        rotationSpeed = 50;
+        boss.boss.speed = 5;
     }
 }
