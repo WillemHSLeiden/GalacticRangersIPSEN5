@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour{
 
-    public GameObject laserPrefab;
+    [SerializeField] private GameObject laserPrefab;
+    [SerializeField] private GameObject chargedLaserPrefab;
+    [SerializeField] private KeyCode fire;
+    [SerializeField] private int initiateChargedLaserTime;
+    [SerializeField] private Transform controller;
+    private float chargeTimer;
 
-    public Transform controller;
-
-    // Update is called once per frame
     void Update()
     {
         Vector3 relativePos = controller.position - transform.position;
         Quaternion aimDir = controller.rotation;
         transform.rotation = Quaternion.Lerp(transform.rotation, aimDir, 0.2f);
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(laserPrefab, transform.position, transform.localRotation);
-        }
 
         //Move up or down for test
         if (Input.GetKey(KeyCode.W)) {
@@ -36,5 +33,48 @@ public class Turret : MonoBehaviour{
         else if (Input.GetKey(KeyCode.D)){
             controller.Rotate(0, 1, 0);
         }
+
+        CountChargeTimer();
+        Fire();
     }
+
+    private void CountChargeTimer()
+    {
+        if (Input.GetKey(fire))
+        {
+            chargeTimer += Time.deltaTime;
+        }
+    }
+
+    private void RestartChargedTimer()
+    {
+        chargeTimer = 0;
+    }
+
+    private void ShootChargedLaser()
+    {
+        Instantiate(chargedLaserPrefab, transform.position, transform.localRotation);
+        RestartChargedTimer();
+    }
+
+    private void ShootLaser()
+    {
+        if ((Input.GetKeyUp(KeyCode.Space)) && (chargeTimer < initiateChargedLaserTime))
+        {
+            Instantiate(laserPrefab, transform.position, transform.localRotation);
+            RestartChargedTimer();
+        }
+    }
+
+    private void Fire()
+    {
+        if ((Input.GetKeyUp(fire)) && (chargeTimer > initiateChargedLaserTime))
+        {
+            ShootChargedLaser();
+
+            return;
+        }
+        ShootLaser();
+    }
+
 }

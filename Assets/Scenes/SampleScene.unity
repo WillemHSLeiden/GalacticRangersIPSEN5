@@ -1248,6 +1248,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 8304319225527999780, guid: 33bd833101a01a344b81917a465a0fa3,
     type: 3}
+  chargedLaserPrefab: {fileID: 8304319225527999780, guid: c9fb74109d584fe4b96ff7e893a5993e,
+    type: 3}
+  fire: 32
+  initiateChargedLaserTime: 2
   controller: {fileID: 605692517}
 --- !u!1 &1576778797
 GameObject:
