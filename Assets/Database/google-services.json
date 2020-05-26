@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "430611328372",
+    "firebase_url": "https://virturem-84d72.firebaseio.com",
+    "project_id": "virturem-84d72",
+    "storage_bucket": "virturem-84d72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430611328372:android:409898e36145328d7a9021",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.GalacticRangers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430611328372-d45v56ndjhsjtbftlo8ho8iiba9ube3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSB4B-l9ZOT0BxWIIbhrCmndsqAuKFVrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430611328372-d45v56ndjhsjtbftlo8ho8iiba9ube3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

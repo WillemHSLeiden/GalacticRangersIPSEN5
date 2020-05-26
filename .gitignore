@@ -63,6 +63,18 @@ ExportedObj/
 # Unity3D generated file on crash reports
 sysinfo.txt
 
+#Firebase
+[Aa]ssets/Firebase/
+[Aa]ssets/Firebase.meta
+[Aa]ssets/ExternalDependencyManager/
+[Aa]ssets/ExternalDependencyManager.meta
+[Aa]ssets/Editor Default Resources/
+[Aa]ssets/Editor Default Resources.meta
+[Aa]ssets/StreamingAssets/
+[Aa]ssets/StreamingAssets.meta
+[Aa]ssets/dotNet45/
+[Aa]ssets/dotNet45.meta
+
 # Builds
 *.apk
 *.unitypackage
