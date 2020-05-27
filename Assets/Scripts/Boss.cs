@@ -53,7 +53,7 @@ public class Boss : MonoBehaviour
                     invoked = true;
                 }
 
-                pathFollower.follow(false, null, true);
+                pathFollower.follow(false, null, EndOfPathInstruction.Loop);
                 break;
 
             case BossState.EVADING:
@@ -65,7 +65,7 @@ public class Boss : MonoBehaviour
                     invoked = true;
                 }
 
-                pathFollower.follow(true, cameraTransform, true);
+                pathFollower.follow(true, cameraTransform, EndOfPathInstruction.Loop);
 
                 break;
 
@@ -77,7 +77,7 @@ public class Boss : MonoBehaviour
                     invoked = true;
                 }
 
-                pathFollower.follow(false, null, true);
+                pathFollower.follow(false, null, EndOfPathInstruction.Loop);
 
                 break;
 
@@ -89,7 +89,7 @@ public class Boss : MonoBehaviour
                     invoked = true;
                 }
 
-                pathFollower.follow(false, null, true);
+                pathFollower.follow(false, null, EndOfPathInstruction.Loop);
 
                 break;
 

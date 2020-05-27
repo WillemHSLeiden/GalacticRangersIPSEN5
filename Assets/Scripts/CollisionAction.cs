@@ -11,15 +11,16 @@ public class CollisionAction : MonoBehaviour
     [SerializeField]
     public hitEvents hitEvent, blockEvent;
 
-    private bool hit = false;
+    public bool hit = false;
 
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other) {
-        if (other.tag == "laser") {
+        if (other.tag == "Laser") {
             if (!hit)
                 hitEvent.Invoke();
             else
                 blockEvent.Invoke();
+            Destroy(other.gameObject);
         }
     }
 
@@ -30,9 +31,6 @@ public class CollisionAction : MonoBehaviour
     }
 
     public void hitSwitch() {
-        if (hit)
-            hit = true;
-        else
-            hit = false;
+        hit = true;
     }
 }

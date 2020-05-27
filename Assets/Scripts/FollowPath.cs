@@ -27,13 +27,13 @@ public class FollowPath
         prevPos.Add(gameobj.transform.position);
 
     }
-    public void follow(bool lookAt = false, Transform lookAtTarget = null, bool loop = false){
+    public void follow(bool lookAt = false, Transform lookAtTarget = null, EndOfPathInstruction instruction = EndOfPathInstruction.Stop){
         for (int i = 0; i < gameobj.Count; i++){
             if(this.enemy[i] != null){
                 this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
-                this.gameobj[i].transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled[i]);
+                this.gameobj[i].transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled[i], instruction);
                 if (!lookAt)
-                    this.gameobj[i].transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled[i]);
+                    this.gameobj[i].transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled[i], instruction);
                 else
                     this.gameobj[i].transform.LookAt(lookAtTarget);
 
