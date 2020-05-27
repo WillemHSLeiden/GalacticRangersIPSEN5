@@ -25,6 +25,13 @@ public class FollowPath {
         this.gameobj.transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled);
     }
 
+    public void followLerp() {
+
+        distanceTravelled += this.enemy.speed * Time.deltaTime;
+        this.gameobj.transform.position = Vector3.Lerp(this.gameobj.transform.position, pathCreator.path.GetPointAtDistance(distanceTravelled), 0.1f);
+        this.gameobj.transform.rotation = Quaternion.Lerp(this.gameobj.transform.rotation, pathCreator.path.GetRotationAtDistance(distanceTravelled), 0.1f);
+    }
+
     public void followLookAt(Transform lookAtTarget) {
 
         distanceTravelled += this.enemy.speed * Time.deltaTime;

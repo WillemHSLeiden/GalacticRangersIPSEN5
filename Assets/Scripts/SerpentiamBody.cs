@@ -72,12 +72,18 @@ public class SerpentiamBody : MonoBehaviour {
         newPart.localScale = new Vector3(size, size, size);
 
         newPart.SetParent(transform);
+        newPart.GetChild(0).gameObject.GetComponent<CollisionAction>().serpentiamBody = this;
 
         bodyParts.Add(newPart);
     }
 
     public void AddBodyHit() {
         bodyHits++;
+
+        if (bodyHits >= startingSize - 1) {
+            boss.switchStateWrapper(Boss.BossState.VULNARABLE);
+            StopAllCoroutines();
+        }
     }
 
     public void Fire(float timeStamp) {

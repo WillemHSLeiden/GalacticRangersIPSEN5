@@ -13,6 +13,8 @@ public class CollisionAction : MonoBehaviour
 
     private bool hit = false;
 
+    public SerpentiamBody serpentiamBody = null;
+
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "laser") {
@@ -34,5 +36,16 @@ public class CollisionAction : MonoBehaviour
             hit = true;
         else
             hit = false;
+    }
+
+    public void damageParent() {
+
+    }
+
+    public void addSerpentiamHit() {
+        if (serpentiamBody != null)
+            serpentiamBody.AddBodyHit();
+        else
+            Debug.LogError("Serpentiam not found!");
     }
 }

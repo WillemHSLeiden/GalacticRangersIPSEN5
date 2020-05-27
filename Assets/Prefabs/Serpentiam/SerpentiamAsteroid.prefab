@@ -4872,9 +4872,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5310115115785051486, guid: 693070eef85a6ec4f8bf228329dd6c5a,
-          type: 3}
-        m_MethodName: AddBodyHit
+      - m_Target: {fileID: 3004613790222075978}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4884,8 +4883,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3004613790222075978}
-        m_MethodName: Play
+      - m_Target: {fileID: 3105771684400126943}
+        m_MethodName: addSerpentiamHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4898,6 +4897,7 @@ MonoBehaviour:
   blockEvent:
     m_PersistentCalls:
       m_Calls: []
+  serpentiamBody: {fileID: 0}
 --- !u!1 &6550807592497868324
 GameObject:
   m_ObjectHideFlags: 0

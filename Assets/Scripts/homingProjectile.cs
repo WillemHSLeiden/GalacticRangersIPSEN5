@@ -15,8 +15,4 @@ public class homingProjectile : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
-
-    public void hitEffect() {
-
-    }
 }

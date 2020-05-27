@@ -8,9 +8,9 @@ using PathCreation;
 public class Boss : MonoBehaviour
 {
 
-    public enum BossState { STARTUP, EVADING, ATTACKING, DYING }
+    public enum BossState { STARTUP, EVADING, ATTACKING, DYING, VULNARABLE }
 
-    private BossState state = BossState.STARTUP;
+    public BossState state = BossState.STARTUP;
 
     private FollowPath pathFollower;
 
@@ -56,7 +56,7 @@ public class Boss : MonoBehaviour
 
             case BossState.EVADING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[1], 25);
+                    pathFollower = new FollowPath(bossObject, boss, paths[1], 24.5f);
                     evadingEvents.Invoke();
                     StartCoroutine(switchState(BossState.ATTACKING, evasionPhaseLength));
                     invoked = true;
@@ -78,9 +78,25 @@ public class Boss : MonoBehaviour
 
                 break;
 
+            case BossState.VULNARABLE:
+                if (!invoked) {
+                    pathFollower = new FollowPath(bossObject, boss, paths[3]);
+                    StartCoroutine(switchState(BossState.EVADING, attackPhaseLength));
+                    invoked = true;
+                }
+
+                pathFollower.followLerp();
+
+                break;
+
             case BossState.DYING:
                 break;
         }
+    }
+
+    public void switchStateWrapper(BossState switchedState) {
+        StopAllCoroutines();
+        StartCoroutine(switchState(switchedState, 0));
     }
 
     IEnumerator switchState(BossState switchedState, float delayTime) {
