@@ -4,10 +4,16 @@ using UnityEngine;
 using PathCreation;
 
 [System.Serializable]
-public class Enemy {
+public class Enemy
+{
     public string name;
     public float speed;
     public GameObject body;
     public float health;
+
+    public TimedEvent enemyEvent;
+
+    //  public float IdleTime = 5;
+
 
 }
