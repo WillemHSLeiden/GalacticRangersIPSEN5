@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AstriodBehavior : MonoBehaviour{
+public class AstroidBehavior : MonoBehaviour{
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Laser")
