@@ -37,6 +37,7 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pathFollower.addEnemy(bossObject, boss, paths[0]);
         boss.speed = 5;
         boss.health = 20;
     }
@@ -47,7 +48,7 @@ public class Boss : MonoBehaviour
         switch (state) {
             case BossState.STARTUP:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[0]);
+                    pathFollower.addEnemy(bossObject, boss, paths[0]);
                     StartCoroutine(switchState(BossState.EVADING, startUpPhaseLength));
                     invoked = true;
                 }
@@ -57,20 +58,20 @@ public class Boss : MonoBehaviour
 
             case BossState.EVADING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[1], 24.5f);
+                    pathFollower.addEnemy(bossObject, boss, paths[1], 24.5f);
                     evadingEvents.Invoke();
                     StartCoroutine(switchState(BossState.ATTACKING, evasionPhaseLength));
                     boss.speed = 5;
                     invoked = true;
                 }
 
-                pathFollower.followLookAt(cameraTransform);
+                pathFollower.follow(true, cameraTransform);
 
                 break;
 
             case BossState.ATTACKING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[2]);
+                    pathFollower.addEnemy(bossObject, boss, paths[2]);
                     attackingEvents.Invoke();
                     StartCoroutine(switchState(BossState.EVADING, attackPhaseLength));
                     invoked = true;
@@ -82,7 +83,7 @@ public class Boss : MonoBehaviour
 
             case BossState.VULNERABLE:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[3]);
+                    pathFollower.addEnemy(bossObject, boss, paths[3]);
                     StartCoroutine(switchState(BossState.EVADING, vulnerablePhaseLength));
                     boss.speed = 8;
                     invoked = true;

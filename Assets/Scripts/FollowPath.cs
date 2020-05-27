@@ -18,23 +18,26 @@ public class FollowPath
     public FollowPath(){
     }
 
-    public void addEnemy(GameObject gameobj, Enemy enemy, PathCreator path){
+    public void addEnemy(GameObject gameobj, Enemy enemy, PathCreator path, float startPos = 0){
         this.enemy.Add(enemy);
         this.pathCreator = path;
         this.gameobj.Add(gameobj);
-        this.distanceTravelled.Add(0);
+        this.distanceTravelled.Add(startPos);
 
         prevPos.Add(gameobj.transform.position);
 
     }
-    public void follow(){
+    public void follow(bool lookAt = false, Transform lookAtTarget = null){
         for (int i = 0; i < gameobj.Count; i++){
             if(this.enemy[i] != null){
                 this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
                 this.gameobj[i].transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled[i], end);
-                this.gameobj[i].transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled[i], end);
+                if (!lookAt)
+                    this.gameobj[i].transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled[i], end);
+                else
+                    this.gameobj[i].transform.LookAt(lookAtTarget);
 
-                if(this.gameobj[i].transform.position != this.prevPos[i]){
+                if (this.gameobj[i].transform.position != this.prevPos[i]){
                     this.prevPos[i] = this.gameobj[i].transform.position;
                 }else{
                     this.enemy[i] = null;
@@ -43,19 +46,16 @@ public class FollowPath
         }
     }
 
-    public void followLookAt(Transform lookAtTarget) {
-
-        distanceTravelled += this.enemy.speed * Time.deltaTime;
-        this.gameobj.transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled);
-        this.gameobj.transform.LookAt(lookAtTarget);
-    }
-
-
+    // Use in unending loops only
     public void followLerp() {
 
-        distanceTravelled += this.enemy.speed * Time.deltaTime;
-        this.gameobj.transform.position = Vector3.Lerp(this.gameobj.transform.position, pathCreator.path.GetPointAtDistance(distanceTravelled), 0.1f);
-        this.gameobj.transform.rotation = Quaternion.Lerp(this.gameobj.transform.rotation, pathCreator.path.GetRotationAtDistance(distanceTravelled), 0.1f);
+        for (int i = 0; i < gameobj.Count; i++) {
+            if (this.enemy[i] != null) {
+                this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
+                this.gameobj[i].transform.position = Vector3.Lerp(this.gameobj[i].transform.position, pathCreator.path.GetPointAtDistance(distanceTravelled[i]), 0.1f);
+                this.gameobj[i].transform.rotation = Quaternion.Lerp(this.gameobj[i].transform.rotation, pathCreator.path.GetRotationAtDistance(distanceTravelled[i]), 0.1f);
+            }
+        }
     }
 
     public bool pathFinished(int index){
