@@ -12,7 +12,7 @@ public class Boss : MonoBehaviour
 
     public BossState state = BossState.STARTUP;
 
-    private FollowPath pathFollower;
+    private FollowPath pathFollower = new FollowPath();
 
     public PathCreator[] paths;
 
@@ -53,7 +53,7 @@ public class Boss : MonoBehaviour
                     invoked = true;
                 }
 
-                pathFollower.follow();
+                pathFollower.follow(false, null, true);
                 break;
 
             case BossState.EVADING:
@@ -65,7 +65,7 @@ public class Boss : MonoBehaviour
                     invoked = true;
                 }
 
-                pathFollower.follow(true, cameraTransform);
+                pathFollower.follow(true, cameraTransform, true);
 
                 break;
 
@@ -77,7 +77,7 @@ public class Boss : MonoBehaviour
                     invoked = true;
                 }
 
-                pathFollower.follow();
+                pathFollower.follow(false, null, true);
 
                 break;
 
@@ -89,7 +89,7 @@ public class Boss : MonoBehaviour
                     invoked = true;
                 }
 
-                pathFollower.followLerp();
+                pathFollower.follow(false, null, true);
 
                 break;
 

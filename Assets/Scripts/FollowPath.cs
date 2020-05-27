@@ -27,19 +27,19 @@ public class FollowPath
         prevPos.Add(gameobj.transform.position);
 
     }
-    public void follow(bool lookAt = false, Transform lookAtTarget = null){
+    public void follow(bool lookAt = false, Transform lookAtTarget = null, bool loop = false){
         for (int i = 0; i < gameobj.Count; i++){
             if(this.enemy[i] != null){
                 this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
-                this.gameobj[i].transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled[i], end);
+                this.gameobj[i].transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled[i]);
                 if (!lookAt)
-                    this.gameobj[i].transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled[i], end);
+                    this.gameobj[i].transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled[i]);
                 else
                     this.gameobj[i].transform.LookAt(lookAtTarget);
 
-                if (this.gameobj[i].transform.position != this.prevPos[i]){
+                if (this.gameobj[i].transform.position != this.prevPos[i]) {
                     this.prevPos[i] = this.gameobj[i].transform.position;
-                }else{
+                } else {
                     this.enemy[i] = null;
                 }
             }
@@ -52,8 +52,8 @@ public class FollowPath
         for (int i = 0; i < gameobj.Count; i++) {
             if (this.enemy[i] != null) {
                 this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
-                this.gameobj[i].transform.position = Vector3.Lerp(this.gameobj[i].transform.position, pathCreator.path.GetPointAtDistance(distanceTravelled[i]), 0.1f);
-                this.gameobj[i].transform.rotation = Quaternion.Lerp(this.gameobj[i].transform.rotation, pathCreator.path.GetRotationAtDistance(distanceTravelled[i]), 0.1f);
+                this.gameobj[i].transform.position = Vector3.Lerp(this.gameobj[i].transform.position, pathCreator.path.GetPointAtDistance(distanceTravelled[i]), 0.5f);
+                this.gameobj[i].transform.rotation = Quaternion.Lerp(this.gameobj[i].transform.rotation, pathCreator.path.GetRotationAtDistance(distanceTravelled[i]), 0.5f);
             }
         }
     }
