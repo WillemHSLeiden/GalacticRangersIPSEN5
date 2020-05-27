@@ -122,6 +122,7 @@ public class SerpentiamBody : MonoBehaviour {
         if (boss.boss.health <= 0) {
             boss.switchStateWrapper(Boss.BossState.DYING);
             StopAllCoroutines();
+            StartCoroutine(killSerpentiam());
         }
     }
 
@@ -163,5 +164,15 @@ public class SerpentiamBody : MonoBehaviour {
     IEnumerator flashReset() {
         yield return new WaitForSeconds(0.1f);
         changeBodyMaterial(vulnerableMat);
+    }
+
+    IEnumerator killSerpentiam() {
+        yield return new WaitForSeconds(1f);
+        for (int i = bodyParts.Count - 1; i > 0; i--) {
+            yield return new WaitForSeconds(0.2f);
+            bodyParts[i].gameObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 }

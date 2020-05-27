@@ -1496,6 +1496,7 @@ MonoBehaviour:
     type: 3}
   vulnerableMat: {fileID: 2100000, guid: a2a5e830dd6ccc64db03342a828a8bce, type: 2}
   asteroidMat: {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
+  hitFlashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
 --- !u!1 &1573992855
 GameObject:
   m_ObjectHideFlags: 0
