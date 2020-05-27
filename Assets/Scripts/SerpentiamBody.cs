@@ -22,6 +22,8 @@ public class SerpentiamBody : MonoBehaviour {
 
     public GameObject projectile;
 
+    public Material vulnerableMat, asteroidMat, hitFlashMat; 
+
     private void Start() {
         for(int i = 0; i < startingSize - 1; i++) {
             AddBodyPart();
@@ -72,23 +74,65 @@ public class SerpentiamBody : MonoBehaviour {
         newPart.localScale = new Vector3(size, size, size);
 
         newPart.SetParent(transform);
-        newPart.GetChild(0).gameObject.GetComponent<CollisionAction>().serpentiamBody = this;
+        newPart.GetChild(0).gameObject.GetComponent<SerpentiamBodypart>().serpentiamBody = this;
 
         bodyParts.Add(newPart);
     }
 
     public void AddBodyHit() {
         bodyHits++;
+        checkVulnerability();
+    }
+
+    private void checkVulnerability() {
 
         if (bodyHits >= startingSize - 1) {
-            boss.switchStateWrapper(Boss.BossState.VULNARABLE);
+            boss.switchStateWrapper(Boss.BossState.VULNERABLE);
             StopAllCoroutines();
+            stopFiring();
+
+            changeBodyMaterial(vulnerableMat);
+
+            bodyHits = 0;
+            StartCoroutine(resetMesh());
         }
     }
 
     public void Fire(float timeStamp) {
         StartCoroutine(fireTimer(timeStamp));
     }
+
+    private void stopFiring() {
+        rotationSpeed = 50;
+        boss.boss.speed = 5;
+
+        for (int i = 1; i < bodyParts.Count; i++) {
+            bodyParts[i].GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
+        }
+    }
+
+    public void damage() {
+        changeBodyMaterial(hitFlashMat);
+        StartCoroutine(flashReset());
+        boss.boss.health--;
+        checkBossHealth();
+    }
+
+    private void checkBossHealth() {
+        if (boss.boss.health <= 0) {
+            boss.switchStateWrapper(Boss.BossState.DYING);
+            StopAllCoroutines();
+        }
+    }
+
+    private void changeBodyMaterial(Material mat) {
+        for (int i = 1; i < bodyParts.Count; i++) {
+            bodyParts[i].GetChild(0).gameObject.GetComponent<Renderer>().material = mat;
+        }
+
+        transform.GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>().material = mat;
+    }
+
 
     IEnumerator fireTimer(float timeStamp) {
         yield return new WaitForSeconds(timeStamp);
@@ -109,11 +153,15 @@ public class SerpentiamBody : MonoBehaviour {
             _projectile.GetComponent<homingProjectile>().target = playerPos;
         }
 
-        rotationSpeed = 50;
-        boss.boss.speed = 5;
+        stopFiring();
+    }
 
-        for (int i = 1; i < bodyParts.Count; i++) {
-            bodyParts[i].GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
-        }
+    IEnumerator resetMesh() {
+        yield return new WaitForSeconds(boss.getVulnerabilityLength());
+        changeBodyMaterial(asteroidMat);
+    }
+    IEnumerator flashReset() {
+        yield return new WaitForSeconds(0.1f);
+        changeBodyMaterial(vulnerableMat);
     }
 }

@@ -1184,7 +1184,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6027f1fa0f65b2d4387ad6cbd889a7c5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.49
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6027f1fa0f65b2d4387ad6cbd889a7c5,
         type: 3}
@@ -1418,6 +1418,7 @@ MonoBehaviour:
   - {fileID: 1162792177}
   - {fileID: 541180388}
   - {fileID: 1073264381}
+  - {fileID: 1573992856}
   bossObject: {fileID: 346993442}
   evadingEvents:
     m_PersistentCalls:
@@ -1461,6 +1462,7 @@ MonoBehaviour:
   evasionPhaseLength: 15.6
   attackPhaseLength: 19.5
   startUpPhaseLength: 8.6
+  vulnerablePhaseLength: 7
   boss:
     name: 
     speed: 0
@@ -1492,6 +1494,8 @@ MonoBehaviour:
   playerPos: {fileID: 963194228}
   projectile: {fileID: 3053347629192873306, guid: 8b239b710c852e74cabc09007a616b10,
     type: 3}
+  vulnerableMat: {fileID: 2100000, guid: a2a5e830dd6ccc64db03342a828a8bce, type: 2}
+  asteroidMat: {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
 --- !u!1 &1573992855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,7 +1507,7 @@ GameObject:
   - component: {fileID: 1573992857}
   - component: {fileID: 1573992856}
   m_Layer: 0
-  m_Name: SerpentiamVulnarable
+  m_Name: SerpentiamVulnerable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1524,18 +1528,18 @@ MonoBehaviour:
   editorData:
     _bezierPath:
       points:
-      - {x: -7, y: 0, z: 7}
-      - {x: -7.9664655, y: -2.5393448, z: 2.6116433}
-      - {x: 7.9664655, y: -2.5393448, z: 1.3883567}
+      - {x: -7, y: 0, z: 3.5}
+      - {x: -7.0614986, y: -2.0821002, z: -0.6356473}
+      - {x: 7.2978096, y: -2.8838372, z: 0.6107199}
       - {x: 7, y: 0, z: -3}
-      - {x: 6.1649036, y: 2.1941783, z: -6.791859}
+      - {x: 6.7131743, y: 2.7774765, z: -6.4775505}
       - {x: -6.1649036, y: 2.8058217, z: -6.791859}
       - {x: -7, y: 5, z: -3}
       - {x: -7.9664655, y: 7.539345, z: 1.3883567}
-      - {x: 7.9664655, y: 7.539345, z: 2.6116433}
+      - {x: 8.080707, y: 8.436846, z: 3.3040338}
       - {x: 7, y: 5, z: 7}
-      - {x: 6.1649036, y: 2.8058217, z: 10.791859}
-      - {x: -6.1649036, y: 2.1941783, z: 10.791859}
+      - {x: 6.04066, y: 1.9491208, z: 10.2809}
+      - {x: -6.9391503, y: 2.0601363, z: 7.592021}
       isClosed: 1
       space: 0
       controlMode: 3
@@ -1580,7 +1584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573992855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 50}
+  m_LocalPosition: {x: 0, y: -2.11, z: 50}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

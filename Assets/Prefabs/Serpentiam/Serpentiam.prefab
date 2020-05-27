@@ -93,6 +93,7 @@ MonoBehaviour:
   evasionPhaseLength: 15.6
   attackPhaseLength: 19.5
   startUpPhaseLength: 10.95
+  vulnerablePhaseLength: 7
   boss:
     name: 
     speed: 0
@@ -124,6 +125,8 @@ MonoBehaviour:
   playerPos: {fileID: 0}
   projectile: {fileID: 3053347629192873306, guid: 8b239b710c852e74cabc09007a616b10,
     type: 3}
+  vulnerableMat: {fileID: 0}
+  asteroidMat: {fileID: 0}
 --- !u!1 &1036958730532212815
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3476492683474047313, guid: 6a00f6b03d007d74a996adbb33e11772, type: 3}
+  - {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

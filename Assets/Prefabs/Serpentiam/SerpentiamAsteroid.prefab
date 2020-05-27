@@ -4765,6 +4765,7 @@ GameObject:
   - component: {fileID: 2342398817056579229}
   - component: {fileID: 2618519363477631163}
   - component: {fileID: 9206992088772174037}
+  - component: {fileID: 3639977562922680102}
   - component: {fileID: 3105771684400126943}
   m_Layer: 0
   m_Name: Asteroid
@@ -4813,7 +4814,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3476492683474047313, guid: 6a00f6b03d007d74a996adbb33e11772, type: 3}
+  - {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4834,6 +4835,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3639977562922680102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5139981793491261123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e18da6beff05e43b730596fa1ed70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serpentiamBody: {fileID: 0}
+  hitFlashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
+  vulnerableMat: {fileID: 2100000, guid: a2a5e830dd6ccc64db03342a828a8bce, type: 2}
 --- !u!114 &3105771684400126943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4883,7 +4899,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3105771684400126943}
+      - m_Target: {fileID: 3639977562922680102}
         m_MethodName: addSerpentiamHit
         m_Mode: 1
         m_Arguments:
@@ -4897,7 +4913,6 @@ MonoBehaviour:
   blockEvent:
     m_PersistentCalls:
       m_Calls: []
-  serpentiamBody: {fileID: 0}
 --- !u!1 &6550807592497868324
 GameObject:
   m_ObjectHideFlags: 0
@@ -9607,8 +9622,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3476492683474047313, guid: 6a00f6b03d007d74a996adbb33e11772, type: 3}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
+  - {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -8,7 +8,7 @@ using PathCreation;
 public class Boss : MonoBehaviour
 {
 
-    public enum BossState { STARTUP, EVADING, ATTACKING, DYING, VULNARABLE }
+    public enum BossState { STARTUP, EVADING, ATTACKING, DYING, VULNERABLE }
 
     public BossState state = BossState.STARTUP;
 
@@ -26,7 +26,7 @@ public class Boss : MonoBehaviour
     public bossEvent evadingEvents, attackingEvents;
 
     [SerializeField]
-    private float evasionPhaseLength = 10, attackPhaseLength = 10, startUpPhaseLength = 5;
+    private float evasionPhaseLength = 10, attackPhaseLength = 10, startUpPhaseLength = 5, vulnerablePhaseLength = 7;
 
     public Enemy boss = new Enemy();
 
@@ -38,6 +38,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
         boss.speed = 5;
+        boss.health = 20;
     }
 
     // Update is called once per frame
@@ -59,6 +60,7 @@ public class Boss : MonoBehaviour
                     pathFollower = new FollowPath(bossObject, boss, paths[1], 24.5f);
                     evadingEvents.Invoke();
                     StartCoroutine(switchState(BossState.ATTACKING, evasionPhaseLength));
+                    boss.speed = 5;
                     invoked = true;
                 }
 
@@ -78,10 +80,11 @@ public class Boss : MonoBehaviour
 
                 break;
 
-            case BossState.VULNARABLE:
+            case BossState.VULNERABLE:
                 if (!invoked) {
                     pathFollower = new FollowPath(bossObject, boss, paths[3]);
-                    StartCoroutine(switchState(BossState.EVADING, attackPhaseLength));
+                    StartCoroutine(switchState(BossState.EVADING, vulnerablePhaseLength));
+                    boss.speed = 8;
                     invoked = true;
                 }
 
@@ -90,6 +93,7 @@ public class Boss : MonoBehaviour
                 break;
 
             case BossState.DYING:
+                transform.Translate(Vector3.forward * 5 * Time.deltaTime);
                 break;
         }
     }
@@ -103,5 +107,9 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         state = switchedState;
         invoked = false;
+    }
+
+    public float getVulnerabilityLength() {
+        return this.vulnerablePhaseLength;
     }
 }
