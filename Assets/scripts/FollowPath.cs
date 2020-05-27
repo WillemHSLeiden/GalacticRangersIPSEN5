@@ -28,26 +28,34 @@ public class FollowPath
     }
     public void follow(){
         for (int i = 0; i < gameobj.Count; i++){
-            this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
-            this.gameobj[i].transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled[i], end);
-            this.gameobj[i].transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled[i], end);   
-            
-            if(this.gameobj[i].transform.position == this.prevPos[i]){
-                Debug.Log(enemy[i].name+" Heeft niet bewogen");
-            }else{
-                this.prevPos[i] = this.gameobj[i].transform.position;
+            if(this.enemy[i] != null){
+                this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
+                this.gameobj[i].transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled[i], end);
+                this.gameobj[i].transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled[i], end);   
+                
+                if(this.gameobj[i].transform.position != this.prevPos[i]){
+                    this.prevPos[i] = this.gameobj[i].transform.position;
+                }else{
+                    this.enemy[i] = null;
+                }
             }
         }
     }
 
-    public bool pathFinished(){
-        for (int i = 0; i < this.gameobj.Count; i++){
-            if(this.pathCreator.path.GetPoint(1) == this.gameobj[i].transform.position){
-                return true;
-            }else{
-                return false;
-            }
+    public bool pathFinished(int index){
+
+        if(this.enemy[index] == null){
+            return true;
+        }else{
+            return false;
         }
-         return false;
+       
+    }
+
+    public void cleanArrays(){
+        distanceTravelled = new List<float>();
+        enemy = new List<Enemy>();
+        gameobj = new List<GameObject>();
+        prevPos = new List<Vector3>();
     }
 }

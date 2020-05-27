@@ -59,7 +59,6 @@ public class WaveSpawner : MonoBehaviour
         if (waveCountdown <= 0){
             if(state != SpawnState.SPAWNING && state != SpawnState.FINISHED){
                 //Start spawning wave
-                Debug.Log("Wave is klaar");
                 StartCoroutine( SpawnWave(waves[nextWave]) );
             }
         }else{
@@ -87,32 +86,32 @@ public class WaveSpawner : MonoBehaviour
     void waveCompleted(){
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
-        pathFollower = null;
 
         if(nextWave + 1 > waves.Length -1  ){
             state = SpawnState.FINISHED;
-
         }else{
             nextWave++;
         }
     }
 
     bool despawnEnemy(Wave _wave){
-        // _wave.despawnTimer -= Time.deltaTime;
-        // if(_wave.despawnTimer <= 0){
-        //     _wave.despawnTimer = 6f;
-        //     foreach(UnityEngine.Object enemy in spawnedEnemies){
-        //         DestroyImmediate(enemy, true);
-        //     }
-        //     return true;
-        if(pathFollower != null && pathFollower.pathFinished()){
-            foreach(UnityEngine.Object enemy in spawnedEnemies){
-                DestroyImmediate(enemy, true);
+        bool allEnemiesDespawned = true;
+        for(int i = 0; i < spawnedEnemies.Count; i++){
+            if(pathFollower.pathFinished(i)){
+                DestroyImmediate(spawnedEnemies[i], true);
+                spawnedEnemies[i] = null;
+            }else{
+                allEnemiesDespawned = false;
             }
-            return true;
         }
-
-        return false;
+        
+        if(allEnemiesDespawned == true){
+            spawnedEnemies = new List<GameObject>();
+            pathFollower.cleanArrays();
+            return true;
+        }else{
+            return false;
+        } 
     }
 
     IEnumerator SpawnWave(Wave _wave){
@@ -131,15 +130,15 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy( Enemy _enemy, Transform[] _spawnPoint, PathCreator path){
         //Spawn enemy
-        if(_spawnPoint.Length == 0){
-            Debug.LogError("Geen spawnpoint gegeven");
-        }else{
-            Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
-            GameObject spawnedEnemy = (GameObject) Instantiate(_enemy.body, _sp.position, _sp.rotation);
-            pathFollower.addEnemy(spawnedEnemy, _enemy, path);            
-            spawnedEnemies.Add(spawnedEnemy);
-            timedEvent(_enemy);
-        }
+        // if(_spawnPoint.Length == 0){
+        //     Debug.LogError("Geen spawnpoint gegeven");
+        // }else{
+            // Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
+        GameObject spawnedEnemy = (GameObject) Instantiate(_enemy.body, _enemy.body.transform.position, _enemy.body.transform.rotation);
+        pathFollower.addEnemy(spawnedEnemy, _enemy, path);            
+        spawnedEnemies.Add(spawnedEnemy);
+        timedEvent(_enemy);
+        // }
     }
 
 }
