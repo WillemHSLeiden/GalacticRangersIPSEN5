@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ee12918a54a204f8210f3fe19b4e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
 --- !u!54 &8268297260003853022
 Rigidbody:
   m_ObjectHideFlags: 0

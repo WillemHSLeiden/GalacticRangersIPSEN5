@@ -429,7 +429,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  evasionPhaseLength: 15.6
+  evasionPhaseLength: 7.8
   attackPhaseLength: 19.5
   startUpPhaseLength: 8.6
   vulnerablePhaseLength: 15
@@ -691,13 +691,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5530124193461710727}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: 0.027538273, y: 0.7394587, z: 0.6718889, w: -0.031746417}
   m_LocalPosition: {x: -0, y: 0, z: 0.009275407}
   m_LocalScale: {x: 0.786988, y: 0.7999606, z: 0.78496826}
   m_Children: []
   m_Father: {fileID: 5006239338295184698}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -95.488, y: 5.968994, z: 178.842}
 --- !u!33 &8458610790010287246
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -724,7 +724,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3511325375820423461, guid: 6a00f6b03d007d74a996adbb33e11772, type: 3}
+  - {fileID: 2100000, guid: 7560e15862b6a4747a7fc731305ddbd5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
