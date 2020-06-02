@@ -6,8 +6,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirebaseCommunicator : MonoBehaviour
+public class FirebaseCommunicator
 {
+    private static FirebaseCommunicator instance;
+
+    public static FirebaseCommunicator GetInstance()
+    {
+        if(instance == null)
+        {
+            instance = new FirebaseCommunicator();
+        }
+        return instance;
+    }
+
+    private FirebaseCommunicator() { }
+
     GameLogger gameLogger;
     DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
     Boolean isLoggingStarted = false;
