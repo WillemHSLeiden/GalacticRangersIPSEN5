@@ -152,10 +152,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RigBaseGameObject: {fileID: 94390920}
   m_CameraFloorOffsetObject: {fileID: 649806992}
-  m_CameraGameObject: {fileID: 1585708022}
+  m_CameraGameObject: {fileID: 0}
   m_TrackingOriginMode: 1
   m_TrackingSpace: 3
-  m_CameraYOffset: 1.36144
+  m_CameraYOffset: 0
 --- !u!4 &94390922
 Transform:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ Transform:
   m_GameObject: {fileID: 94390920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 649806993}
   m_Father: {fileID: 0}
@@ -387,6 +387,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1484913740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484913742}
+  - component: {fileID: 1484913741}
+  m_Layer: 0
+  m_Name: XR Interaction Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1484913741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484913740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1484913742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484913740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544401992
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1484913741}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -839,7 +882,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585708022}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -866,7 +909,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5140002
+      value: -2.539
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
