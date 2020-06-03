@@ -134,7 +134,7 @@ public class WaveSpawner : MonoBehaviour
         //     Debug.LogError("Geen spawnpoint gegeven");
         // }else{
             // Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
-        GameObject spawnedEnemy = (GameObject) Instantiate(_enemy.body, _enemy.body.transform.position, _enemy.body.transform.rotation);
+        GameObject spawnedEnemy = (GameObject) Instantiate(_enemy.body, transform.position, transform.rotation);
         pathFollower.addEnemy(spawnedEnemy, _enemy, path);            
         spawnedEnemies.Add(spawnedEnemy);
         timedEvent(_enemy);

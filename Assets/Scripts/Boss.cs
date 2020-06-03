@@ -12,7 +12,7 @@ public class Boss : MonoBehaviour
 
     public BossState state = BossState.STARTUP;
 
-    private FollowPath pathFollower;
+    private FollowPath pathFollower = new FollowPath();
 
     public PathCreator[] paths;
 
@@ -37,6 +37,7 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pathFollower.addEnemy(bossObject, boss, paths[0]);
         boss.speed = 5;
         boss.health = 20;
     }
@@ -47,48 +48,48 @@ public class Boss : MonoBehaviour
         switch (state) {
             case BossState.STARTUP:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[0]);
+                    pathFollower.addEnemy(bossObject, boss, paths[0]);
                     StartCoroutine(switchState(BossState.EVADING, startUpPhaseLength));
                     invoked = true;
                 }
 
-                pathFollower.follow();
+                pathFollower.follow(false, null, EndOfPathInstruction.Loop);
                 break;
 
             case BossState.EVADING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[1], 24.5f);
+                    pathFollower.addEnemy(bossObject, boss, paths[1], 24.5f);
                     evadingEvents.Invoke();
                     StartCoroutine(switchState(BossState.ATTACKING, evasionPhaseLength));
                     boss.speed = 5;
                     invoked = true;
                 }
 
-                pathFollower.followLookAt(cameraTransform);
+                pathFollower.follow(true, cameraTransform, EndOfPathInstruction.Loop);
 
                 break;
 
             case BossState.ATTACKING:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[2]);
+                    pathFollower.addEnemy(bossObject, boss, paths[2]);
                     attackingEvents.Invoke();
                     StartCoroutine(switchState(BossState.EVADING, attackPhaseLength));
                     invoked = true;
                 }
 
-                pathFollower.follow();
+                pathFollower.follow(false, null, EndOfPathInstruction.Loop);
 
                 break;
 
             case BossState.VULNERABLE:
                 if (!invoked) {
-                    pathFollower = new FollowPath(bossObject, boss, paths[3]);
+                    pathFollower.addEnemy(bossObject, boss, paths[3]);
                     StartCoroutine(switchState(BossState.EVADING, vulnerablePhaseLength));
                     boss.speed = 8;
                     invoked = true;
                 }
 
-                pathFollower.followLerp();
+                pathFollower.follow(false, null, EndOfPathInstruction.Loop);
 
                 break;
 

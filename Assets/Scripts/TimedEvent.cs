@@ -12,11 +12,11 @@ public class TimedEvent{
     public float eventStart;    
 
     public void attackEvent(){
-        Debug.Log("Attacking");
+        //Debug.Log("Attacking");
     }
 
     public void chatEvent(){
-        Debug.Log("Chatten");
+        //Debug.Log("Chatten");
     }
 
 }

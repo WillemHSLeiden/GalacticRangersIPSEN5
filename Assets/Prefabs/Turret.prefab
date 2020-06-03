@@ -383,9 +383,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6272375742364013558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26311ed94bd284841b5390fa709973a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 04c9730167e17fe439bd0877b4103fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 8304319225527999780, guid: c0b2e8d22b11d2a4aa289db0b59749e1,
+  laserPrefab: {fileID: 8304319225527999780, guid: 33bd833101a01a344b81917a465a0fa3,
     type: 3}
+  chargedLaserPrefab: {fileID: 0}
+  fire: 0
+  initiateChargedLaserTime: 0
   controller: {fileID: 0}

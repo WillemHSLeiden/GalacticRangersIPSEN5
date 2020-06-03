@@ -18,25 +18,50 @@ public class Turret : MonoBehaviour
         Quaternion aimDir = controller.rotation;
         transform.rotation = Quaternion.Lerp(transform.rotation, aimDir, 0.2f);
 
-        //Move up or down for test
-        if (Input.GetKey(KeyCode.W))
+        var v3 = new Vector3(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"), 0.0f) * 100 * Time.deltaTime;
+        //controller.Rotate(v3 * 50 * Time.deltaTime);
+        controller.eulerAngles = new Vector3(controller.eulerAngles.x + v3.x, controller.eulerAngles.y + v3.y, 0);
+
+        CountChargeTimer();
+        Fire();
+    }
+
+    private void CountChargeTimer()
+    {
+        if (Input.GetKey(fire))
         {
-            controller.Rotate(-1, 0, 0);
+            chargeTimer += Time.deltaTime;
+        }
+    }
+
+    private void RestartChargedTimer()
+    {
+        chargeTimer = 0;
+    }
+
+    private void ShootChargedLaser()
+    {
+        Instantiate(chargedLaserPrefab, transform.position, transform.localRotation);
+        RestartChargedTimer();
+    }
+
+    private void ShootLaser()
+    {
+        Instantiate(laserPrefab, transform.position, transform.localRotation);
+    }
+
+    private void Fire()
+    {
+        if ((Input.GetKeyUp(fire)) && (chargeTimer > initiateChargedLaserTime))
+        {
+            ShootChargedLaser();
+
+            return;
         }
 
-        else if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(fire)) 
         {
-            controller.Rotate(1, 0, 0);
-        }
-        //Move left or right for test
-        if (Input.GetKey(KeyCode.A))
-        {
-            controller.Rotate(0, -1, 0);
-        }
-
-        else if (Input.GetKey(KeyCode.D))
-        {
-            controller.Rotate(0, 1, 0);
+            ShootLaser();
         }
 
         CountChargeTimer();

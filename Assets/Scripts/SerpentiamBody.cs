@@ -93,6 +93,8 @@ public class SerpentiamBody : MonoBehaviour {
 
             changeBodyMaterial(vulnerableMat);
 
+            changeBodypartsState(SerpentiamBodypart.BodypartState.VULNERABLE);
+
             bodyHits = 0;
             StartCoroutine(resetMesh());
         }
@@ -134,6 +136,12 @@ public class SerpentiamBody : MonoBehaviour {
         transform.GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>().material = mat;
     }
 
+    private void changeBodypartsState(SerpentiamBodypart.BodypartState state) {
+        for (int i = 1; i < bodyParts.Count; i++) {
+            bodyParts[i].GetChild(0).gameObject.GetComponent<SerpentiamBodypart>().state = state;
+        }
+    }
+
 
     IEnumerator fireTimer(float timeStamp) {
         yield return new WaitForSeconds(timeStamp);
@@ -160,6 +168,7 @@ public class SerpentiamBody : MonoBehaviour {
     IEnumerator resetMesh() {
         yield return new WaitForSeconds(boss.getVulnerabilityLength());
         changeBodyMaterial(asteroidMat);
+        changeBodypartsState(SerpentiamBodypart.BodypartState.NEUTRAL);
     }
     IEnumerator flashReset() {
         yield return new WaitForSeconds(0.1f);
