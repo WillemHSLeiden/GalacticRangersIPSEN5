@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bossSpawner : MonoBehaviour
+public class BossSpawner : MonoBehaviour
 {
     public GameObject serpentiam;
     // Start is called before the first frame update
