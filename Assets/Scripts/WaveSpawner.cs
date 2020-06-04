@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour
         public Enemy[] enemies;
         //De rate waarop enemies spawnen
         public float rate;
-        public Transform[] spawnPoints;
+        // public Transform[] spawnPoints;
         // public float despawnTimer = 6f;
 
         public PathCreator pathCreator;
@@ -38,7 +38,6 @@ public class WaveSpawner : MonoBehaviour
     void Start(){
         pathFollower = new FollowPath();       
         waveCountdown = timeBetweenWaves;
-        
     }
     
 
@@ -59,7 +58,8 @@ public class WaveSpawner : MonoBehaviour
         if (waveCountdown <= 0){
             if(state != SpawnState.SPAWNING && state != SpawnState.FINISHED){
                 //Start spawning wave
-                StartCoroutine( SpawnWave(waves[nextWave]) );
+                if(waves.Length != nextWave)
+                    StartCoroutine( SpawnWave(waves[nextWave]) );
             }
         }else{
             waveCountdown -= Time.deltaTime;
@@ -87,7 +87,7 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
 
-        if(nextWave + 1 > waves.Length -1  ){
+        if(nextWave + 1 > waves.Length -1  || nextWave == waves.Length){
             state = SpawnState.FINISHED;
         }else{
             nextWave++;
@@ -119,7 +119,7 @@ public class WaveSpawner : MonoBehaviour
 
         //Spawn
         for(int i = 0; i < _wave.enemies.Length; i++){
-            SpawnEnemy(_wave.enemies[i], _wave.spawnPoints, _wave.pathCreator);
+            SpawnEnemy(_wave.enemies[i],  _wave.pathCreator);
             yield return new WaitForSeconds(1f/_wave.rate);
         }
 
@@ -128,7 +128,7 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
-    void SpawnEnemy( Enemy _enemy, Transform[] _spawnPoint, PathCreator path){
+    void SpawnEnemy( Enemy _enemy,  PathCreator path){
         //Spawn enemy
         // if(_spawnPoint.Length == 0){
         //     Debug.LogError("Geen spawnpoint gegeven");
