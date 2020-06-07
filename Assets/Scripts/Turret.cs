@@ -45,7 +45,7 @@ public class Turret : MonoBehaviour
         RestartChargedTimer();
     }
 
-    private void ShootLaser()
+    public void ShootLaser()
     {
         Instantiate(laserPrefab, transform.position, transform.localRotation);
     }
