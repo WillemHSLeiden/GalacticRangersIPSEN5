@@ -63,6 +63,48 @@ public class Turret : MonoBehaviour
         {
             ShootLaser();
         }
+
+        CountChargeTimer();
+        Fire();
+    }
+
+    private void CountChargeTimer()
+    {
+        if (Input.GetKey(fire))
+        {
+            chargeTimer += Time.deltaTime;
+        }
+    }
+
+    private void RestartChargedTimer()
+    {
+        chargeTimer = 0;
+    }
+
+    private void ShootChargedLaser()
+    {
+        Instantiate(chargedLaserPrefab, transform.position, transform.localRotation);
+        RestartChargedTimer();
+    }
+
+    private void ShootLaser()
+    {
+        if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
+        {
+            Instantiate(laserPrefab, transform.position, transform.localRotation);
+            RestartChargedTimer();
+        }
+    }
+
+    private void Fire()
+    {
+        if ((Input.GetKeyUp(fire)) && (chargeTimer > initiateChargedLaserTime))
+        {
+            ShootChargedLaser();
+
+            return;
+        }
+        ShootLaser();
     }
 
 }
