@@ -9,4 +9,8 @@ public class BehaviourTest : MonoBehaviour, BehaviourStrategy
     public void setHealth(float health){
         Debug.Log("Health is: "+health);
     }
+
+    public void setDamage(float health){
+        Debug.Log("Damage is: "+health);
+    }
 }
