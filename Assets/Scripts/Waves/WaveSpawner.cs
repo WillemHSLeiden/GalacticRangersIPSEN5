@@ -135,6 +135,11 @@ public class WaveSpawner : MonoBehaviour
         // }else{
             // Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
         GameObject spawnedEnemy = (GameObject) Instantiate(_enemy.body, transform.position, transform.rotation);
+        
+        BehaviourStrategy behaviour =  spawnedEnemy.GetComponent<BehaviourStrategy>();
+        behaviour.setHealth(_enemy.health);
+        behaviour.setDamage(_enemy.damage);
+
         pathFollower.addEnemy(spawnedEnemy, _enemy, path);            
         spawnedEnemies.Add(spawnedEnemy);
         timedEvent(_enemy);
