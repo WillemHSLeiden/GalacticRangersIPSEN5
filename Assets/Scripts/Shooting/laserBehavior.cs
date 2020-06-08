@@ -6,6 +6,7 @@ public class laserBehavior : MonoBehaviour {
 
     public float speed = 1f;
     public float lifeDuration = 20f;
+    public float damage { get; } = 1f;
     
     private float lifeTimer;
 

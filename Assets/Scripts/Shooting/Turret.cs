@@ -6,6 +6,8 @@ public class Turret : MonoBehaviour
 {
 
     [SerializeField] private GameObject laserPrefab;
+    [SerializeField] private GameObject GreenLaserPrefab;
+    [SerializeField] private GameObject PurpleLaserPrefab;
     [SerializeField] private GameObject chargedLaserPrefab;
     [SerializeField] private KeyCode fire;
     [SerializeField] private int initiateChargedLaserTime;
@@ -49,8 +51,21 @@ public class Turret : MonoBehaviour
     {
         if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
         {
-            Instantiate(laserPrefab, transform.position, transform.localRotation);
-            RestartChargedTimer();
+            switch (LaserStage.Instance.getLaserStage())
+            {
+                case 0:
+                    Instantiate(laserPrefab, transform.position, transform.localRotation);
+                    RestartChargedTimer();
+                    break;
+                case 1:
+                    Instantiate(GreenLaserPrefab, transform.position, transform.localRotation);
+                    RestartChargedTimer();
+                    break;
+                case 2:
+                    Instantiate(PurpleLaserPrefab, transform.position, transform.localRotation);
+                    RestartChargedTimer();
+                    break;
+            }
         }
     }
 
