@@ -128,22 +128,27 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
-    void SpawnEnemy( Enemy _enemy,  PathCreator path){
+    void SpawnEnemy( Enemy enemy,  PathCreator path){
         //Spawn enemy
         // if(_spawnPoint.Length == 0){
         //     Debug.LogError("Geen spawnpoint gegeven");
         // }else{
             // Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
-        GameObject spawnedEnemy = (GameObject) Instantiate(_enemy.body, transform.position, transform.rotation);
+        GameObject spawnedEnemy = (GameObject) Instantiate(enemy.body, transform.position, transform.rotation);
         
-        BehaviourStrategy behaviour =  spawnedEnemy.GetComponent<BehaviourStrategy>();
-        behaviour.setHealth(_enemy.health);
-        behaviour.setDamage(_enemy.damage);
-
-        pathFollower.addEnemy(spawnedEnemy, _enemy, path);            
+        this.setEnemyBehaviours(spawnedEnemy, enemy);
+        
+        pathFollower.addEnemy(spawnedEnemy, enemy, path);            
         spawnedEnemies.Add(spawnedEnemy);
-        timedEvent(_enemy);
+        timedEvent(enemy);
         // }
+    }
+    
+    void setEnemyBehaviours(GameObject spawnedEnemy, Enemy enemy){
+        BehaviourStrategy behaviour =  spawnedEnemy.GetComponent<BehaviourStrategy>();
+        behaviour.setHealth(enemy.health);
+        behaviour.setDamage(enemy.damage);
+
     }
 
 }
