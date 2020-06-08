@@ -16,8 +16,10 @@ public class MenuHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, targetGameObject.transform.position, 0.1f);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetGameObject.transform.rotation, 0.1f);
+        if (targetGameObject != null) {
+            transform.position = Vector3.Lerp(transform.position, targetGameObject.transform.position, 0.1f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetGameObject.transform.rotation, 0.1f);
+        }
     }
 
     public void SetParent(GameObject gameObject) {
