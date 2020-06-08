@@ -6,12 +6,12 @@ public class PauseMenu : MonoBehaviour
 {
     // static nodig om te checken vanuit andere scripts, zonder referece naar dit script
     public static bool GamePaused = false;
-    public GameObject pauseMenuUI;
+    public GameObject pauseMenuUI; //creert reference voor de UI
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space)) //voorlopig met spatie
         {
             if (GamePaused)
             {
