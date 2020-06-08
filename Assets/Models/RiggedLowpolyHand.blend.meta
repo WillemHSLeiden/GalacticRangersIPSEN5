@@ -1,27 +1,12 @@
 fileFormatVersion: 2
-guid: 45576c27a43cb984a8b313c5cb88c72d
+guid: 13f2b30cb82d6a840931822127e43c21
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: -623603649343465320
     second: Scene
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 381932b2cbd25bc4886d4b9f6c5bab48, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hull
-    second: {fileID: 670224309865224971, guid: e6063e3ff42391843901ade6459db3e2, type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 670224309865224971, guid: e6063e3ff42391843901ade6459db3e2, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
