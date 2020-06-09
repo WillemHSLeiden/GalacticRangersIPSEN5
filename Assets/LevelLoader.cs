@@ -9,16 +9,7 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
 
     //Variabel voor de Inspector
-    public float transitionTime = 1f; //1 on default
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            LoadNextLevel();
-        }
-    }
+    public float transitionTime = 3f; //1 on default
 
     public void LoadNextLevel()
     {

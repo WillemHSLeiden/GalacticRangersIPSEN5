@@ -1263,6 +1263,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8843092673239426183, guid: 0182b6345bfb81542a7dcc0da1ed3dd1,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8843092673482392538, guid: 0182b6345bfb81542a7dcc0da1ed3dd1,
+        type: 3}
+      propertyPath: m_Name
+      value: Fade
+      objectReference: {fileID: 0}
     - target: {fileID: 8843092675070132825, guid: 0182b6345bfb81542a7dcc0da1ed3dd1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1326,7 +1336,7 @@ PrefabInstance:
     - target: {fileID: 8843092675070132827, guid: 0182b6345bfb81542a7dcc0da1ed3dd1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0182b6345bfb81542a7dcc0da1ed3dd1, type: 3}
