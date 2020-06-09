@@ -7,37 +7,20 @@ using System;
 public class WaveSpawner : MonoBehaviour
 {
 
-    public enum SpawnState{SPAWNING, WAITING, COUNTING, FINISHED}
-
-    [System.Serializable]
-    public class Wave
-    {
-        // Zo kunnen we BV kenbaar maken dat er een boss aankomt.
-        public string waveName;
-        public Enemy[] enemies;
-        //De rate waarop enemies spawnen
-        public float rate;
-        // public Transform[] spawnPoints;
-        // public float despawnTimer = 6f;
-
-        public PathCreator pathCreator;
-    }
+    public enum SpawnState{SPAWNING, COUNTING, FINISHED}
 
     public Wave[] waves;
     private int nextWave = 0;
-    public float timeBetweenWaves = 5f;
-    private float waveCountdown;
+    
+    public float timeStartSpawning = 1f;
     private SpawnState state = SpawnState.COUNTING;
 
     private List<GameObject> spawnedEnemies = new List<GameObject>();
 
-
-    //Kan beter?? 
     private FollowPath pathFollower;
 
     void Start(){
         pathFollower = new FollowPath();       
-        waveCountdown = timeBetweenWaves;
     }
     
 
@@ -46,23 +29,17 @@ public class WaveSpawner : MonoBehaviour
             pathFollower.follow();
         }
 
-        if(state == SpawnState.WAITING){
-            //Check if enemies are despawned
-            if(despawnEnemy(waves[nextWave])){
-                //Begin a new wave, previous wave is done.
-                waveCompleted();
-            }
-            return;
-        }
 
-        if (waveCountdown <= 0){
+        despawnEnemy();
+
+        if (timeStartSpawning <= 0){
             if(state != SpawnState.SPAWNING && state != SpawnState.FINISHED){
                 //Start spawning wave
                 if(waves.Length != nextWave)
                     StartCoroutine( SpawnWave(waves[nextWave]) );
             }
         }else{
-            waveCountdown -= Time.deltaTime;
+            timeStartSpawning -= Time.deltaTime;
         }
     }
 
@@ -85,8 +62,6 @@ public class WaveSpawner : MonoBehaviour
 
     void waveCompleted(){
         state = SpawnState.COUNTING;
-        waveCountdown = timeBetweenWaves;
-
         if(nextWave + 1 > waves.Length -1  || nextWave == waves.Length){
             state = SpawnState.FINISHED;
         }else{
@@ -94,7 +69,7 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    bool despawnEnemy(Wave _wave){
+    bool despawnEnemy(){
         bool allEnemiesDespawned = true;
         for(int i = 0; i < spawnedEnemies.Count; i++){
             if(pathFollower.pathFinished(i)){
@@ -117,14 +92,18 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave(Wave _wave){
         state = SpawnState.SPAWNING;
 
+        if(state != SpawnState.FINISHED){
+            waveCompleted();
+        }
+
+        yield return new WaitForSeconds(_wave.timeTillWaveStarts);
+
         //Spawn
         for(int i = 0; i < _wave.enemies.Length; i++){
             SpawnEnemy(_wave.enemies[i],  _wave.pathCreator);
             yield return new WaitForSeconds(1f/_wave.rate);
         }
-
-        state = SpawnState.WAITING;
-
+        
         yield break;
     }
 
