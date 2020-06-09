@@ -47,7 +47,7 @@ public class Turret : MonoBehaviour
         RestartChargedTimer();
     }
 
-    public void ShootLaser()
+    private void ShootLaser()
     {
         if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
         {
@@ -77,14 +77,7 @@ public class Turret : MonoBehaviour
 
             return;
         }
-
-        if (Input.GetKeyDown(fire))
-        {
-            ShootLaser();
-        }
-
-        CountChargeTimer();
-        Fire();
+        ShootLaser();
     }
 
 }
