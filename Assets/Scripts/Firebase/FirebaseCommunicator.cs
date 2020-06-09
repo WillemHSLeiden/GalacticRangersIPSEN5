@@ -6,13 +6,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirebaseCommunicator : MonoBehaviour
+public class FirebaseCommunicator
 {
+    private static FirebaseCommunicator instance;
+
+    public static FirebaseCommunicator GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = new FirebaseCommunicator();
+        }
+        return instance;
+    }
+
+    private FirebaseCommunicator()
+    {
+        StartFirebaseConnection();
+    }
+
     GameLogger gameLogger;
     DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
     Boolean isLoggingStarted = false;
 
-    void Awake()
+    void StartFirebaseConnection()
     {
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
             dependencyStatus = task.Result;
@@ -58,30 +74,17 @@ public class FirebaseCommunicator : MonoBehaviour
             {
                 Debug.Log("saving completed.");
             }
-        }); ;
+        });
+
+        HighscoreModel model = new HighscoreModel("Ultimate_Gamer", 9999, gameReference.Key);
+        HighscoreService.GetInstance().SaveOverAllHighscore(model);
+
         Debug.Log("Logging Stopped");
         isLoggingStarted = false;
         gameLogger = null;
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            StartLogging();
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            SaveGameData();
-        }
-    }
 
 }
