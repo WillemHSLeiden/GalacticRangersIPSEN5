@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class laserBehavior : MonoBehaviour {
 
-    public float speed = 1f;
+    public float speed = 0.11f;
     public float lifeDuration = 20f;
     
     private float lifeTimer;
