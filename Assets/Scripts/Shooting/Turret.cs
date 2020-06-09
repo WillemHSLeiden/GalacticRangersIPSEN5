@@ -6,13 +6,15 @@ public class Turret : MonoBehaviour
 {
 
     [SerializeField] private GameObject laserPrefab;
+    [SerializeField] private GameObject GreenLaserPrefab;
+    [SerializeField] private GameObject PurpleLaserPrefab;
     [SerializeField] private GameObject chargedLaserPrefab;
-    [SerializeField] private KeyCode fire;
-    [SerializeField] private int initiateChargedLaserTime;
+    [SerializeField] private KeyCode fire = KeyCode.Space;
+    [SerializeField] private int initiateChargedLaserTime = 200;
     [SerializeField] private Transform controller;
     [SerializeField] private string lockOnTag = "Enemy";
     private float chargeTimer;
-    [SerializeField] private GameObject target;
+    private GameObject target;
     [SerializeField] private GameObject targetReticle;
 
     void Update()
@@ -64,20 +66,30 @@ public class Turret : MonoBehaviour
     private void ShootChargedLaser()
     {
         SpawnLaser(chargedLaserPrefab);
-        RestartChargedTimer();
     }
 
     private void ShootLaser()
     {
         if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
         {
-            SpawnLaser(laserPrefab);
-            RestartChargedTimer();
+            switch (LaserStage.Instance.getLaserStage())
+            {
+                case 0:
+                    SpawnLaser(laserPrefab);
+                    break;
+                case 1:
+                    SpawnLaser(GreenLaserPrefab);
+                    break;
+                case 2:
+                    SpawnLaser(PurpleLaserPrefab);
+                    break;
+            }
         }
     }
 
     private void SpawnLaser(GameObject _laserPrefab)
     {
+        RestartChargedTimer();
         GameObject laser = Instantiate(_laserPrefab, transform.position, transform.localRotation);
         laser.GetComponent<LockOn>().target = target;
     }
