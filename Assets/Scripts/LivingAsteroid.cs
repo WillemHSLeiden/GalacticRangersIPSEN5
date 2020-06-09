@@ -8,7 +8,7 @@ public class LivingAsteroid : MonoBehaviour
 
 
     public void Attack() {
-
+        anim.SetTrigger("Charge");
     }
 
     public void FireLaser() {
