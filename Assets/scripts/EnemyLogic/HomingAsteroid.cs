@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
+public class HomingAsteroid : MonoBehaviour, BehaviourStrategy
+{   
 
     [SerializeField]
     private Material flashMat;
@@ -12,6 +13,13 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
 
     private float speed;
 
+    private Vector3 path;
+    void Start(){
+        this.createNewPath();
+    }
+    void Update(){
+        this.moveMeteorite();
+    }
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Laser")
@@ -23,6 +31,24 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
         if (health <= 0)
         {
             gameObject.GetComponent<Renderer>().material = flashMat;
+            Invoke("setInActive", 0.05f);
+        }
+    }
+
+    private void createNewPath(){
+        GameObject playerObject = GameObject.FindWithTag("Player");
+        float newX = playerObject.transform.position.x + Random.Range(-10f, 10f);
+        float newY = playerObject.transform.position.y + Random.Range(-10f, 10f);
+        float newZ = playerObject.transform.position.z - 20;
+
+        this.path = new Vector3(newX, newY, newZ);
+    }
+
+    
+    private void moveMeteorite(){
+        transform.position = Vector3.MoveTowards(transform.position, this.path, this.speed*Time.deltaTime);
+        this.speed += 3f*Time.deltaTime;
+        if(transform.position == this.path){
             Invoke("setInActive", 0.05f);
         }
     }

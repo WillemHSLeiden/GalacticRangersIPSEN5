@@ -11,6 +11,8 @@ public class NebuloidBehavior : MonoBehaviour, BehaviourStrategy{
 
     private float damage;
 
+    private float speed;
+
     private void OnTriggerEnter(Collider collider) {
         if (collider.tag == "Laser") {
             Destroy(collider.gameObject);
@@ -31,6 +33,10 @@ public class NebuloidBehavior : MonoBehaviour, BehaviourStrategy{
     public void setHealth(float health)
     {
         this.health = health;
+    }
+    public void setSpeed(float speed)
+    {
+        this.speed = speed;
     }
 
     public void setInActive()

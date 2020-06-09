@@ -127,6 +127,7 @@ public class WaveSpawner : MonoBehaviour
         BehaviourStrategy behaviour =  spawnedEnemy.GetComponent<BehaviourStrategy>();
         behaviour.setHealth(enemy.health);
         behaviour.setDamage(enemy.damage);
+        behaviour.setSpeed(enemy.speed);
 
     }
 
