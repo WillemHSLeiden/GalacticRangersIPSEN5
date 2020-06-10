@@ -22,4 +22,14 @@ public class BehaviourTest : MonoBehaviour, BehaviourStrategy
     {
         throw new System.NotImplementedException();
     }
+
+    public float getHealth(){
+        return 0f;
+    }
+    public float getDamage(){
+        return 0f;
+    }
+    public float getSpeed(){
+        return 0f;
+    }
 }
