@@ -76,4 +76,8 @@ public class HomingAsteroid : MonoBehaviour, BehaviourStrategy
     {
         this.player = player;
     }
+    public float getDamage(float damage)
+    {
+        return this.damage;
+    }
 }

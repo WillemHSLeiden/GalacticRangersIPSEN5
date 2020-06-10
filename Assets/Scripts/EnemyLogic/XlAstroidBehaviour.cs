@@ -110,4 +110,9 @@ public class XlAstroidBehaviour : MonoBehaviour, BehaviourStrategy
     {
         this.player = player;
     }
+
+    public float getDamage(float damage)
+    {
+        return this.damage;
+    }
 }
