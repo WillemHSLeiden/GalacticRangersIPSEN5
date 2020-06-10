@@ -5,7 +5,6 @@ using UnityEngine;
 public class MenuHand : MonoBehaviour
 {
     private GameObject targetGameObject;
-    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +24,6 @@ public class MenuHand : MonoBehaviour
     public void SetParent(GameObject gameObject) {
         transform.SetParent(gameObject.transform);
         targetGameObject = gameObject;
-    }
-
-    public void SetTrigger(string trigger) {
-        anim.SetTrigger(trigger);
     }
 
 }

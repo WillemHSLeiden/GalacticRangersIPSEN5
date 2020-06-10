@@ -50,4 +50,14 @@ public class NebuloidBehavior : MonoBehaviour, BehaviourStrategy{
     {
         this.player = player;
     }
+
+    public float getHealth(){
+        return this.health;
+    }
+    public float getDamage(){
+        return this.damage;
+    }
+    public float getSpeed(){
+        return this.speed;
+    }
 }
