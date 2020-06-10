@@ -17,12 +17,13 @@ public class Player : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        if (collision.collider.tag == "Enemy")
+        if (collider.tag == "Enemy")
         {
-            BehaviourStrategy enemy = collision.gameObject.GetComponent<BehaviourStrategy>();
-            enemy.getDamage
+            BehaviourStrategy enemy = collider.gameObject.GetComponent<BehaviourStrategy>();
+            TakeDamage((int)enemy.getDamage());
+            Destroy(collider.gameObject);
         }
     }
 
@@ -36,6 +37,10 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        if(currentHealth <= 0)
+        {
+            //Game Over todo
+        }
     }
 
 }
