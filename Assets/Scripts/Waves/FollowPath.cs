@@ -30,11 +30,10 @@ public class FollowPath
     public void follow(bool lookAt = false, Transform lookAtTarget = null, EndOfPathInstruction instruction = EndOfPathInstruction.Stop){
         for (int i = 0; i < gameobj.Count; i++){
             if(this.gameobj[i] != null){
-                Debug.Log(this.gameobj[i].GetComponent<BehaviourStrategy>().getSpeed());
                 this.distanceTravelled[i] += this.gameobj[i].GetComponent<BehaviourStrategy>().getSpeed() * Time.deltaTime;
                 this.gameobj[i].transform.position = pathCreator[i].path.GetPointAtDistance(distanceTravelled[i], instruction);
                 if (!lookAt)
-                    this.gameobj[i].transform.rotation = pathCreator[i].path.GetRotationAtDistance(distanceTravelled[i], instruction);
+                    this.gameobj[i].transform.rotation = Quaternion.Lerp(this.gameobj[i].transform.rotation, pathCreator[i].path.GetRotationAtDistance(distanceTravelled[i], instruction), 2f * Time.deltaTime);
                 else
                     this.gameobj[i].transform.LookAt(lookAtTarget);
 
@@ -61,7 +60,7 @@ public class FollowPath
 
     public bool pathFinished(int index){
 
-        if(this.enemy[index] == null){
+        if(this.gameobj[index] == null){
             return true;
         }else{
             return false;
