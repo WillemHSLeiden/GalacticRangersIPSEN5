@@ -8,17 +8,19 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     private float damage;
     private float speed;
     private Transform player;
-
     public Animator anim;
 
-
-    public void startAttacking(){
-        this.speed = 0;
-        anim.SetTrigger("Charge");
+    void Start(){
+        // this.setSpeed(3f);
     }
+    public void startAttacking(){
+        this.setSpeed(0.1f);
+        // anim.SetTrigger("Charge");
+    }
+    
 
     public void shootLaser(){
-
+        Debug.Log("Schieten");
     }
 
     public void setInActive(){}
@@ -41,6 +43,6 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
         return this.damage;
     }
     public float getSpeed(){
-        return this.speed;
+        return speed;
     }
 }
