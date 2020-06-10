@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyParts:
+  - {fileID: 0}
   - {fileID: 5461846322296715716}
   minDist: 3
   speed: 1.78
