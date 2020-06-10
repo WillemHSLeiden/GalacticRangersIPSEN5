@@ -216,7 +216,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LeaderboardUI
+          m_StringArgument: LetGoButton
           m_BoolArgument: 0
         m_CallState: 2
   m_OnLastHoverExit:
@@ -913,6 +913,17 @@ MonoBehaviour:
           m_StringArgument: Reset
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610584244}
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LetGoButton
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &646917013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,7 +1504,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SkinsUI
+          m_StringArgument: LetGoButton
           m_BoolArgument: 0
         m_CallState: 2
   m_OnLastHoverExit:
@@ -2067,6 +2078,17 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -2404780706570275130, guid: 45576c27a43cb984a8b313c5cb88c72d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 381932b2cbd25bc4886d4b9f6c5bab48, type: 2}
+    - target: {fileID: -2404780706570275130, guid: 45576c27a43cb984a8b313c5cb88c72d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 670224309865224971, guid: 6027f1fa0f65b2d4387ad6cbd889a7c5,
+        type: 3}
     - target: {fileID: -927199367670048503, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
       propertyPath: m_Name
@@ -2381,12 +2403,12 @@ PrefabInstance:
     - target: {fileID: 5860224712883984519, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5783882
+      value: -3.225
       objectReference: {fileID: 0}
     - target: {fileID: 5860224712883984519, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4377516
+      value: -0.948
       objectReference: {fileID: 0}
     - target: {fileID: 5860224712883984519, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
@@ -2446,17 +2468,17 @@ PrefabInstance:
     - target: {fileID: 7700786737297249834, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.57839
+      value: 3.255
       objectReference: {fileID: 0}
     - target: {fileID: 7700786737297249834, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.788467
+      value: 1.817
       objectReference: {fileID: 0}
     - target: {fileID: 7700786737297249834, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4377516
+      value: -1.015
       objectReference: {fileID: 0}
     - target: {fileID: 7700786737297249834, guid: 45576c27a43cb984a8b313c5cb88c72d,
         type: 3}
@@ -3704,13 +3726,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585708022}
-  m_LocalRotation: {x: -0.107904136, y: -0, z: -0, w: 0.99416137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 649806993}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -12.389001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1610285277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,7 +3746,7 @@ GameObject:
   - component: {fileID: 1610285280}
   - component: {fileID: 1610285279}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3804,15 +3826,15 @@ MonoBehaviour:
           m_StringArgument: Reset
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1610584244}
+        m_MethodName: ResetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: LetGoButton
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1610285280
@@ -4055,6 +4077,17 @@ MonoBehaviour:
           m_StringArgument: Reset
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1610584244}
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LetGoButton
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1693794540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4268,7 +4301,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: PlayUI
+          m_StringArgument: LetGoButton
           m_BoolArgument: 0
         m_CallState: 2
   m_OnLastHoverExit:
@@ -4345,6 +4378,7 @@ GameObject:
   - component: {fileID: 1870021600}
   - component: {fileID: 1870021599}
   - component: {fileID: 1870021598}
+  - component: {fileID: 1870021601}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4423,7 +4457,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1585708026}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4434,6 +4468,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1870021601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870021596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
 --- !u!1 &1893034915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,7 +4510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893034915}
   m_LocalRotation: {x: -0.0132441465, y: -0, z: -0, w: 0.9999123}
-  m_LocalPosition: {x: 0.0205, y: -0.0378, z: 0}
+  m_LocalPosition: {x: 0.0366, y: -0.067, z: 0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 915961303}
@@ -4483,6 +4535,7 @@ GameObject:
   - component: {fileID: 2058731162}
   - component: {fileID: 2058731161}
   - component: {fileID: 2058731160}
+  - component: {fileID: 2058731163}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4561,7 +4614,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1585708026}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4572,6 +4625,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2058731163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058731158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
 --- !u!1 &2067991131
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using PathCreation;
 
 public class Boss : MonoBehaviour, BehaviourStrategy
 {
-
+    private float health, damage, speed;
     public enum BossState { STARTUP, EVADING, ATTACKING, DYING, VULNERABLE }
 
     public BossState state = BossState.STARTUP;
@@ -14,9 +14,6 @@ public class Boss : MonoBehaviour, BehaviourStrategy
     private FollowPath pathFollower = new FollowPath();
 
     public PathCreator[] paths;
-
-    [SerializeField]
-    private GameObject bossObject = null;
 
     [System.Serializable]
     public class bossEvent : UnityEvent { }
@@ -27,18 +24,18 @@ public class Boss : MonoBehaviour, BehaviourStrategy
     [SerializeField]
     private float evasionPhaseLength = 10, attackPhaseLength = 10, startUpPhaseLength = 5, vulnerablePhaseLength = 7;
 
-    public Enemy boss = new Enemy();
-
     public Transform cameraTransform;
+
+    private Transform player;
 
     private bool invoked = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        pathFollower.addEnemy(bossObject, boss, paths[0]);
-        boss.speed = 5;
-        boss.health = 20;
+        //pathFollower.addEnemy(bossObject, null, paths[0]);
+        this.setSpeed(5);
+        this.setHealth(20);
     }
 
     // Update is called once per frame
@@ -47,7 +44,7 @@ public class Boss : MonoBehaviour, BehaviourStrategy
         switch (state) {
             case BossState.STARTUP:
                 if (!invoked) {
-                    pathFollower.addEnemy(bossObject, boss, paths[0]);
+                    pathFollower.addEnemy(gameObject, null, paths[0]);
                     StartCoroutine(switchState(BossState.EVADING, startUpPhaseLength));
                     invoked = true;
                 }
@@ -57,10 +54,10 @@ public class Boss : MonoBehaviour, BehaviourStrategy
 
             case BossState.EVADING:
                 if (!invoked) {
-                    pathFollower.addEnemy(bossObject, boss, paths[1], 24.5f);
+                    pathFollower.addEnemy(gameObject, null, paths[1], 24.5f);
                     evadingEvents.Invoke();
                     StartCoroutine(switchState(BossState.ATTACKING, evasionPhaseLength));
-                    boss.speed = 5;
+                    this.setSpeed(5);
                     invoked = true;
                 }
 
@@ -70,7 +67,7 @@ public class Boss : MonoBehaviour, BehaviourStrategy
 
             case BossState.ATTACKING:
                 if (!invoked) {
-                    pathFollower.addEnemy(bossObject, boss, paths[2]);
+                    pathFollower.addEnemy(gameObject, null, paths[2]);
                     attackingEvents.Invoke();
                     StartCoroutine(switchState(BossState.EVADING, attackPhaseLength));
                     invoked = true;
@@ -82,9 +79,9 @@ public class Boss : MonoBehaviour, BehaviourStrategy
 
             case BossState.VULNERABLE:
                 if (!invoked) {
-                    pathFollower.addEnemy(bossObject, boss, paths[3]);
+                    pathFollower.addEnemy(gameObject, null, paths[3]);
                     StartCoroutine(switchState(BossState.EVADING, vulnerablePhaseLength));
-                    boss.speed = 8;
+                    this.setSpeed(8);
                     invoked = true;
                 }
 
@@ -111,5 +108,28 @@ public class Boss : MonoBehaviour, BehaviourStrategy
 
     public float getVulnerabilityLength() {
         return this.vulnerablePhaseLength;
+    }
+
+    public void setInActive() { }
+    public void setHealth(float health) {
+        this.health = health;
+    }
+    public void setDamage(float damage) {
+        this.damage = damage;
+    }
+    public void setSpeed(float speed) {
+        this.speed = speed;
+    }
+    public void setPlayerObject(Transform player) {
+        this.player = player;
+    }
+    public float getHealth() {
+        return this.health;
+    }
+    public float getDamage() {
+        return this.damage;
+    }
+    public float getSpeed() {
+        return this.speed;
     }
 }
