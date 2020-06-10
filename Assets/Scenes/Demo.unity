@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.06231446, g: 0.1546635, b: 0.3249086, a: 1}
+  m_IndirectSpecularColor: {r: 0.022585468, g: 0.112132706, b: 0.29605287, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6100,6 +6100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6027f1fa0f65b2d4387ad6cbd889a7c5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -113181020801827196, guid: 6027f1fa0f65b2d4387ad6cbd889a7c5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6486,46 +6491,60 @@ MonoBehaviour:
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 1
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 2
       speed: 8
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 3
       speed: 8
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 4
       speed: 8
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 5
       speed: 8
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     rate: 0.7
-    spawnPoints:
-    - {fileID: 2078993050}
     pathCreator: {fileID: 1114880514}
-  timeBetweenWaves: 4
+    timeTillWaveStarts: 5
+  timeStartSpawning: 1
 --- !u!4 &2078993050
 Transform:
   m_ObjectHideFlags: 0
@@ -6591,45 +6610,59 @@ MonoBehaviour:
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 1
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 2
       speed: 8
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 3
       speed: 8
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 4
       speed: 8
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 5
       speed: 8
       body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     rate: 0.7
-    spawnPoints:
-    - {fileID: 2088725971}
     pathCreator: {fileID: 644537321}
+    timeTillWaveStarts: 5
   - waveName: Nebuloids
     enemies:
     - name: Enemy 1
@@ -6637,45 +6670,59 @@ MonoBehaviour:
       body: {fileID: 1851467574735637527, guid: 6e0c998694f5f4e4a971c72697ad8ecc,
         type: 3}
       health: 1
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 2
       speed: 20
       body: {fileID: 1851467574735637527, guid: 6e0c998694f5f4e4a971c72697ad8ecc,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 3
       speed: 20
       body: {fileID: 1851467574735637527, guid: 6e0c998694f5f4e4a971c72697ad8ecc,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 4
       speed: 20
       body: {fileID: 1851467574735637527, guid: 6e0c998694f5f4e4a971c72697ad8ecc,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     - name: Enemy 5
       speed: 20
       body: {fileID: 1851467574735637527, guid: 6e0c998694f5f4e4a971c72697ad8ecc,
         type: 3}
       health: 0
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     rate: 0.7
-    spawnPoints:
-    - {fileID: 2088725971}
     pathCreator: {fileID: 38607900}
+    timeTillWaveStarts: 5
   - waveName: Serpentiam
     enemies:
     - name: Enemy 1
@@ -6683,11 +6730,13 @@ MonoBehaviour:
       body: {fileID: 7490413732029271648, guid: e02e16cfe04243049946102cc8ee0876,
         type: 3}
       health: 1
+      damage: 0
       enemyEvent:
-        eventType: 0
-        eventStart: 1
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
+        eventStart: 0
     rate: 0.7
-    spawnPoints:
-    - {fileID: 2088725971}
     pathCreator: {fileID: 644537321}
-  timeBetweenWaves: 1
+    timeTillWaveStarts: 5
+  timeStartSpawning: 1

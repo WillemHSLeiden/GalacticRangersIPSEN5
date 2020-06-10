@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &1601035 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 6027f1fa0f65b2d4387ad6cbd889a7c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1015793822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &169238461
 GameObject:
   m_ObjectHideFlags: 0
@@ -5133,7 +5139,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     - name: Astroid2
       speed: 20
@@ -5142,7 +5150,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     - name: Astroid3
       speed: 20
@@ -5151,7 +5161,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     - name: Astroid4
       speed: 20
@@ -5160,7 +5172,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     - name: Astroid5
       speed: 20
@@ -5169,7 +5183,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     rate: 1
     pathCreator: {fileID: 644537321}
@@ -5183,7 +5199,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     rate: 1
     pathCreator: {fileID: 1692093694}
@@ -5197,7 +5215,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     rate: 1
     pathCreator: {fileID: 204100255}
@@ -5211,7 +5231,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     - name: Astroid Right 1
       speed: 20
@@ -5220,7 +5242,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     - name: Astroid Right 1
       speed: 20
@@ -5229,7 +5253,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     rate: 1
     pathCreator: {fileID: 951309433}
@@ -5243,7 +5269,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     rate: 1
     pathCreator: {fileID: 1692093694}
@@ -5257,7 +5285,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     rate: 1
     pathCreator: {fileID: 1430954272}
@@ -5271,7 +5301,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     - name: Astroid Right 1
       speed: 20
@@ -5280,7 +5312,9 @@ MonoBehaviour:
       health: 1
       damage: 0
       enemyEvent:
-        eventType: 0
+      - eventType: 0
+        eventStart: 0
+      - eventType: 0
         eventStart: 0
     rate: 1
     pathCreator: {fileID: 1541206581}
@@ -5637,6 +5671,12 @@ MonoBehaviour:
   m_AnimateModel: 0
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
+--- !u!1 &609527539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7976775186225171557, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+    type: 3}
+  m_PrefabInstance: {fileID: 954983554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &616261463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5775,6 +5815,23 @@ PrefabInstance:
       propertyPath: initiateChargedLaserTime
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6272375742364013556, guid: be73e1620dec6654b9d767f2a413a2cd,
+        type: 3}
+      propertyPath: GreenLaserPrefab
+      value: 
+      objectReference: {fileID: 3674961463756150540, guid: ba5bcd0920223e142aa123881162b32b,
+        type: 3}
+    - target: {fileID: 6272375742364013556, guid: be73e1620dec6654b9d767f2a413a2cd,
+        type: 3}
+      propertyPath: PurpleLaserPrefab
+      value: 
+      objectReference: {fileID: 7226655080315742719, guid: 47c644c14eb61634ab87cc867d0b4d0d,
+        type: 3}
+    - target: {fileID: 6272375742364013556, guid: be73e1620dec6654b9d767f2a413a2cd,
+        type: 3}
+      propertyPath: targetReticle
+      value: 
+      objectReference: {fileID: 609527539}
     - target: {fileID: 6272375742364013559, guid: be73e1620dec6654b9d767f2a413a2cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -6165,6 +6222,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1001 &954983554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7976775186225171556, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1601035}
+    - target: {fileID: 7976775186225171557, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_Name
+      value: targetReticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a1ae6cd0f79d6a4f9163831acc2218b, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
