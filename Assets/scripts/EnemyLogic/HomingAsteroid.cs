@@ -47,7 +47,7 @@ public class HomingAsteroid : MonoBehaviour, BehaviourStrategy
     
     private void moveMeteorite(){
         transform.position = Vector3.MoveTowards(transform.position, this.path, this.speed*Time.deltaTime);
-        this.speed += 3f*Time.deltaTime;
+        this.speed += 5f*Time.deltaTime;
         if(transform.position == this.path){
             Invoke("setInActive", 0.05f);
         }
