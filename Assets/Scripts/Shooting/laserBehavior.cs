@@ -6,6 +6,7 @@ public class laserBehavior : MonoBehaviour {
 
     public float speed = 1f;
     public float lifeDuration = 20f;
+    public float damage = 1f;
     
     private float lifeTimer;
 
@@ -26,5 +27,8 @@ public class laserBehavior : MonoBehaviour {
         if (lifeTimer <= 0f){
             Destroy(gameObject);
         }
+    }
+    public float GetDamage() {
+        return damage;
     }
 }

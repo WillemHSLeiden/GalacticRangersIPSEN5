@@ -11,9 +11,8 @@ public class Enemy
     public GameObject body;
     public float health;
 
-    public TimedEvent enemyEvent;
+    public float damage;
 
-    //  public float IdleTime = 5;
-
+    public TimedEvent[] enemyEvent;
 
 }

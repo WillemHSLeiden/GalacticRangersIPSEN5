@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
 
-public class XlAstroidBehaviour : MonoBehaviour
+public class XlAstroidBehaviour : MonoBehaviour, BehaviourStrategy
 {
 
     public GameObject astroidXlPrefab;
@@ -16,6 +16,14 @@ public class XlAstroidBehaviour : MonoBehaviour
     
      [SerializeField]
     private Material flashMat;
+
+    private float health;
+
+    private float damage;
+
+    private float speed;
+
+    private Transform player;
 
     private float size;
     // Start is called before the first frame update
@@ -38,10 +46,15 @@ public class XlAstroidBehaviour : MonoBehaviour
     {
         if (collider.tag == "Laser")
         {
-            splitMeteorite();
             Destroy(collider.gameObject);
             astroidXlPrefab.GetComponent<Renderer>().material = flashMat;
-            Invoke("SetInactive", 0.05f);
+            laserBehavior laser = collider.gameObject.GetComponent<laserBehavior>();
+            health -= laser.GetDamage();
+        }
+        if (health <= 0)
+        {
+            splitMeteorite();
+            Invoke("setInActive", 0.05f);
         }
     }
 
@@ -66,14 +79,35 @@ public class XlAstroidBehaviour : MonoBehaviour
         Vector3 path = new Vector3(newX, newY, newZ);
         return path;
     }
-    private void SetInactive() {
-        this.astroidXlPrefab.SetActive(false);
-    }
 
     private void moveMeteorite(){
         for(int i = 0; i < this.spawnedEnemy.Count; i++){
             // Debug.Log(this.spawnedEnemy[i].transform.position);
             this.spawnedEnemy[i].transform.position = Vector3.MoveTowards(this.spawnedEnemy[i].transform.position, Vector3.zero, 300f*Time.deltaTime);
         }
+    }
+
+    public void setInActive(){
+        this.astroidXlPrefab.SetActive(false);
+    }
+
+    public void setHealth(float health)
+    {
+        this.health = health;
+    }
+
+    public void setDamage(float damage)
+    {
+        this.damage = damage;
+    }
+
+    public void setSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+
+    public void setPlayerObject(Transform player)
+    {
+        this.player = player;
     }
 }
