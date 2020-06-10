@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using PathCreation;
 
-public class Boss : MonoBehaviour
+public class Boss : MonoBehaviour, BehaviourStrategy
 {
 
     public enum BossState { STARTUP, EVADING, ATTACKING, DYING, VULNERABLE }
