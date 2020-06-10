@@ -35,7 +35,7 @@ public class WaveSpawner : MonoBehaviour
         }
 
 
-        despawnEnemy();
+        // despawnEnemy();
 
         if (timeStartSpawning <= 0)
         {

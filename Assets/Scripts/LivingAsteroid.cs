@@ -9,35 +9,16 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     private float speed;
     private Transform player;
     public Animator anim;
-    [SerializeField]
-    private ParticleSystem particle;
-
-    private bool keepUpdating;
 
     void Start(){
         // this.setSpeed(3f);
-        particle.Stop();
-
-    }
-
-    void Update(){
-        if(keepUpdating){
-            transform.LookAt(this.player.transform);
-        }
     }
     public void startAttacking(){
-        particle.Play();
-        anim.SetTrigger("Charge");
         this.setSpeed(0.1f);
-        keepUpdating = true;
-        StartCoroutine(startMoving());        
+        // anim.SetTrigger("Charge");
     }
     
-    IEnumerator startMoving(){
-        yield return new WaitForSeconds(5.2f);
-        this.setSpeed(15f);
-        keepUpdating = false;
-    }
+
     public void shootLaser(){
         Debug.Log("Schieten");
     }
