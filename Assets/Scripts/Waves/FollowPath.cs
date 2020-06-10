@@ -29,8 +29,8 @@ public class FollowPath
     }
     public void follow(bool lookAt = false, Transform lookAtTarget = null, EndOfPathInstruction instruction = EndOfPathInstruction.Stop){
         for (int i = 0; i < gameobj.Count; i++){
-            if(this.enemy[i] != null){
-                this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
+            if(this.gameobj[i] != null){
+                this.distanceTravelled[i] += this.gameobj[i].GetComponent<BehaviourStrategy>().getSpeed() * Time.deltaTime;
                 this.gameobj[i].transform.position = pathCreator[i].path.GetPointAtDistance(distanceTravelled[i], instruction);
                 if (!lookAt)
                     this.gameobj[i].transform.rotation = pathCreator[i].path.GetRotationAtDistance(distanceTravelled[i], instruction);
@@ -50,8 +50,8 @@ public class FollowPath
     public void followLerp() {
 
         for (int i = 0; i < gameobj.Count; i++) {
-            if (this.enemy[i] != null) {
-                this.distanceTravelled[i] += this.enemy[i].speed * Time.deltaTime;
+            if (this.gameobj[i] != null) {
+                this.distanceTravelled[i] += this.gameobj[i].GetComponent<BehaviourStrategy>().getSpeed() * Time.deltaTime;
                 this.gameobj[i].transform.position = Vector3.Lerp(this.gameobj[i].transform.position, pathCreator[i].path.GetPointAtDistance(distanceTravelled[i]), 0.5f);
                 this.gameobj[i].transform.rotation = Quaternion.Lerp(this.gameobj[i].transform.rotation, pathCreator[i].path.GetRotationAtDistance(distanceTravelled[i]), 0.5f);
             }
