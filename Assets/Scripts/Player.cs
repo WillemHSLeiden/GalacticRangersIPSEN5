@@ -17,13 +17,19 @@ public class Player : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "Enemy")
+        {
+            BehaviourStrategy enemy = collider.gameObject.GetComponent<BehaviourStrategy>();
+            TakeDamage((int)enemy.getDamage());
+            Destroy(collider.gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
         
     }
 
@@ -31,6 +37,10 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        if(currentHealth <= 0)
+        {
+            //Game Over todo
+        }
     }
 
 }
