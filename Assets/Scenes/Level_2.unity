@@ -5112,6 +5112,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8981204063990780328, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1751671267076168160, guid: a223b825a34e9f746be1edec3b8712e7,
+        type: 3}
+    - target: {fileID: 8981204063990780329, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 670224309865224971, guid: 34d04e0d2a2341848b9fe83ce25ee590,
+        type: 3}
     - target: {fileID: 8981204064151924682, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5172,6 +5184,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CompleteShip
       objectReference: {fileID: 0}
+    - target: {fileID: 8981204064263971726, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5999256631150533747, guid: a223b825a34e9f746be1edec3b8712e7,
+        type: 3}
+    - target: {fileID: 8981204064263971727, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 670224309865224971, guid: 34d04e0d2a2341848b9fe83ce25ee590,
+        type: 3}
     - target: {fileID: 8981204064571027647, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -5312,11 +5336,59 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8981204065111352636, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 670224309865224971, guid: 34d04e0d2a2341848b9fe83ce25ee590,
+        type: 3}
+    - target: {fileID: 8981204065111352639, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1637886949980539409, guid: a223b825a34e9f746be1edec3b8712e7,
+        type: 3}
     - target: {fileID: 8981204065132582510, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
       propertyPath: m_Color.a
       value: 0.5882353
       objectReference: {fileID: 0}
+    - target: {fileID: 8981204065156930785, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5069774215892298429, guid: a223b825a34e9f746be1edec3b8712e7,
+        type: 3}
+    - target: {fileID: 8981204065156930790, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 670224309865224971, guid: 34d04e0d2a2341848b9fe83ce25ee590,
+        type: 3}
+    - target: {fileID: 8981204065467737926, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 8547471881871753710, guid: 29791e84a976b3f4aa58bcf96506425f,
+        type: 3}
+    - target: {fileID: 8981204065467737927, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 670224309865224971, guid: 34d04e0d2a2341848b9fe83ce25ee590,
+        type: 3}
+    - target: {fileID: 8981204065512655421, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6264831526926562434, guid: a223b825a34e9f746be1edec3b8712e7,
+        type: 3}
+    - target: {fileID: 8981204065512655426, guid: 889a75188929f1946b8124f355d91a48,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 670224309865224971, guid: 34d04e0d2a2341848b9fe83ce25ee590,
+        type: 3}
     - target: {fileID: 8981204065559409984, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
       propertyPath: m_LocalPosition.z

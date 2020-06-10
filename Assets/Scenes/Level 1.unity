@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.06231446, g: 0.1546635, b: 0.3249086, a: 1}
+  m_IndirectSpecularColor: {r: 0.022585468, g: 0.112132706, b: 0.29605287, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,7 +151,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.3
-  m_Range: 5.81
+  m_Range: 8.17
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -207,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169238461}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03, y: 0.05, z: 1.66}
+  m_LocalPosition: {x: -0.03, y: 0.58, z: 2.291}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5016,7 +5016,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -5714,7 +5714,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -5896,7 +5896,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1.27
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6008,7 +6008,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -10968,7 +10968,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -11052,7 +11052,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -11168,7 +11168,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -11260,18 +11260,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8981204063990780328, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1751671267076168160, guid: 45576c27a43cb984a8b313c5cb88c72d,
-        type: 3}
-    - target: {fileID: 8981204063990780329, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 670224309865224971, guid: 67107541a13b7a24087df4b5caf11d77,
-        type: 3}
     - target: {fileID: 8981204064151924682, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11332,18 +11320,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CompleteShip
       objectReference: {fileID: 0}
-    - target: {fileID: 8981204064263971726, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -5999256631150533747, guid: 45576c27a43cb984a8b313c5cb88c72d,
-        type: 3}
-    - target: {fileID: 8981204064263971727, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 670224309865224971, guid: 67107541a13b7a24087df4b5caf11d77,
-        type: 3}
     - target: {fileID: 8981204064933524889, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -11354,54 +11330,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8981204065111352636, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 670224309865224971, guid: 67107541a13b7a24087df4b5caf11d77,
-        type: 3}
-    - target: {fileID: 8981204065111352639, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1637886949980539409, guid: 45576c27a43cb984a8b313c5cb88c72d,
-        type: 3}
-    - target: {fileID: 8981204065156930785, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -5069774215892298429, guid: 45576c27a43cb984a8b313c5cb88c72d,
-        type: 3}
-    - target: {fileID: 8981204065156930790, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 670224309865224971, guid: 67107541a13b7a24087df4b5caf11d77,
-        type: 3}
-    - target: {fileID: 8981204065467737926, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 8547471881871753710, guid: 29791e84a976b3f4aa58bcf96506425f,
-        type: 3}
-    - target: {fileID: 8981204065467737927, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 670224309865224971, guid: 67107541a13b7a24087df4b5caf11d77,
-        type: 3}
-    - target: {fileID: 8981204065512655421, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -6264831526926562434, guid: 45576c27a43cb984a8b313c5cb88c72d,
-        type: 3}
-    - target: {fileID: 8981204065512655426, guid: 889a75188929f1946b8124f355d91a48,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 670224309865224971, guid: 67107541a13b7a24087df4b5caf11d77,
-        type: 3}
     - target: {fileID: 8981204065602793157, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
       propertyPath: m_IsTrigger

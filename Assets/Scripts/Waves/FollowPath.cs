@@ -41,7 +41,7 @@ public class FollowPath
                 if (this.gameobj[i].transform.position != this.prevPos[i]) {
                     this.prevPos[i] = this.gameobj[i].transform.position;
                 } else {
-                    this.gameobj[i] = null;
+                    this.enemy[i] = null;
                 }
             }
         }
@@ -61,7 +61,7 @@ public class FollowPath
 
     public bool pathFinished(int index){
 
-        if(this.gameobj[index] == null){
+        if(this.enemy[index] == null){
             return true;
         }else{
             return false;

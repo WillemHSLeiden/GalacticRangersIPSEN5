@@ -106,7 +106,7 @@ public class SerpentiamBody : MonoBehaviour {
 
     private void stopFiring() {
         rotationSpeed = 50;
-        boss.setSpeed(5);
+        boss.boss.speed = 5;
 
         for (int i = 1; i < bodyParts.Count; i++) {
             bodyParts[i].GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
@@ -116,12 +116,12 @@ public class SerpentiamBody : MonoBehaviour {
     public void damage() {
         changeBodyMaterial(hitFlashMat);
         StartCoroutine(flashReset());
-        boss.setHealth(boss.getHealth() - 1);
+        boss.boss.health--;
         checkBossHealth();
     }
 
     private void checkBossHealth() {
-        if (boss.getHealth() <= 0) {
+        if (boss.boss.health <= 0) {
             boss.switchStateWrapper(Boss.BossState.DYING);
             StopAllCoroutines();
             StartCoroutine(killSerpentiam());
@@ -145,7 +145,7 @@ public class SerpentiamBody : MonoBehaviour {
 
     IEnumerator fireTimer(float timeStamp) {
         yield return new WaitForSeconds(timeStamp);
-        boss.setSpeed(2);
+        boss.boss.speed = 2;
 
         for (int i = 1; i < bodyParts.Count; i++) {
             bodyParts[i].GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
