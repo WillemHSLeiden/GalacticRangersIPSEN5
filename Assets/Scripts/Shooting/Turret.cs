@@ -101,7 +101,13 @@ public class Turret : MonoBehaviour
             ShootChargedLaser();
             return;
         }
-        ShootLaser();
+
+        if (Input.GetKeyDown(fire))
+        {
+            ShootLaser();
+        }
+
+        CountChargeTimer();
     }
 
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HomingAsteroid : MonoBehaviour, BehaviourStrategy
-{   
+{
 
     [SerializeField]
     private Material flashMat;
@@ -45,7 +45,7 @@ public class HomingAsteroid : MonoBehaviour, BehaviourStrategy
         this.path = new Vector3(newX, newY, newZ);
     }
 
-    
+
     private void moveMeteorite(){
         transform.position = Vector3.MoveTowards(transform.position, this.path, this.speed*Time.deltaTime);
         this.speed += 5f*Time.deltaTime;
