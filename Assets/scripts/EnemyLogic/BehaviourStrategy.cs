@@ -8,5 +8,8 @@ public interface BehaviourStrategy
     void setHealth(float health);
     void setDamage(float damage);
     void setSpeed(float speed);
+
+
+    void startChatting();
 }
 

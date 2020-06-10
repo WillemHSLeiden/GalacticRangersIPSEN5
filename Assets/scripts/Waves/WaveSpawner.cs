@@ -45,13 +45,12 @@ public class WaveSpawner : MonoBehaviour
 
     void timedEvent(Enemy enemy){
         //Ombouwen naar switch
-        TimedEvent timedEvent = new TimedEvent();
         if(enemy.enemyEvent.eventType == EventType.ATTACK){
-            StartCoroutine(callTimedEvent(enemy.enemyEvent.eventStart, timedEvent.attackEvent ));
+            StartCoroutine(callTimedEvent(enemy.enemyEvent.eventStart, enemy.body.GetComponent<AttackStrategy>().startAttacking ));
         }else{
-            StartCoroutine(callTimedEvent(enemy.enemyEvent.eventStart, timedEvent.chatEvent ));
+            StartCoroutine(callTimedEvent(enemy.enemyEvent.eventStart, enemy.body.GetComponent<BehaviourStrategy>().startChatting ));
         }
-}
+    }
 
     IEnumerator callTimedEvent(float delay, Action action){
         yield return new WaitForSeconds(delay);
