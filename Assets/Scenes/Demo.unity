@@ -6522,8 +6522,6 @@ MonoBehaviour:
         eventType: 0
         eventStart: 1
     rate: 0.7
-    spawnPoints:
-    - {fileID: 2078993050}
     pathCreator: {fileID: 1114880514}
   timeBetweenWaves: 4
 --- !u!4 &2078993050
@@ -6627,8 +6625,6 @@ MonoBehaviour:
         eventType: 0
         eventStart: 1
     rate: 0.7
-    spawnPoints:
-    - {fileID: 2088725971}
     pathCreator: {fileID: 644537321}
   - waveName: Nebuloids
     enemies:
@@ -6673,8 +6669,6 @@ MonoBehaviour:
         eventType: 0
         eventStart: 1
     rate: 0.7
-    spawnPoints:
-    - {fileID: 2088725971}
     pathCreator: {fileID: 38607900}
   - waveName: Serpentiam
     enemies:
@@ -6687,7 +6681,5 @@ MonoBehaviour:
         eventType: 0
         eventStart: 1
     rate: 0.7
-    spawnPoints:
-    - {fileID: 2088725971}
     pathCreator: {fileID: 644537321}
   timeBetweenWaves: 1
