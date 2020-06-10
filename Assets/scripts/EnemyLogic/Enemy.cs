@@ -13,6 +13,6 @@ public class Enemy
 
     public float damage;
 
-    public TimedEvent enemyEvent;
+    public TimedEvent[] enemyEvent;
 
 }

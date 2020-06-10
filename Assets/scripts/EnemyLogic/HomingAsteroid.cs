@@ -14,6 +14,7 @@ public class HomingAsteroid : MonoBehaviour, BehaviourStrategy
     private float speed;
 
     private Vector3 path;
+    private Transform player;
     void Start(){
         this.createNewPath();
     }
@@ -70,5 +71,9 @@ public class HomingAsteroid : MonoBehaviour, BehaviourStrategy
     public void setSpeed(float speed)
     {
         this.speed = speed;
+    }
+    public void setPlayerObject(Transform player)
+    {
+        this.player = player;
     }
 }

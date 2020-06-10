@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
 
-public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrategy
+public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy
 {
 
     public GameObject asteroidXlPrefab;
@@ -24,6 +24,9 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrat
     private float speed;
 
     private float size;
+
+    private Transform player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,5 +88,10 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrat
     public void setSpeed(float speed)
     {
         this.speed = speed;
+    }
+
+    public void setPlayerObject(Transform player)
+    {
+        this.player = player;
     }
 }

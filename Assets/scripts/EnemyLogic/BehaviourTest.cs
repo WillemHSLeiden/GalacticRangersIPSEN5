@@ -18,5 +18,13 @@ public class BehaviourTest : MonoBehaviour, BehaviourStrategy
         Debug.Log("Speed is: "+ speed);
     }
 
-    public void setGameObject();
+    public void startChatting()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void setPlayerObject(Transform player)
+    {
+        throw new System.NotImplementedException();
+    }
 }
