@@ -23,7 +23,6 @@ public class WaveSpawner : MonoBehaviour
 
     void Start()
     {
-        pathFollower = new FollowPath();
         this.playerObj = GameObject.FindWithTag("Player");
     }
 
@@ -36,7 +35,7 @@ public class WaveSpawner : MonoBehaviour
         }
 
 
-        despawnEnemy();
+        // despawnEnemy();
 
         if (timeStartSpawning <= 0)
         {
@@ -53,7 +52,7 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    void timedEvent(Enemy enemy)
+    void timedEvent(Enemy enemy, GameObject go)
     {
         //Ombouwen naar switch
         foreach (TimedEvent te in enemy.enemyEvent)
@@ -62,8 +61,8 @@ public class WaveSpawner : MonoBehaviour
             {
                 case EventType.ATTACK:
 
-                    if (enemy.body.GetComponent<AttackStrategy>() != null)
-                        StartCoroutine(callTimedEvent(te.eventStart, enemy.body.GetComponent<AttackStrategy>().startAttacking));
+                    if (go.GetComponent<AttackStrategy>() != null)
+                        StartCoroutine(callTimedEvent(te.eventStart, go.GetComponent<AttackStrategy>().startAttacking));
                     break;
 
 /*                case EventType.CHAT:
@@ -115,7 +114,7 @@ public class WaveSpawner : MonoBehaviour
             }
         }
 
-        if (allEnemiesDespawned == true)
+        if (allEnemiesDespawned == true && this.pathFollower != null)
         {
             spawnedEnemies = new List<GameObject>();
             pathFollower.cleanArrays();
@@ -140,11 +139,10 @@ public class WaveSpawner : MonoBehaviour
 
         //Spawn
         for (int i = 0; i < _wave.enemies.Length; i++)
-        {
+        {   
             SpawnEnemy(_wave.enemies[i], _wave.pathCreator);
             yield return new WaitForSeconds(1f / _wave.rate);
         }
-
         yield break;
     }
 
@@ -159,9 +157,13 @@ public class WaveSpawner : MonoBehaviour
 
         this.setEnemyBehaviours(spawnedEnemy, enemy);
 
-        pathFollower.addEnemy(spawnedEnemy, enemy, path);
-        spawnedEnemies.Add(spawnedEnemy);
-        timedEvent(enemy);
+        if(pathFollower == null){
+            this.pathFollower = new FollowPath();
+        }
+
+        this.pathFollower.addEnemy(spawnedEnemy, enemy, path);
+        this.spawnedEnemies.Add(spawnedEnemy);
+        this.timedEvent(enemy, spawnedEnemy);
         // }
     }
 

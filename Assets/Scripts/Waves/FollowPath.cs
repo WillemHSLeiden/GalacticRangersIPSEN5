@@ -30,6 +30,7 @@ public class FollowPath
     public void follow(bool lookAt = false, Transform lookAtTarget = null, EndOfPathInstruction instruction = EndOfPathInstruction.Stop){
         for (int i = 0; i < gameobj.Count; i++){
             if(this.gameobj[i] != null){
+                Debug.Log(this.gameobj[i].GetComponent<BehaviourStrategy>().getSpeed());
                 this.distanceTravelled[i] += this.gameobj[i].GetComponent<BehaviourStrategy>().getSpeed() * Time.deltaTime;
                 this.gameobj[i].transform.position = pathCreator[i].path.GetPointAtDistance(distanceTravelled[i], instruction);
                 if (!lookAt)
@@ -40,7 +41,7 @@ public class FollowPath
                 if (this.gameobj[i].transform.position != this.prevPos[i]) {
                     this.prevPos[i] = this.gameobj[i].transform.position;
                 } else {
-                    this.enemy[i] = null;
+                    this.gameobj[i] = null;
                 }
             }
         }
