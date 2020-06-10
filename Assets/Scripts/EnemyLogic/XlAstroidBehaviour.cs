@@ -13,7 +13,7 @@ public class XlAstroidBehaviour : MonoBehaviour, BehaviourStrategy
     List<GameObject> spawnedEnemy = new List<GameObject>();
     List<Vector3> endPoints = new List<Vector3>();
 
-    
+
      [SerializeField]
     private Material flashMat;
 
@@ -38,7 +38,7 @@ public class XlAstroidBehaviour : MonoBehaviour, BehaviourStrategy
     void Update()
     {Debug.Log(this.spawnedEnemy.Count);
         if(this.spawnedEnemy.Count > 0){
-            
+
             this.moveMeteorite();
         }
     }
@@ -58,7 +58,7 @@ public class XlAstroidBehaviour : MonoBehaviour, BehaviourStrategy
         }
     }
 
-    private void splitMeteorite(){ 
+    private void splitMeteorite(){
         for ( int i = 0; i <= size; i++){
             Vector3 currentPos = astroidXlPrefab.transform.position;
             float newX = currentPos.x + Random.Range(-10f, 10f);

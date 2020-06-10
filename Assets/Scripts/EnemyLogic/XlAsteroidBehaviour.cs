@@ -13,7 +13,7 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy
     List<GameObject> spawnedEnemy = new List<GameObject>();
     List<Vector3> endPoints = new List<Vector3>();
 
-    
+
      [SerializeField]
     private Material flashMat;
 
@@ -52,7 +52,7 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy
         }
     }
 
-    private void splitMeteorite(){ 
+    private void splitMeteorite(){
         for ( int i = 0; i <= size; i++){
             Vector3 currentPos = asteroidXlPrefab.transform.position;
             float newX = currentPos.x + Random.Range(-10f, 10f);
@@ -65,7 +65,7 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy
     }
 
     private void addBehaviour(List<GameObject> spawnedEnemy){
-        foreach(GameObject go in spawnedEnemy){        
+        foreach(GameObject go in spawnedEnemy){
             go.GetComponent<BehaviourStrategy>().setSpeed(this.speed);
             go.GetComponent<BehaviourStrategy>().setHealth(1);
             go.GetComponent<BehaviourStrategy>().setDamage(0);
