@@ -297,4 +297,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle: 0.2
   target: {fileID: 0}
-  stepspeed: 0
+  stepspeed: 0.2

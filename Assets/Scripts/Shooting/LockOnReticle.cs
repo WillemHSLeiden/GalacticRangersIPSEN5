@@ -6,16 +6,16 @@ public class LockOnReticle : MonoBehaviour
 {
 
     public Transform target;
-    public Transform player; 
+    public Transform player;
 
     void Orbit()
     {
         if (target != null)
         {
-            Vector3 direction = target.position - player.position;
+            Vector3 direction = player.position - target.position;
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, 0.2f);
-            transform.position = target.position;
+            transform.position = player.position;
         }
     }
 

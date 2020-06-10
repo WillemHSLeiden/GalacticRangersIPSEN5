@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3049990168120345954}
   m_Layer: 0
   m_Name: AsteroidHoming
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,4 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99adbe8be936bf4caf96c746a573fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
+  flashMat: {fileID: 0}

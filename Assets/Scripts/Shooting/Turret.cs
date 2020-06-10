@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
@@ -10,12 +11,13 @@ public class Turret : MonoBehaviour
     [SerializeField] private GameObject PurpleLaserPrefab;
     [SerializeField] private GameObject chargedLaserPrefab;
     [SerializeField] private KeyCode fire = KeyCode.Space;
-    [SerializeField] private int initiateChargedLaserTime = 200;
+    [SerializeField] private float initiateChargedLaserTime = 0.5f;
     [SerializeField] private Transform controller;
     [SerializeField] private string lockOnTag = "Enemy";
     private float chargeTimer;
-    private GameObject target;
+    public GameObject target;
     [SerializeField] private GameObject targetReticle;
+    public Boolean charging = false;
 
     void Update()
     {
@@ -26,7 +28,7 @@ public class Turret : MonoBehaviour
         var v3 = new Vector3(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"), 0.0f) * 100 * Time.deltaTime;
         //controller.Rotate(v3 * 50 * Time.deltaTime);
         controller.eulerAngles = new Vector3(controller.eulerAngles.x + v3.x, controller.eulerAngles.y + v3.y, 0);
-        RayCastLockOn();
+
         CountChargeTimer();
         Fire();
     }
@@ -42,15 +44,27 @@ public class Turret : MonoBehaviour
                 Debug.DrawLine(transform.position, hit.transform.position);
                 target = hit.collider.gameObject;
                 targetReticle.GetComponent<LockOnReticle>().target = target.transform;
+                transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+                transform.GetChild(1).GetComponent<MeshRenderer>().enabled = false;
             }
         }
     }
 
     private void CountChargeTimer()
     {
+
         if (Input.GetKey(fire))
         {
+            Debug.Log("Charging: " + charging);
             chargeTimer += Time.deltaTime;
+            if (target == null)
+            {
+                RayCastLockOn();
+            }
+            if (!charging)
+            {
+                charging = true;
+            }
         }
     }
 
@@ -58,7 +72,6 @@ public class Turret : MonoBehaviour
     {
         chargeTimer = 0;
         Quaternion rotation = transform.rotation;
-        target = null;
         transform.rotation = rotation;
 
     }
@@ -66,6 +79,16 @@ public class Turret : MonoBehaviour
     private void ShootChargedLaser()
     {
         SpawnLaser(chargedLaserPrefab);
+        CancelChargedLaser();
+    }
+
+    private void CancelChargedLaser()
+    {
+        target = null;
+        targetReticle.GetComponent<LockOnReticle>().target = null;
+        targetReticle.transform.position = transform.position + new Vector3(0, 0, -5);
+        transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+        transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
     }
 
     private void ShootLaser()
@@ -84,6 +107,11 @@ public class Turret : MonoBehaviour
                     SpawnLaser(PurpleLaserPrefab);
                     break;
             }
+            if (charging)
+            {
+                charging = false;
+                CancelChargedLaser();
+            }
         }
     }
 
@@ -96,7 +124,7 @@ public class Turret : MonoBehaviour
 
     private void Fire()
     {
-        if ((Input.GetKey(fire)) && (chargeTimer > initiateChargedLaserTime))
+        if ((Input.GetKeyUp(fire)) && (chargeTimer > initiateChargedLaserTime))
         {
             ShootChargedLaser();
             return;
