@@ -7,11 +7,11 @@ using System;
 public class WaveSpawner : MonoBehaviour
 {
 
-    public enum SpawnState{SPAWNING, COUNTING, FINISHED}
+    public enum SpawnState { SPAWNING, COUNTING, FINISHED }
 
     public Wave[] waves;
     private int nextWave = 0;
-    
+
     public float timeStartSpawning = 1f;
     private SpawnState state = SpawnState.COUNTING;
 
@@ -21,43 +21,54 @@ public class WaveSpawner : MonoBehaviour
 
     private GameObject playerObj;
 
-    void Start(){
+    void Start()
+    {
         pathFollower = new FollowPath();
-        this.playerObj = GameObject.FindWithTag("Player");       
+        this.playerObj = GameObject.FindWithTag("Player");
     }
-    
 
-    void Update(){
-        if(pathFollower != null){
+
+    void Update()
+    {
+        if (pathFollower != null)
+        {
             pathFollower.follow();
         }
 
 
         despawnEnemy();
 
-        if (timeStartSpawning <= 0){
-            if(state != SpawnState.SPAWNING && state != SpawnState.FINISHED){
+        if (timeStartSpawning <= 0)
+        {
+            if (state != SpawnState.SPAWNING && state != SpawnState.FINISHED)
+            {
                 //Start spawning wave
-                if(waves.Length != nextWave)
-                    StartCoroutine( SpawnWave(waves[nextWave]) );
+                if (waves.Length != nextWave)
+                    StartCoroutine(SpawnWave(waves[nextWave]));
             }
-        }else{
+        }
+        else
+        {
             timeStartSpawning -= Time.deltaTime;
         }
     }
 
-    void timedEvent(Enemy enemy){
+    void timedEvent(Enemy enemy)
+    {
         //Ombouwen naar switch
-        foreach (TimedEvent te in enemy.enemyEvent) {
-        switch (te.eventType)
+        foreach (TimedEvent te in enemy.enemyEvent)
+        {
+            switch (te.eventType)
             {
                 case EventType.ATTACK:
-                    StartCoroutine(callTimedEvent(te.eventStart, enemy.body.GetComponent<AttackStrategy>().startAttacking));
+
+                    if (enemy.body.GetComponent<AttackStrategy>() != null)
+                        StartCoroutine(callTimedEvent(te.eventStart, enemy.body.GetComponent<AttackStrategy>().startAttacking));
                     break;
 
 /*                case EventType.CHAT:
-                    StartCoroutine(callTimedEvent(te.eventStart, enemy.body.GetComponent<BehaviourStrategy>().startChatting));
-                    break;
+                  StartCoroutine(callTimedEvent(te.eventStart, enemy.body.GetComponent<BehaviourStrategy>().startChatting));
+                  break;
 */
                 case EventType.NULL:
                     break;
@@ -67,78 +78,96 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    IEnumerator callTimedEvent(float delay, Action action){
+    IEnumerator callTimedEvent(float delay, Action action)
+    {
         yield return new WaitForSeconds(delay);
         action();
-    
+
     }
 
 
-    void waveCompleted(){
+    void waveCompleted()
+    {
         state = SpawnState.COUNTING;
-        if(nextWave + 1 > waves.Length -1  || nextWave == waves.Length){
+        if (nextWave + 1 > waves.Length - 1 || nextWave == waves.Length)
+        {
             state = SpawnState.FINISHED;
-        }else{
+        }
+        else
+        {
             nextWave++;
         }
     }
 
-    bool despawnEnemy(){
+    bool despawnEnemy()
+    {
         bool allEnemiesDespawned = true;
-        for(int i = 0; i < spawnedEnemies.Count; i++){
-            if(pathFollower.pathFinished(i)){
+        for (int i = 0; i < spawnedEnemies.Count; i++)
+        {
+            if (pathFollower.pathFinished(i))
+            {
                 DestroyImmediate(spawnedEnemies[i], true);
                 spawnedEnemies[i] = null;
-            }else{
+            }
+            else
+            {
                 allEnemiesDespawned = false;
             }
         }
-        
-        if(allEnemiesDespawned == true){
+
+        if (allEnemiesDespawned == true)
+        {
             spawnedEnemies = new List<GameObject>();
             pathFollower.cleanArrays();
             return true;
-        }else{
+        }
+        else
+        {
             return false;
-        } 
+        }
     }
 
-    IEnumerator SpawnWave(Wave _wave){
+    IEnumerator SpawnWave(Wave _wave)
+    {
         state = SpawnState.SPAWNING;
 
-        if(state != SpawnState.FINISHED){
+        if (state != SpawnState.FINISHED)
+        {
             waveCompleted();
         }
 
         yield return new WaitForSeconds(_wave.timeTillWaveStarts);
 
         //Spawn
-        for(int i = 0; i < _wave.enemies.Length; i++){
-            SpawnEnemy(_wave.enemies[i],  _wave.pathCreator);
-            yield return new WaitForSeconds(1f/_wave.rate);
+        for (int i = 0; i < _wave.enemies.Length; i++)
+        {
+            SpawnEnemy(_wave.enemies[i], _wave.pathCreator);
+            yield return new WaitForSeconds(1f / _wave.rate);
         }
-        
+
         yield break;
     }
 
-    void SpawnEnemy( Enemy enemy,  PathCreator path){
+    void SpawnEnemy(Enemy enemy, PathCreator path)
+    {
         //Spawn enemy
         // if(_spawnPoint.Length == 0){
         //     Debug.LogError("Geen spawnpoint gegeven");
         // }else{
-            // Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
-        GameObject spawnedEnemy = (GameObject) Instantiate(enemy.body, transform.position, transform.rotation);
-        
+        // Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
+        GameObject spawnedEnemy = (GameObject)Instantiate(enemy.body, transform.position, transform.rotation);
+
         this.setEnemyBehaviours(spawnedEnemy, enemy);
-        
-        pathFollower.addEnemy(spawnedEnemy, enemy, path);            
+
+        pathFollower.addEnemy(spawnedEnemy, enemy, path);
         spawnedEnemies.Add(spawnedEnemy);
         timedEvent(enemy);
         // }
     }
-    
-    void setEnemyBehaviours(GameObject spawnedEnemy, Enemy enemy){
-        BehaviourStrategy behaviour =  spawnedEnemy.GetComponent<BehaviourStrategy>();
+
+    void setEnemyBehaviours(GameObject spawnedEnemy, Enemy enemy)
+    {
+        BehaviourStrategy behaviour = spawnedEnemy.GetComponent<BehaviourStrategy>();
         behaviour.setHealth(enemy.health);
         behaviour.setDamage(enemy.damage);
         behaviour.setSpeed(enemy.speed);

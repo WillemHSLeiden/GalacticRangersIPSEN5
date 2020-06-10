@@ -6,7 +6,7 @@ public class LockOn : MonoBehaviour
 {
     public float angle = 0.2f;
     public GameObject target;
-    public float stepspeed 0.0f;
+    public float stepspeed = 0.0f;
 
     // Start is called before the first frame update
     void Start()

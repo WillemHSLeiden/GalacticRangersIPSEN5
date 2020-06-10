@@ -21,6 +21,10 @@ public class XlAstroidBehaviour : MonoBehaviour, BehaviourStrategy
 
     private float damage;
 
+    private float speed;
+
+    private Transform player;
+
     private float size;
     // Start is called before the first frame update
     void Start()
@@ -95,5 +99,15 @@ public class XlAstroidBehaviour : MonoBehaviour, BehaviourStrategy
     public void setDamage(float damage)
     {
         this.damage = damage;
+    }
+
+    public void setSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+
+    public void setPlayerObject(Transform player)
+    {
+        this.player = player;
     }
 }
