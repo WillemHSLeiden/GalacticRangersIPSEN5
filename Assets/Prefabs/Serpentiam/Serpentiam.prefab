@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa7c1959d8d2244a808a0c0331a70c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 2
   paths:
   - {fileID: 8781646303225873406}
   - {fileID: 8781646304379538439}

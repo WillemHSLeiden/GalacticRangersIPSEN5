@@ -55,6 +55,7 @@ public class Turret : MonoBehaviour
 
         if (Input.GetKey(fire))
         {
+            Debug.Log("Charging: " + charging);
             chargeTimer += Time.deltaTime;
             if (target == null)
             {

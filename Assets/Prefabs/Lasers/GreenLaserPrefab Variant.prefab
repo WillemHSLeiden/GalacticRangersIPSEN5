@@ -167,15 +167,10 @@ PrefabInstance:
       propertyPath: damage
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3437807099547913634, guid: 33bd833101a01a344b81917a465a0fa3,
-        type: 3}
-      propertyPath: speed
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 8304319225527999780, guid: 33bd833101a01a344b81917a465a0fa3,
         type: 3}
       propertyPath: m_Name
-      value: GreenLaserPrefab Variant
+      value: greenLaserPrefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33bd833101a01a344b81917a465a0fa3, type: 3}

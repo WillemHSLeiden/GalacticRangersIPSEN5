@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Collided");
         if (collider.tag == "Enemy")
         {
             BehaviourStrategy enemy = collider.gameObject.GetComponent<BehaviourStrategy>();

@@ -12,9 +12,6 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     [SerializeField]
     private ParticleSystem particle;
 
-    [SerializeField]
-    private Material flashMat;
-
     private bool keepUpdating;
 
     void Start(){
@@ -45,9 +42,7 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
         Debug.Log("Schieten");
     }
 
-    public void setInActive(){
-        this.gameObject.SetActive(false);
-    }
+    public void setInActive(){}
     public void setHealth(float health){
         this.health = health;
     }
@@ -68,19 +63,5 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     }
     public float getSpeed(){
         return speed;
-    }
-
-    private void OnTriggerEnter(Collider collider) {
-        Debug.Log("Collided");
-        if (collider.tag == "Laser") {
-            Debug.Log("Collided with Laser");
-            Destroy(collider.gameObject);
-            laserBehavior laser = collider.gameObject.GetComponent<laserBehavior>();
-            health -= laser.GetDamage();
-        }
-        if (health <= 0) {
-            gameObject.GetComponent<Renderer>().material = flashMat;
-            Invoke("setInActive", 0.05f);
-        }
     }
 }
