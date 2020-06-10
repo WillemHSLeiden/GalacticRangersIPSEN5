@@ -17,4 +17,6 @@ public class BehaviourTest : MonoBehaviour, BehaviourStrategy
     {
         Debug.Log("Speed is: "+ speed);
     }
+
+    public void setGameObject();
 }

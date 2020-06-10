@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
 
-public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy
+public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrategy
 {
 
     public GameObject asteroidXlPrefab;

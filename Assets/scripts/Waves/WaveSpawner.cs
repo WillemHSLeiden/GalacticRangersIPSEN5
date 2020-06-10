@@ -19,8 +19,11 @@ public class WaveSpawner : MonoBehaviour
 
     private FollowPath pathFollower;
 
+    private GameObject playerObj;
+
     void Start(){
-        pathFollower = new FollowPath();       
+        pathFollower = new FollowPath();
+        this.playerObj = GameObject.FindWithTag("Player");       
     }
     
 
@@ -127,7 +130,7 @@ public class WaveSpawner : MonoBehaviour
         behaviour.setHealth(enemy.health);
         behaviour.setDamage(enemy.damage);
         behaviour.setSpeed(enemy.speed);
-
+        behaviour.setPlayerObject(this.playerObj.transform);
     }
 
 }

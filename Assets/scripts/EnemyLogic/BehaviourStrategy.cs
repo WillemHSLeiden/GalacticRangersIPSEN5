@@ -9,5 +9,6 @@ public interface BehaviourStrategy
     void setDamage(float damage);
     void setSpeed(float speed);
     void startChatting();
+    void setPlayerObject(Transform player);
 }
 
