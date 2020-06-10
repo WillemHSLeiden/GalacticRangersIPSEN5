@@ -5,27 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    //Reference naar animatie
-    public Animator transition;
-
-    //Variabel voor de Inspector
-    public float transitionTime = 3f; //1 on default
-
-    public void LoadNextLevel()
+    public void LoadLevel(int sceneIndex) 
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadAsync(sceneIndex));
+       
     }
 
-    //IEnumerator coroutine
-    IEnumerator LoadLevel(int LevelIndex) 
+    IEnumerator LoadAsync(int sceneIndex)
     {
-        //Speel de animatie met gemaakte trigger
-        transition.SetTrigger("Start");
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
-        //Wacht voor bepaald aantal seconden
-        yield return new WaitForSeconds(transitionTime);
+        while (!operation.isDone) 
+        {
+            //luiken dicht maybe
+            
+            yield return null; //wacht een frame
+            
+        }
+    }
 
-        //laad de scene
-        SceneManager.LoadScene(LevelIndex);
+    public void Quit()
+    {
+        //Om te testen binnen Unity
+        Debug.Log("Spel Afgesloten");
+        SceneManager.LoadSceneAsync("Menu");
     }
 }
