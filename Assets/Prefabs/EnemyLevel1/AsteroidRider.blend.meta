@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6027f1fa0f65b2d4387ad6cbd889a7c5
+guid: 29c03f7e28e426340bf552a2a64fb956
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
@@ -7,19 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Exhaust
-    second: {fileID: 2100000, guid: 9e9cef419da399a479db82b187e8b1ae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 381932b2cbd25bc4886d4b9f6c5bab48, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hull
-    second: {fileID: -400310251153081761, guid: ca7cb3fa6e88f8349b2afc939d01d219,
-      type: 3}
+      name: No Name
+    second: {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

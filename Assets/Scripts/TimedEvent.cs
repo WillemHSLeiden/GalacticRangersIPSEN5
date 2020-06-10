@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public enum EventType{ATTACK, CHAT};
+public enum EventType{ATTACK, CHAT, NULL};
 [System.Serializable]
 public class TimedEvent{
     public EventType eventType;

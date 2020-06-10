@@ -6,13 +6,13 @@ using PathCreation;
 [System.Serializable]
 public class Enemy
 {
-    public string name2;
+    public string name;
     public float speed;
     public GameObject body;
     public float health;
 
     public float damage;
 
-    public TimedEvent enemyEvent;
+    public TimedEvent[] enemyEvent;
 
 }

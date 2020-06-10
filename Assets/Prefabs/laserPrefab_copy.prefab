@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 3437807099547913634}
   - component: {fileID: 1596837354695231537}
   m_Layer: 0
-  m_Name: laserPrefab
+  m_Name: laserPrefab_copy
   m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,9 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9075c0234be10d542bee59abf5b5b045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  lifeDuration: 5
-  damage: 1
+  speed: 30
+  lifeDuration: 1000
 --- !u!114 &1596837354695231537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +294,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692140380fb6a6642b927895a3d24989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 0.2
   target: {fileID: 0}
-  stepspeed: 0
