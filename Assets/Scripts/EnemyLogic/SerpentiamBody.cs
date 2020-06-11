@@ -22,10 +22,14 @@ public class SerpentiamBody : MonoBehaviour {
 
     public GameObject projectile;
 
-    public Material vulnerableMat, asteroidMat, hitFlashMat; 
+    private GameObject resultScreen;
+
+    public Material vulnerableMat, asteroidMat, hitFlashMat;
 
     private void Start() {
-        for(int i = 0; i < startingSize - 1; i++) {
+        resultScreen = GameObject.FindGameObjectWithTag("Results");
+
+        for (int i = 0; i < startingSize - 1; i++) {
             AddBodyPart();
             if (i > 0) {
                 var _particleSystem = bodyParts[i].GetChild(1).gameObject.GetComponent<ParticleSystem>();
@@ -62,7 +66,7 @@ public class SerpentiamBody : MonoBehaviour {
 
             currBodyPart.position = Vector3.Slerp(currBodyPart.position, newPos, T);
             currBodyPart.LookAt(prevBodyPart);
-            float rotMultiplier = (bodyParts.Count - i + 1) / 2; 
+            float rotMultiplier = (bodyParts.Count - i + 1) / 2;
             currBodyPart.GetChild(0).gameObject.transform.Rotate(Vector3.forward * rotationSpeed * rotMultiplier * Time.deltaTime);
         }
 
@@ -116,7 +120,8 @@ public class SerpentiamBody : MonoBehaviour {
     public void damage() {
         changeBodyMaterial(hitFlashMat);
         StartCoroutine(flashReset());
-        boss.boss.health--;
+        Debug.Log("Damaged");
+        boss.setHealth(boss.getHealth() - 1);
         checkBossHealth();
     }
 
@@ -133,7 +138,7 @@ public class SerpentiamBody : MonoBehaviour {
             bodyParts[i].GetChild(0).gameObject.GetComponent<Renderer>().material = mat;
         }
 
-        transform.GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>().material = mat;
+        //transform.GetChild(0).GetChild(1).gameObject.GetComponent<Renderer>().material = mat;
     }
 
     private void changeBodypartsState(SerpentiamBodypart.BodypartState state) {
@@ -183,5 +188,6 @@ public class SerpentiamBody : MonoBehaviour {
         }
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+        resultScreen.transform.position = new Vector3(0, 0, 17);
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Cube
   - Cyllinder
   - Enemy
+  - Results
   layers:
   - Default
   - TransparentFX
