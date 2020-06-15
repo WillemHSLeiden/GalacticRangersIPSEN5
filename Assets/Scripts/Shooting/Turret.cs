@@ -30,7 +30,7 @@ public class Turret : MonoBehaviour
         controller.eulerAngles = new Vector3(controller.eulerAngles.x + v3.x, controller.eulerAngles.y + v3.y, 0);
 
         CountChargeTimer();
-        Fire();
+        //Fire();
     }
 
     private void RayCastLockOn()
@@ -91,10 +91,10 @@ public class Turret : MonoBehaviour
         transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
     }
 
-    private void ShootLaser()
+    public void ShootLaser()
     {
-        if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
-        {
+        //if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
+        //{
             switch (LaserStage.Instance.getLaserStage())
             {
                 case 0:
@@ -112,7 +112,7 @@ public class Turret : MonoBehaviour
                 charging = false;
                 CancelChargedLaser();
             }
-        }
+        //}
     }
 
     private void SpawnLaser(GameObject _laserPrefab)
