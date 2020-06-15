@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341671762612502185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.833}
+  m_LocalPosition: {x: 0, y: 0, z: 1.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 341671762814831285}
@@ -185,8 +185,6 @@ GameObject:
   - component: {fileID: 341671762814831280}
   - component: {fileID: 341671762814831281}
   - component: {fileID: 341671762814831282}
-  - component: {fileID: 341671762814831244}
-  - component: {fileID: 341671762814831283}
   m_Layer: 0
   m_Name: LivingAsteroid
   m_TagString: Untagged
@@ -3920,7 +3918,7 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 1
-    collisionShape0: {fileID: 341671762814831244}
+    collisionShape0: {fileID: 341671762814831280}
     collisionShape1: {fileID: 0}
     collisionShape2: {fileID: 0}
     collisionShape3: {fileID: 0}
@@ -4958,7 +4956,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82dd8e6a5e3e7c4fa3fe3f52cccb812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 341671762814831282}
+  particle: {fileID: 341671762814831286}
 --- !u!95 &341671762814831282
 Animator:
   serializedVersion: 3
@@ -4978,32 +4977,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &341671762814831244
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341671762814831245}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: -1.33}
---- !u!114 &341671762814831283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341671762814831245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f82dd8e6a5e3e7c4fa3fe3f52cccb812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
 --- !u!1 &341671762899594767
 GameObject:
   m_ObjectHideFlags: 0

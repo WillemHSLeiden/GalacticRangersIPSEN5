@@ -11,6 +11,7 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
     private float damage;
 
     private float speed;
+    private Transform player;
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -44,5 +45,19 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
     public void setSpeed(float speed)
     {
         this.speed = speed;
+    }
+    public void setPlayerObject(Transform player)
+    {
+        this.player = player;
+    }
+
+    public float getHealth(){
+        return this.health;
+    }
+    public float getDamage(){
+        return this.damage;
+    }
+    public float getSpeed(){
+        return this.speed;
     }
 }

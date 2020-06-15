@@ -9532,7 +9532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3642180552544517761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 27.94}
+  m_LocalPosition: {x: 0, y: 0, z: 79.41497}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3642180552719578087}
@@ -9635,7 +9635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e18da6beff05e43b730596fa1ed70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serpentiamBody: {fileID: 0}
+  serpentiamBody: {fileID: 8781646303856281210, guid: cdeeb3430be10304d92d6ae6c095e15a,
+    type: 3}
   neutralEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9674,7 +9675,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 3642180552719578089}
-        m_MethodName: steelize
+        m_MethodName: addSerpentiamHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

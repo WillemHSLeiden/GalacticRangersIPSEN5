@@ -66,6 +66,7 @@ public class SerpentiamBodypart : MonoBehaviour
             if (state != BodypartState.VULNERABLE)
                 serpentiamBody.AddBodyHit();
             else {
+                Debug.Log("Damaged");
                 serpentiamBody.damage();
             }
         else

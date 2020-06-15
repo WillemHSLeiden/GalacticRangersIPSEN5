@@ -2,16 +2,66 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LivingAsteroid : MonoBehaviour
-{
+public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
+{   
+    private float health;
+    private float damage;
+    private float speed;
+    private Transform player;
     public Animator anim;
+    [SerializeField]
+    private ParticleSystem particle;
 
+    private bool keepUpdating;
 
-    public void Attack() {
-        anim.SetTrigger("Charge");
+    void Start(){
+        // this.setSpeed(3f);
+        particle.Stop();
+
     }
 
-    public void FireLaser() {
+    void Update(){
+        if(keepUpdating){
+            transform.LookAt(this.player.transform);
+        }
+    }
+    public void startAttacking(){
+        particle.Play();
+        anim.SetTrigger("Charge");
+        this.setSpeed(0.1f);
+        keepUpdating = true;
+        StartCoroutine(startMoving());        
+    }
+    
+    IEnumerator startMoving(){
+        yield return new WaitForSeconds(5.2f);
+        this.setSpeed(15f);
+        keepUpdating = false;
+    }
+    public void shootLaser(){
+        Debug.Log("Schieten");
+    }
 
+    public void setInActive(){}
+    public void setHealth(float health){
+        this.health = health;
+    }
+    public void setDamage(float damage){
+        this.damage = damage;
+    }
+    public void setSpeed(float speed){
+        this.speed = speed;
+    }
+    public  void setPlayerObject(Transform player){
+        this.player = player;
+    }
+    public float getHealth(){
+        return this.health;
+    }
+    public float getDamage(){
+        return this.damage;
+    }
+    public float getSpeed(){
+        return speed;
     }
 }

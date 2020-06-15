@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4824275436082130343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798111208394460663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275861f3566989745a5d9c2cf4969b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &5490006529611154766
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808124641906373709, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055420469261435253, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7aadb5eed2cbfd74eb3d610c32001547, type: 2}
+    - target: {fileID: 5125974008215390393, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthPowerup
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 344404161538217670, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6, type: 3}
+--- !u!1 &798111208394460663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5125974008215390393, guid: 5a1ab89cb14fa1a4c8aa0eb8fa1e05c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5490006529611154766}
+  m_PrefabAsset: {fileID: 0}

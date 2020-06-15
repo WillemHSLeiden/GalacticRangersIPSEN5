@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
 
-public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrategy
+public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy
 {
 
     public GameObject asteroidXlPrefab;
@@ -13,7 +13,7 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrat
     List<GameObject> spawnedEnemy = new List<GameObject>();
     List<Vector3> endPoints = new List<Vector3>();
 
-    
+
      [SerializeField]
     private Material flashMat;
 
@@ -24,6 +24,9 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrat
     private float speed;
 
     private float size;
+
+    private Transform player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +52,7 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrat
         }
     }
 
-    private void splitMeteorite(){ 
+    private void splitMeteorite(){
         for ( int i = 0; i <= size; i++){
             Vector3 currentPos = asteroidXlPrefab.transform.position;
             float newX = currentPos.x + Random.Range(-10f, 10f);
@@ -62,7 +65,7 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrat
     }
 
     private void addBehaviour(List<GameObject> spawnedEnemy){
-        foreach(GameObject go in spawnedEnemy){        
+        foreach(GameObject go in spawnedEnemy){
             go.GetComponent<BehaviourStrategy>().setSpeed(this.speed);
             go.GetComponent<BehaviourStrategy>().setHealth(1);
             go.GetComponent<BehaviourStrategy>().setDamage(0);
@@ -85,5 +88,20 @@ public class XlAsteroidBehaviour : MonoBehaviour, BehaviourStrategy, AttackStrat
     public void setSpeed(float speed)
     {
         this.speed = speed;
+    }
+
+    public void setPlayerObject(Transform player)
+    {
+        this.player = player;
+    }
+
+    public float getHealth(){
+        return this.health;
+    }
+    public float getDamage(){
+        return this.damage;
+    }
+    public float getSpeed(){
+        return this.speed;
     }
 }

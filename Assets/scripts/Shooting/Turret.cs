@@ -1,5 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
+
+using System;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
@@ -9,10 +10,14 @@ public class Turret : MonoBehaviour
     [SerializeField] private GameObject GreenLaserPrefab;
     [SerializeField] private GameObject PurpleLaserPrefab;
     [SerializeField] private GameObject chargedLaserPrefab;
-    [SerializeField] private KeyCode fire;
-    [SerializeField] private int initiateChargedLaserTime;
+    [SerializeField] private KeyCode fire = KeyCode.Space;
+    [SerializeField] private float initiateChargedLaserTime = 0.5f;
     [SerializeField] private Transform controller;
+    [SerializeField] private string lockOnTag = "Enemy";
     private float chargeTimer;
+    public GameObject target;
+    [SerializeField] private GameObject targetReticle;
+    public Boolean charging = false;
 
     void Update()
     {
@@ -25,48 +30,96 @@ public class Turret : MonoBehaviour
         controller.eulerAngles = new Vector3(controller.eulerAngles.x + v3.x, controller.eulerAngles.y + v3.y, 0);
 
         CountChargeTimer();
-        Fire();
+        //Fire();
+    }
+
+    private void RayCastLockOn()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        {
+            if (hit.transform.CompareTag(lockOnTag))
+            {
+                Debug.DrawLine(transform.position, hit.transform.position);
+                target = hit.collider.gameObject;
+                targetReticle.GetComponent<LockOnReticle>().target = target.transform;
+                transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+                transform.GetChild(1).GetComponent<MeshRenderer>().enabled = false;
+            }
+        }
     }
 
     private void CountChargeTimer()
     {
+
         if (Input.GetKey(fire))
         {
+            Debug.Log("Charging: " + charging);
             chargeTimer += Time.deltaTime;
+            if (target == null)
+            {
+                RayCastLockOn();
+            }
+            if (!charging)
+            {
+                charging = true;
+            }
         }
     }
 
     private void RestartChargedTimer()
     {
         chargeTimer = 0;
+        Quaternion rotation = transform.rotation;
+        transform.rotation = rotation;
+
     }
 
     private void ShootChargedLaser()
     {
-        Instantiate(chargedLaserPrefab, transform.position, transform.localRotation);
-        RestartChargedTimer();
+        SpawnLaser(chargedLaserPrefab);
+        CancelChargedLaser();
+    }
+
+    private void CancelChargedLaser()
+    {
+        target = null;
+        targetReticle.GetComponent<LockOnReticle>().target = null;
+        targetReticle.transform.position = transform.position + new Vector3(0, 0, -5);
+        transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+        transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
     }
 
     public void ShootLaser()
     {
-        if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
-        {
+        //if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
+        //{
             switch (LaserStage.Instance.getLaserStage())
             {
                 case 0:
-                    Instantiate(laserPrefab, transform.position, transform.localRotation);
-                    RestartChargedTimer();
+                    SpawnLaser(laserPrefab);
                     break;
                 case 1:
-                    Instantiate(GreenLaserPrefab, transform.position, transform.localRotation);
-                    RestartChargedTimer();
+                    SpawnLaser(GreenLaserPrefab);
                     break;
                 case 2:
-                    Instantiate(PurpleLaserPrefab, transform.position, transform.localRotation);
-                    RestartChargedTimer();
+                    SpawnLaser(PurpleLaserPrefab);
                     break;
             }
-        }
+            if (charging)
+            {
+                charging = false;
+                CancelChargedLaser();
+            }
+        //}
+    }
+
+    private void SpawnLaser(GameObject _laserPrefab)
+    {
+        RestartChargedTimer();
+        GameObject laser = Instantiate(_laserPrefab, transform.position, transform.localRotation);
+        laser.GetComponent<LockOn>().target = target;
     }
 
     private void Fire()
@@ -74,14 +127,15 @@ public class Turret : MonoBehaviour
         if ((Input.GetKeyUp(fire)) && (chargeTimer > initiateChargedLaserTime))
         {
             ShootChargedLaser();
-
             return;
         }
 
-        ShootLaser();
+        if (Input.GetKeyDown(fire))
+        {
+            ShootLaser();
+        }
 
-        // CountChargeTimer();
-        // Fire();
+        CountChargeTimer();
     }
 
 }
