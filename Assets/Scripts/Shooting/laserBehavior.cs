@@ -31,4 +31,12 @@ public class laserBehavior : MonoBehaviour {
     public float GetDamage() {
         return damage;
     }
+
+    public void OnDestroy()
+    {
+        if (lifeTimer > 0f)
+        {
+            GameLogger.GetInstance().PlayerHitShot();
+        }
+    }
 }
