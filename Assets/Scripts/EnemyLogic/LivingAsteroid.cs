@@ -9,37 +9,32 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     private float speed;
     private Transform player;
     public Animator anim;
-    [SerializeField]
-    private ParticleSystem particle;
-
-    private bool keepUpdating;
+    [SerializeField] private GameObject missle;
+    [SerializeField] private ParticleSystem particle;
 
     void Start(){
-        // this.setSpeed(3f);
         particle.Stop();
-
     }
 
     void Update(){
-        if(keepUpdating){
-            transform.LookAt(this.player.transform);
-        }
     }
     public void startAttacking(){
         particle.Play();
         anim.SetTrigger("Charge");
         this.setSpeed(0.1f);
-        keepUpdating = true;
         StartCoroutine(startMoving());        
+    }
+
+    public void shootLaser()
+    {
+        GameObject enemyMissle = Instantiate(missle, transform.position, transform.localRotation);
+        BehaviourStrategy missleBehaviour = enemyMissle.GetComponent<BehaviourStrategy>();
+        missleBehaviour.setDamage(damage);
     }
     
     IEnumerator startMoving(){
         yield return new WaitForSeconds(5.2f);
-        this.setSpeed(15f);
-        keepUpdating = false;
-    }
-    public void shootLaser(){
-        Debug.Log("Schieten");
+        this.setSpeed(speed);
     }
 
     public void setInActive(){}

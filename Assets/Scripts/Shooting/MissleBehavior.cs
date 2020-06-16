@@ -27,7 +27,8 @@ public class MissleBehavior : MonoBehaviour, BehaviourStrategy
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
+ //       this.transform.LookAt(this.player.transform);
+ //       this.transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
 
         // Remove the lifetime to see if the bullet should be removed.
         lifeTimer -= Time.deltaTime;

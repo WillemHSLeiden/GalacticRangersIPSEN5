@@ -4957,6 +4957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 341671762814831282}
+  missle: {fileID: 509944827471707571, guid: c78a2864c7cf7c646b99bb0d92ffc735, type: 3}
   particle: {fileID: 341671762814831286}
 --- !u!95 &341671762814831282
 Animator:
