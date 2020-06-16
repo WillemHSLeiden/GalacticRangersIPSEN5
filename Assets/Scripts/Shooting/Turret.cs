@@ -30,7 +30,7 @@ public class Turret : MonoBehaviour
         controller.eulerAngles = new Vector3(controller.eulerAngles.x + v3.x, controller.eulerAngles.y + v3.y, 0);
 
         CountChargeTimer();
-        //Fire();
+        Fire();
     }
 
     private void RayCastLockOn()
@@ -55,7 +55,6 @@ public class Turret : MonoBehaviour
 
         if (Input.GetKey(fire))
         {
-            Debug.Log("Charging: " + charging);
             chargeTimer += Time.deltaTime;
             if (target == null)
             {
@@ -65,15 +64,17 @@ public class Turret : MonoBehaviour
             {
                 charging = true;
             }
+            if (target != null && !target.activeSelf)
+            {
+                CancelChargedLaser();
+            }
         }
+
     }
 
     private void RestartChargedTimer()
     {
         chargeTimer = 0;
-        Quaternion rotation = transform.rotation;
-        transform.rotation = rotation;
-
     }
 
     private void ShootChargedLaser()
@@ -86,7 +87,7 @@ public class Turret : MonoBehaviour
     {
         target = null;
         targetReticle.GetComponent<LockOnReticle>().target = null;
-        targetReticle.transform.position = transform.position + new Vector3(0, 0, -5);
+        targetReticle.transform.position = transform.position + new Vector3(-5, -5, -5);
         transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
         transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
     }
@@ -117,6 +118,7 @@ public class Turret : MonoBehaviour
 
     private void SpawnLaser(GameObject _laserPrefab)
     {
+        GameLogger.GetInstance().PlayerFiredShot();
         RestartChargedTimer();
         GameObject laser = Instantiate(_laserPrefab, transform.position, transform.localRotation);
         laser.GetComponent<LockOn>().target = target;
@@ -134,7 +136,6 @@ public class Turret : MonoBehaviour
         {
             ShootLaser();
         }
-
         CountChargeTimer();
     }
 

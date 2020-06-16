@@ -140,7 +140,11 @@ public class WaveSpawner : MonoBehaviour
         //Spawn
         for (int i = 0; i < _wave.enemies.Length; i++)
         {   
-            SpawnEnemy(_wave.enemies[i], _wave.pathCreator);
+            if(_wave.enemies[i].type == Enemy.EnemyType.DYNAMIC){
+                SpawnEnemy(_wave.enemies[i], _wave.pathCreator);
+            }else if(_wave.enemies[i].type == Enemy.EnemyType.STATIC){
+                SpawnStaticEnemy(_wave.enemies[i], _wave.spawnPoint);
+            }
             yield return new WaitForSeconds(1f / _wave.rate);
         }
         yield break;
@@ -149,22 +153,23 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy(Enemy enemy, PathCreator path)
     {
         //Spawn enemy
-        // if(_spawnPoint.Length == 0){
-        //     Debug.LogError("Geen spawnpoint gegeven");
-        // }else{
-        // Transform _sp = _spawnPoint[UnityEngine.Random.Range(0, _spawnPoint.Length)];
-        GameObject spawnedEnemy = (GameObject)Instantiate(enemy.body, transform.position, transform.rotation);
+        if(enemy.type == Enemy.EnemyType.DYNAMIC){
+            GameObject spawnedEnemy = (GameObject)Instantiate(enemy.body, transform.position, transform.rotation);
 
-        this.setEnemyBehaviours(spawnedEnemy, enemy);
+            this.setEnemyBehaviours(spawnedEnemy, enemy);
 
-        if(pathFollower == null){
-            this.pathFollower = new FollowPath();
+            if(pathFollower == null){
+                this.pathFollower = new FollowPath();
+            }
+
+            this.pathFollower.addEnemy(spawnedEnemy, enemy, path);
+            this.spawnedEnemies.Add(spawnedEnemy);
+            this.timedEvent(enemy, spawnedEnemy);
         }
+    }
 
-        this.pathFollower.addEnemy(spawnedEnemy, enemy, path);
-        this.spawnedEnemies.Add(spawnedEnemy);
-        this.timedEvent(enemy, spawnedEnemy);
-        // }
+    void SpawnStaticEnemy(Enemy enemy, Transform spawnpoint){
+        Instantiate(enemy.body, spawnpoint.position, spawnpoint.rotation);
     }
 
     void setEnemyBehaviours(GameObject spawnedEnemy, Enemy enemy)
