@@ -1,4 +1,5 @@
 ﻿using PathCreation;
+using UnityEngine;
 [System.Serializable]
     public class Wave
     {
@@ -10,4 +11,6 @@
         public PathCreator pathCreator;
 
         public float timeTillWaveStarts = 5f;
+
+        public Transform spawnPoint; 
     }
