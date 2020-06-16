@@ -22,8 +22,4 @@ public class MenuShipManager : MonoBehaviour
     public void SetTrigger(string trigger) {
         anim.SetTrigger(trigger);
     }
-
-    public void ChangeScene(string sceneName) {
-        SceneManager.LoadScene(sceneName);
-    }
 }
