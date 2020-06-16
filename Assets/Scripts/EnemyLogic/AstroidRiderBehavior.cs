@@ -11,22 +11,30 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
     [SerializeField] private Material flashMat;
     [SerializeField] private GameObject missle;
     [SerializeField] private float attackSpeed;
+    private float attackTimer;
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("Astroid Rider shoots. pew!");
+        attackTimer -= Time.deltaTime;
+        if (attackTimer <= 0)
+        {
+            attacking();
+            attackTimer = attackSpeed;
+
+        }
     }
     public void startAttacking()
+    {
+        attackTimer = attackSpeed;
+    }
+    public void attacking()
     {
         GameObject enemyMissle = Instantiate(missle, transform.position, transform.localRotation);
         BehaviourStrategy missleBehaviour = enemyMissle.GetComponent<BehaviourStrategy>();
         missleBehaviour.setDamage(damage);
         missleBehaviour.setPlayerObject(player);
-    }
-    public void continueAttacking()
-    {
-
     }
     private void OnTriggerEnter(Collider collider)
     {
