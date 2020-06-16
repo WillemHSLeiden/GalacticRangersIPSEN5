@@ -9,8 +9,30 @@ using Firebase.Extensions;
 [Serializable]
 public class GameLogger
 {
-    public List<GameLog> logs = new List<GameLog>();
-    public GameInfo stats = new GameInfo();
+    private List<GameLog> logs = new List<GameLog>();
+    private GameInfo stats = new GameInfo();
+
+
+    private static GameLogger instance;
+
+    public static GameLogger GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = new GameLogger();
+        }
+        return instance;
+    }
+
+    private GameLogger()
+    {
+
+    }
+
+    public int GetScore()
+    {
+        return stats.enemyKills * 100;
+    }
 
     public void SetTestData()
     {
@@ -62,6 +84,12 @@ public class GameLogger
     public void PlayerReachedNextLevel()
     {
         stats.PlayerReachedNextLevel();
+    }
+
+    internal void Reset()
+    {
+        logs = new List<GameLog>();
+        stats = new GameInfo();
     }
 
     //public void SaveDataToFirebase()
