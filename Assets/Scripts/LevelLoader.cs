@@ -8,9 +8,9 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private Animator leftAirlock, rightAirlock;
 
-    public void LoadLevelAirlock(int sceneIndex) 
+    public void LoadLevelAirlock(string sceneName) 
     {
-        StartCoroutine(LoadAsyncAirlock(sceneIndex));
+        StartCoroutine(LoadAsyncAirlock(sceneName));
        
     }
 
@@ -18,7 +18,7 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadAsync(sceneName));
     } 
 
-    private IEnumerator LoadAsyncAirlock(int sceneIndex)
+    private IEnumerator LoadAsyncAirlock(string sceneName)
     {
         yield return null;
 
@@ -26,7 +26,7 @@ public class LevelLoader : MonoBehaviour
         closeAirlocks();
 
         //Begin to load specified scene
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 
         //Don't allow scene to activate scene yet
         operation.allowSceneActivation = false;
