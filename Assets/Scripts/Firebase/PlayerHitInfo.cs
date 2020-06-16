@@ -8,10 +8,10 @@ public class PlayerHitInfo
 {
     int level = 0;
     string enemyName;
-    int damage = 0;
+    float damage = 0;
     float timestamp;
 
-    public PlayerHitInfo(int level, string enemyName, int damage)
+    public PlayerHitInfo(int level, string enemyName, float damage)
     {
         this.level = level;
         this.enemyName = enemyName;

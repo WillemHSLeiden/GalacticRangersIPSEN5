@@ -92,7 +92,7 @@ public class Turret : MonoBehaviour
         transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
     }
 
-    private void ShootLaser()
+    public void ShootLaser()
     {
         //if ((Input.GetKeyUp(fire)) && (chargeTimer < initiateChargedLaserTime))
         //{
@@ -118,6 +118,7 @@ public class Turret : MonoBehaviour
 
     private void SpawnLaser(GameObject _laserPrefab)
     {
+        GameLogger.GetInstance().PlayerFiredShot();
         RestartChargedTimer();
         GameObject laser = Instantiate(_laserPrefab, transform.position, transform.localRotation);
         laser.GetComponent<LockOn>().target = target;

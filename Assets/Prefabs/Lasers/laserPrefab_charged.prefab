@@ -295,6 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692140380fb6a6642b927895a3d24989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 0.2
+  angle: 1
   target: {fileID: 0}
-  stepspeed: 0.2
+  stepspeed: 1

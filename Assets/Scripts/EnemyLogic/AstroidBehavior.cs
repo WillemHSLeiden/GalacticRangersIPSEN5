@@ -25,6 +25,7 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
         {
             gameObject.GetComponent<Renderer>().material = flashMat;
             Invoke("setInActive", 0.05f);
+            GameLogger.GetInstance().PlayerKilledEnemy();
         }
     }
 
