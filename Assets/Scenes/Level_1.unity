@@ -121,6 +121,90 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17998596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17998597}
+  - component: {fileID: 17998598}
+  m_Layer: 0
+  m_Name: Path 1XL W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17998597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17998596}
+  m_LocalRotation: {x: -0.9903287, y: 0.13874112, z: -0.000000011551497, w: 0.0000000052584856}
+  m_LocalPosition: {x: -7.62, y: 10.68, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &17998598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17998596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -8.341884, y: 3.7424624, z: -126.24363}
+      - {x: -3.6706357, y: 5.2389193, z: -89.894684}
+      - {x: 5.67186, y: 8.231833, z: -17.196808}
+      - {x: 10.343108, y: 9.728291, z: 19.152134}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &29778307
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29778307}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -10.351489, y: 0.202147, z: 23}
+  m_LocalPosition: {x: -10.377435, y: 0.20225525, z: 23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144151106}
@@ -205,6 +289,98 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+--- !u!1 &42809098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42809099}
+  - component: {fileID: 42809100}
+  m_Layer: 0
+  m_Name: Path 3  2 rider W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &42809099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42809098}
+  m_LocalRotation: {x: -0.9146133, y: 0.1281337, z: -0.3797808, w: 0.053205788}
+  m_LocalPosition: {x: 0, y: 5.27, z: 8.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 134.9, z: -164.05}
+--- !u!114 &42809100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42809098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 49.504875, y: -18.494698, z: -102.11434}
+      - {x: 48.174164, y: -12.046073, z: -86.98015}
+      - {x: 46.843452, y: -5.597448, z: -71.84596}
+      - {x: 41.54058, y: -3.7835116, z: -59.222633}
+      - {x: 34.80018, y: -1.4778454, z: -43.177315}
+      - {x: 13.840036, y: -11.247105, z: -27.423512}
+      - {x: 8.530589, y: -7.728214, z: -11.064156}
+      - {x: 4.796911, y: -5.25368, z: 0.43997383}
+      - {x: 6.7709856, y: 2.517323, z: 13.186475}
+      - {x: 8.745061, y: 10.288326, z: 25.932976}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &51754698
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,10 +419,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 392414519}
     timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
   - waveName: Wave XL asteroid BOTTOM
     enemies:
     - name: XL asteroid BOTTOM
@@ -255,10 +433,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1917502639}
     timeTillWaveStarts: 1.5
+    spawnPoint: {fileID: 0}
   - waveName: WAVE 2 ASTEROIDS
     enemies:
     - name: Asteroid 1
@@ -267,6 +447,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -274,10 +455,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1010955786}
     timeTillWaveStarts: 2.5
+    spawnPoint: {fileID: 0}
   - waveName: WAVE 4 ASTEROIDS
     enemies:
     - name: Asteroid 1
@@ -286,6 +469,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -293,6 +477,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -300,6 +485,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -307,10 +493,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1154727109}
     timeTillWaveStarts: 3.5
+    spawnPoint: {fileID: 0}
   - waveName: WAVE 5 ASTEROIDS BOTTOM
     enemies:
     - name: Asteroid 1
@@ -319,6 +507,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -326,6 +515,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -333,6 +523,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -340,6 +531,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 5
       speed: 20
@@ -347,10 +539,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 82893750}
     timeTillWaveStarts: 4
+    spawnPoint: {fileID: 0}
   - waveName: WAVE 5 ASTEROIDS TOP
     enemies:
     - name: Asteroid 1
@@ -359,6 +553,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -366,6 +561,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -373,6 +569,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -380,6 +577,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 5
       speed: 20
@@ -387,10 +585,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 2071421935}
     timeTillWaveStarts: 5.5
+    spawnPoint: {fileID: 0}
   - waveName: Wave XL asteroid TOP
     enemies:
     - name: XL asteroid
@@ -399,10 +599,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 29778309}
     timeTillWaveStarts: 5
+    spawnPoint: {fileID: 0}
   timeStartSpawning: 21
 --- !u!4 &51754700
 Transform:
@@ -621,6 +823,174 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+--- !u!1 &81730154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 81730155}
+  - component: {fileID: 81730156}
+  m_Layer: 0
+  m_Name: Path 1 XL asteroid W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &81730155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81730154}
+  m_LocalRotation: {x: -0.30860484, y: -0.95119035, z: -5.9982197e-10, w: 0.0000000027313374}
+  m_LocalPosition: {x: 15.761423, y: -2.9655743, z: 1.299999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &81730156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81730154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 19.140238, y: -34.875637, z: -114.6624}
+      - {x: 17.754377, y: -27.175352, z: -81.19893}
+      - {x: 14.982658, y: -11.77478, z: -14.272001}
+      - {x: 13.596798, y: -4.0744953, z: 19.191465}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &82240102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82240103}
+  - component: {fileID: 82240104}
+  m_Layer: 0
+  m_Name: Path 4 Asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82240103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82240102}
+  m_LocalRotation: {x: -0.30860484, y: -0.95119035, z: -5.9982197e-10, w: 0.0000000027313374}
+  m_LocalPosition: {x: 4.7114496, y: -12.8241205, z: 11.699999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &82240104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82240102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -1.7330545, y: 0.60826683, z: -116.14977}
+      - {x: -0.4648466, y: 2.6941392, z: -82.29709}
+      - {x: 2.071569, y: 6.865884, z: -14.591703}
+      - {x: 3.339777, y: 8.9517565, z: 19.260984}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &82893748
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +1016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82893748}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 30.149536, y: -0.000022888184, z: 23}
+  m_LocalPosition: {x: 30.225565, y: 0.000009536743, z: 23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144151106}
@@ -705,6 +1075,266 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+--- !u!1 &94609378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94609379}
+  - component: {fileID: 94609380}
+  m_Layer: 0
+  m_Name: Path 4 Asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94609379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94609378}
+  m_LocalRotation: {x: -0.30860144, y: -0.9511915, z: -5.9981514e-10, w: 0.0000000027313096}
+  m_LocalPosition: {x: 4.71, y: -12.82, z: 11.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &94609380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94609378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -1.7330545, y: 0.60826683, z: -116.14977}
+      - {x: -0.4648466, y: 2.6941392, z: -82.29709}
+      - {x: 2.071569, y: 6.865884, z: -14.591703}
+      - {x: 3.339777, y: 8.9517565, z: 19.260984}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &104652053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104652054}
+  - component: {fileID: 104652055}
+  m_Layer: 0
+  m_Name: Path 2 Riders W5 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &104652054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104652053}
+  m_LocalRotation: {x: -0.91195273, y: -0.41029537, z: -0.00000025620074, w: -0.000000115265856}
+  m_LocalPosition: {x: 9.42117, y: -7.6651506, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: -228.45}
+--- !u!114 &104652055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104652053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 15.927406, y: 8.0219145, z: -113.75628}
+      - {x: 13.656424, y: 9.36853, z: -93.14505}
+      - {x: 11.385441, y: 10.715147, z: -72.53383}
+      - {x: 7.9320326, y: 6.947728, z: -55.712585}
+      - {x: 4.650427, y: 3.367734, z: -39.72818}
+      - {x: -1.5405803, y: -11.66652, z: -22.303879}
+      - {x: -5.8758774, y: -15.383402, z: -6.604311}
+      - {x: -8.115468, y: -17.303522, z: 1.5059996}
+      - {x: -10.762456, y: -16.862648, z: 11.32276}
+      - {x: -13.409444, y: -16.421772, z: 21.13952}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &107743866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107743867}
+  - component: {fileID: 107743868}
+  m_Layer: 0
+  m_Name: Path 6 2 asteroids W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &107743867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107743866}
+  m_LocalRotation: {x: -0.99032885, y: 0.13874032, z: -0.0000000027939717, w: -1.1641543e-10}
+  m_LocalPosition: {x: 13.019224, y: 4.8042717, z: 1.3000009}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &107743868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107743866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -0.0000058266387, y: -0.00000026760165, z: -125.490654}
+      - {x: -0.0000043699793, y: -0.00000020070124, z: -89.3302}
+      - {x: -0.0000014566597, y: -0.00000006690041, z: -17.009298}
+      - {x: 0, y: 0, z: 19.151152}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &144151105
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +1371,534 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 160}
+--- !u!1 &158388310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 158388311}
+  - component: {fileID: 158388312}
+  m_Layer: 0
+  m_Name: Path 3  2 rider W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &158388311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158388310}
+  m_LocalRotation: {x: -0.91471714, y: 0.12819466, z: -0.37951133, w: 0.05319717}
+  m_LocalPosition: {x: -0.00027894974, y: 9.509014, z: 8.729869}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 134.9, z: -164.05}
+--- !u!114 &158388312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158388310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 49.504875, y: -18.494698, z: -102.11434}
+      - {x: 48.174164, y: -12.046073, z: -86.98015}
+      - {x: 46.843452, y: -5.597448, z: -71.84596}
+      - {x: 41.54058, y: -3.7835116, z: -59.222633}
+      - {x: 34.80018, y: -1.4778454, z: -43.177315}
+      - {x: 13.840036, y: -11.247105, z: -27.423512}
+      - {x: 8.530589, y: -7.728214, z: -11.064156}
+      - {x: 4.796911, y: -5.25368, z: 0.43997383}
+      - {x: 6.7709856, y: 2.517323, z: 13.186475}
+      - {x: 8.745061, y: 10.288326, z: 25.932976}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &167933590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167933592}
+  - component: {fileID: 167933591}
+  m_Layer: 0
+  m_Name: Wave spawner W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &167933591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167933590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ccc324d34860b428a8a85f88a1c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - waveName: 6 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 5
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 6
+      speed: 20
+      body: {fileID: 0}
+      health: 0
+      damage: 0
+      type: 0
+      enemyEvent: []
+    rate: 1
+    pathCreator: {fileID: 1524998202}
+    timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
+  - waveName: 2 Riders
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    rate: 0.5
+    pathCreator: {fileID: 497363003}
+    timeTillWaveStarts: 3.5
+    spawnPoint: {fileID: 0}
+  - waveName: 3 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    rate: 1
+    pathCreator: {fileID: 913476166}
+    timeTillWaveStarts: 4
+    spawnPoint: {fileID: 0}
+  - waveName: 2 Riders
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    rate: 1
+    pathCreator: {fileID: 1491683770}
+    timeTillWaveStarts: 7.5
+    spawnPoint: {fileID: 0}
+  - waveName: 1 XL
+    enemies:
+    - name: XL asteroid
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent: []
+    rate: 1
+    pathCreator: {fileID: 1691497707}
+    timeTillWaveStarts: 9
+    spawnPoint: {fileID: 0}
+  - waveName: 2 Living Asteroids
+    enemies:
+    - name: Living 1
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Living 2
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    rate: 0.5
+    pathCreator: {fileID: 1560112013}
+    timeTillWaveStarts: 10
+    spawnPoint: {fileID: 0}
+  - waveName: 6 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 5
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 6
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    rate: 1
+    pathCreator: {fileID: 1087234551}
+    timeTillWaveStarts: 13
+    spawnPoint: {fileID: 0}
+  - waveName: 4 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    rate: 1
+    pathCreator: {fileID: 94609380}
+    timeTillWaveStarts: 14
+    spawnPoint: {fileID: 0}
+  - waveName: 4 Living Asteroids
+    enemies:
+    - name: Living Asteroid 1
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Living Asteroid 2
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 4
+    - name: Living  Asteroid 3
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Living  Asteroid 4
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 0
+    rate: 0.5
+    pathCreator: {fileID: 851899757}
+    timeTillWaveStarts: 17
+    spawnPoint: {fileID: 0}
+  - waveName: '3 XL '
+    enemies:
+    - name: XL 1
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: XL 2
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 4
+    - name: XL 3
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 0.5
+    pathCreator: {fileID: 208349933}
+    timeTillWaveStarts: 20
+    spawnPoint: {fileID: 0}
+  - waveName: 3 Riders
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 4
+    - name: Rider 3
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 0.5
+    pathCreator: {fileID: 1437608621}
+    timeTillWaveStarts: 23
+    spawnPoint: {fileID: 0}
+  timeStartSpawning: 75
+--- !u!4 &167933592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167933590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.868452, y: 3.769905, z: 37.92927}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &169238461
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +1991,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &169962678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169962679}
+  - component: {fileID: 169962680}
+  m_Layer: 0
+  m_Name: Path 4 Living Asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169962679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169962678}
+  m_LocalRotation: {x: -0.3086527, y: -0.9511748, z: -6.0014194e-10, w: 0.0000000027334939}
+  m_LocalPosition: {x: 5.4824033, y: -15.027105, z: 11.699999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &169962680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169962678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 10.202334, y: 17.06801, z: -116.563995}
+      - {x: 21.265797, y: 7.806632, z: -102.00005}
+      - {x: 32.329258, y: -1.4547467, z: -87.43611}
+      - {x: 31.320513, y: -1.0190978, z: -71.61911}
+      - {x: 30.457914, y: -0.64656544, z: -58.093674}
+      - {x: 10.322828, y: 14.859988, z: -50.04475}
+      - {x: 8.583496, y: 16.46804, z: -36.695248}
+      - {x: 6.9422483, y: 17.98541, z: -24.098553}
+      - {x: 23.910275, y: 10.281929, z: -8.718758}
+      - {x: 20.504715, y: 8.781073, z: 3.5214381}
+      - {x: 18.63217, y: 7.955827, z: 10.251705}
+      - {x: 10.991647, y: 8.14632, z: 14.876856}
+      - {x: 3.3511233, y: 8.336813, z: 19.502007}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &172391540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172391541}
+  m_Layer: 0
+  m_Name: Paths W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &172391541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172391540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 242425481}
+  - {fileID: 2127648697}
+  - {fileID: 1320411169}
+  - {fileID: 1396909893}
+  - {fileID: 528072609}
+  - {fileID: 1409958030}
+  - {fileID: 17998597}
+  - {fileID: 1722551810}
+  - {fileID: 42809099}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180159389
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +2151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180159389}
   m_LocalRotation: {x: -0, y: 1, z: -0.0000000068102963, w: -0.00000001071021}
-  m_LocalPosition: {x: 21.985598, y: -9.449816, z: -1.5000114}
+  m_LocalPosition: {x: 22.034311, y: -9.471136, z: -1.5000114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1434403294}
@@ -5755,6 +7048,174 @@ Transform:
   m_Father: {fileID: 1455244993}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &208349931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 208349932}
+  - component: {fileID: 208349933}
+  m_Layer: 0
+  m_Name: Path 3 XL asteroid W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &208349932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208349931}
+  m_LocalRotation: {x: -0.30860144, y: -0.9511915, z: -5.9981514e-10, w: 0.0000000027313096}
+  m_LocalPosition: {x: 15.756345, y: -2.9645982, z: 1.2999989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &208349933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208349931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 10.580554, y: -13.365408, z: -114.929504}
+      - {x: 11.55051, y: -11.7556095, z: -81.39039}
+      - {x: 13.490422, y: -8.536013, z: -14.312155}
+      - {x: 14.460379, y: -6.9262137, z: 19.226961}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &242425480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 242425481}
+  - component: {fileID: 242425482}
+  m_Layer: 0
+  m_Name: Path 1 Rider W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &242425481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242425480}
+  m_LocalRotation: {x: -0.9903287, y: 0.13874112, z: -0.000000011551497, w: 0.0000000052584856}
+  m_LocalPosition: {x: -0.47, y: -0.18, z: -5.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &242425482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242425480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -43.27252, y: 16.993153, z: -146.77686}
+      - {x: -32.45439, y: 12.744864, z: -110.08264}
+      - {x: -10.818134, y: 4.248288, z: -36.694214}
+      - {x: -0.0000066757216, y: -6.8212076e-13, z: 0}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &299744112
 GameObject:
   m_ObjectHideFlags: 0
@@ -5923,6 +7384,98 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+--- !u!1 &406375571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406375572}
+  - component: {fileID: 406375573}
+  m_Layer: 0
+  m_Name: Path 3  1 rider W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406375572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406375571}
+  m_LocalRotation: {x: -0.9903117, y: 0.13886285, z: 0.0000002337483, w: -0.00000012388085}
+  m_LocalPosition: {x: -21.80488, y: -8.352636, z: 12.398171}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &406375573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406375571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 49.50354, y: -18.493462, z: -102.035095}
+      - {x: 48.172768, y: -12.04547, z: -86.91525}
+      - {x: 46.84199, y: -5.5974793, z: -71.79542}
+      - {x: 41.540257, y: -3.783498, z: -59.18432}
+      - {x: 34.79929, y: -1.4770856, z: -43.149754}
+      - {x: 13.840487, y: -11.246499, z: -27.413286}
+      - {x: 8.530589, y: -7.728214, z: -11.064156}
+      - {x: 4.7961497, y: -5.253811, z: 0.4341545}
+      - {x: 6.770439, y: 2.5164247, z: 13.174297}
+      - {x: 8.744728, y: 10.28666, z: 25.91444}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &412954902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6052,7 +7605,7 @@ PrefabInstance:
     - target: {fileID: 8981204064151924682, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8981204064151924682, guid: 889a75188929f1946b8124f355d91a48,
         type: 3}
@@ -6296,6 +7849,90 @@ PrefabInstance:
       objectReference: {fileID: 605692517}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 889a75188929f1946b8124f355d91a48, type: 3}
+--- !u!1 &441123463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441123464}
+  - component: {fileID: 441123465}
+  m_Layer: 0
+  m_Name: Path 6 Asteroids W5 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441123464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441123463}
+  m_LocalRotation: {x: -0.30860484, y: -0.95119035, z: -5.9982197e-10, w: 0.0000000027313374}
+  m_LocalPosition: {x: -8.692763, y: -4.241374, z: 11.699999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &441123465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441123463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -1.7308939, y: 0.60700154, z: -115.91686}
+      - {x: -0.46322608, y: 2.6931903, z: -82.122406}
+      - {x: 2.0721092, y: 6.8655677, z: -14.533476}
+      - {x: 3.339777, y: 8.9517565, z: 19.260984}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &461468020
 GameObject:
   m_ObjectHideFlags: 0
@@ -6377,6 +8014,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6388,6 +8026,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6399,6 +8038,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6410,6 +8050,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6421,6 +8062,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6429,6 +8071,7 @@ MonoBehaviour:
     rate: 1
     pathCreator: {fileID: 644537321}
     timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
   - waveName: Wave 1 Enemy hit
     enemies:
     - name: Astroid HIT
@@ -6437,6 +8080,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6445,6 +8089,7 @@ MonoBehaviour:
     rate: 1
     pathCreator: {fileID: 1692093694}
     timeTillWaveStarts: 2
+    spawnPoint: {fileID: 0}
   - waveName: Wave 1 enemy bottom
     enemies:
     - name: Astroid Bottom
@@ -6453,6 +8098,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6461,6 +8107,7 @@ MonoBehaviour:
     rate: 1
     pathCreator: {fileID: 204100255}
     timeTillWaveStarts: 3.03
+    spawnPoint: {fileID: 0}
   - waveName: Wave3 enemy right
     enemies:
     - name: Astroid Right 1
@@ -6469,6 +8116,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6480,6 +8128,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6491,6 +8140,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -6499,6 +8149,7 @@ MonoBehaviour:
     rate: 1
     pathCreator: {fileID: 951309433}
     timeTillWaveStarts: 4.02
+    spawnPoint: {fileID: 0}
   timeStartSpawning: 1
 --- !u!4 &473388093
 Transform:
@@ -6539,7 +8190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486154266}
   m_LocalRotation: {x: -0, y: 1, z: -0.0000000068102963, w: -0.00000001071021}
-  m_LocalPosition: {x: -16.630663, y: 20.314837, z: -1.5}
+  m_LocalPosition: {x: -16.666615, y: 20.360682, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1434403294}
@@ -6598,6 +8249,98 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+--- !u!1 &497363001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 497363002}
+  - component: {fileID: 497363003}
+  m_Layer: 0
+  m_Name: Path 2 Riders W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &497363002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497363001}
+  m_LocalRotation: {x: -0.30860144, y: -0.9511915, z: -5.9981514e-10, w: 0.0000000027313096}
+  m_LocalPosition: {x: 2.9, y: 6.68, z: 1.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &497363003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497363001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 8.244062, y: -10.589346, z: -118.462326}
+      - {x: 1.2422857, y: -10.927078, z: -98.57736}
+      - {x: -5.759491, y: -11.26481, z: -78.69239}
+      - {x: -7.710347, y: -10.467403, z: -60.895744}
+      - {x: -9.434199, y: -9.762785, z: -45.169937}
+      - {x: -8.296057, y: -5.357976, z: -23.84325}
+      - {x: -4.9455905, y: -5.9427567, z: -8.377108}
+      - {x: -2.9046426, y: -6.298978, z: 1.0441465}
+      - {x: 1.8974483, y: -8.662197, z: 11.1023445}
+      - {x: 6.699539, y: -11.025416, z: 21.160543}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1001 &520979193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6648,7 +8391,7 @@ PrefabInstance:
     - target: {fileID: 5608006027565774988, guid: ee40a1ecd37f93542bfec5dc78394a7c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5608006027565774988, guid: ee40a1ecd37f93542bfec5dc78394a7c,
         type: 3}
@@ -6687,6 +8430,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee40a1ecd37f93542bfec5dc78394a7c, type: 3}
+--- !u!1 &528072608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528072609}
+  - component: {fileID: 528072610}
+  m_Layer: 0
+  m_Name: Path 6 asteroids W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528072609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528072608}
+  m_LocalRotation: {x: -0.9903287, y: 0.13874112, z: -0.000000011551497, w: 0.0000000052584856}
+  m_LocalPosition: {x: -15.8, y: -2.6, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &528072610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528072608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -0.000005898966, y: -0.00000049251094, z: -125.17274}
+      - {x: -0.0000044242242, y: -0.0000003693832, z: -89.09177}
+      - {x: -0.0000014747415, y: -0.00000012312773, z: -16.92982}
+      - {x: 0, y: 0, z: 19.151152}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &540727637
 GameObject:
   m_ObjectHideFlags: 0
@@ -6725,6 +8552,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 1
       speed: 20
@@ -6732,10 +8560,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1600109328}
     timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
   - waveName: 4 asteroids top
     enemies:
     - name: Asteroid 1
@@ -6744,6 +8574,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -6751,6 +8582,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -6758,6 +8590,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -6765,10 +8598,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1728260366}
     timeTillWaveStarts: 2.5
+    spawnPoint: {fileID: 0}
   - waveName: 4 asteroids bottom
     enemies:
     - name: Asteroid 1
@@ -6777,6 +8612,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -6784,6 +8620,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -6791,6 +8628,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -6798,10 +8636,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1600897231}
     timeTillWaveStarts: 1.5
+    spawnPoint: {fileID: 0}
   - waveName: 1 asteroids bottom
     enemies:
     - name: Asteroid 1
@@ -6810,10 +8650,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 299744113}
     timeTillWaveStarts: 3
+    spawnPoint: {fileID: 0}
   - waveName: 2 asteroids top
     enemies:
     - name: Asteroid 1
@@ -6822,6 +8664,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -6829,10 +8672,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 2
     pathCreator: {fileID: 1715881185}
     timeTillWaveStarts: 3.5
+    spawnPoint: {fileID: 0}
   - waveName: 2 Living astroids top
     enemies:
     - name: Living astroid 1
@@ -6840,6 +8685,7 @@ MonoBehaviour:
       body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 3
@@ -6848,12 +8694,14 @@ MonoBehaviour:
       body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 3
     rate: 0.15
     pathCreator: {fileID: 1498286543}
     timeTillWaveStarts: 4.5
+    spawnPoint: {fileID: 0}
   timeStartSpawning: 29
 --- !u!4 &540727639
 Transform:
@@ -6869,6 +8717,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &596108578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596108579}
+  m_Layer: 0
+  m_Name: Paths W5 1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596108579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596108578}
+  m_LocalRotation: {x: 0, y: -0, z: 0.91495967, w: -0.40354532}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 887886671}
+  - {fileID: 1249952788}
+  - {fileID: 795042945}
+  - {fileID: 104652054}
+  - {fileID: 81730155}
+  - {fileID: 695159128}
+  - {fileID: 441123464}
+  - {fileID: 82240103}
+  - {fileID: 169962679}
+  - {fileID: 965123974}
+  - {fileID: 1894317404}
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 227.6}
 --- !u!1 &605692516
 GameObject:
   m_ObjectHideFlags: 0
@@ -7244,11 +9133,13 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 950897440}
     timeTillWaveStarts: 0
-  timeStartSpawning: 45
+    spawnPoint: {fileID: 0}
+  timeStartSpawning: 135
 --- !u!4 &617392119
 Transform:
   m_ObjectHideFlags: 0
@@ -7261,7 +9152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &644537320
 GameObject:
@@ -7435,6 +9326,102 @@ MonoBehaviour:
   m_EnableXRInput: 1
   m_EnableMouseInput: 1
   m_EnableTouchInput: 1
+--- !u!1 &695159127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695159128}
+  - component: {fileID: 695159129}
+  m_Layer: 0
+  m_Name: Path 2 Living asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &695159128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695159127}
+  m_LocalRotation: {x: -0.91195273, y: -0.41029537, z: -0.00000025633682, w: -0.000000115241235}
+  m_LocalPosition: {x: 10.484821, y: -8.534447, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: -228.45}
+--- !u!114 &695159129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695159127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -23.16627, y: -31.357456, z: -119.69265}
+      - {x: -9.2451, y: -18.999594, z: -101.24713}
+      - {x: 4.676069, y: -6.641731, z: -82.801605}
+      - {x: 9.290076, y: -6.994686, z: -62.204117}
+      - {x: 12.660624, y: -7.252521, z: -47.157585}
+      - {x: 6.4641376, y: -28.794548, z: -29.91248}
+      - {x: 5.626378, y: -26.325203, z: -14.712948}
+      - {x: 5.1841106, y: -25.021593, z: -6.688861}
+      - {x: 8.891169, y: -10.440732, z: -1.047658}
+      - {x: 5.0418997, y: -8.696555, z: 5.9109297}
+      - {x: 1.4759288, y: -7.0807467, z: 12.35738}
+      - {x: -5.966758, y: -11.751259, z: 16.748451}
+      - {x: -13.409444, y: -16.421772, z: 21.13952}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &701616238
 GameObject:
   m_ObjectHideFlags: 0
@@ -7557,6 +9544,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 61.422005, y: -304.915, z: 35.451}
+--- !u!1 &726691704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726691705}
+  - component: {fileID: 726691706}
+  m_Layer: 0
+  m_Name: Path 2 asteroids W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &726691705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726691704}
+  m_LocalRotation: {x: -0.99032885, y: 0.13874032, z: -0.0000000027939717, w: -1.1641543e-10}
+  m_LocalPosition: {x: -15.848696, y: -2.6076508, z: 1.2999989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &726691706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726691704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 47.723743, y: -30.31658, z: -99.74474}
+      - {x: 36.244873, y: -21.155682, z: -70.02077}
+      - {x: 13.287131, y: -2.8338885, z: -10.572823}
+      - {x: 1.8082609, y: 6.3270087, z: 19.151152}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &770983418
 GameObject:
   m_ObjectHideFlags: 0
@@ -7595,6 +9666,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7606,6 +9678,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7617,6 +9690,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7628,6 +9702,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7639,6 +9714,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7647,6 +9723,7 @@ MonoBehaviour:
     rate: 1
     pathCreator: {fileID: 1189008543}
     timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
   - waveName: Wave 1 Enemy hit
     enemies:
     - name: Astroid HIT
@@ -7655,6 +9732,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7663,6 +9741,7 @@ MonoBehaviour:
     rate: 1
     pathCreator: {fileID: 392414519}
     timeTillWaveStarts: 2
+    spawnPoint: {fileID: 0}
   - waveName: Wave 1 enemy bottom
     enemies:
     - name: Astroid Bottom
@@ -7671,6 +9750,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7679,6 +9759,7 @@ MonoBehaviour:
     rate: 1
     pathCreator: {fileID: 818699628}
     timeTillWaveStarts: 3.03
+    spawnPoint: {fileID: 0}
   - waveName: Wave3 enemy right
     enemies:
     - name: Astroid Right 1
@@ -7687,6 +9768,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7698,6 +9780,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7709,6 +9792,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 0
@@ -7717,6 +9801,7 @@ MonoBehaviour:
     rate: 1
     pathCreator: {fileID: 56443397}
     timeTillWaveStarts: 4.02
+    spawnPoint: {fileID: 0}
   timeStartSpawning: 6
 --- !u!4 &770983420
 Transform:
@@ -7732,6 +9817,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &795042944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795042945}
+  - component: {fileID: 795042946}
+  m_Layer: 0
+  m_Name: Path 3 Asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &795042945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795042944}
+  m_LocalRotation: {x: -0.30860484, y: -0.95119035, z: -5.9982197e-10, w: 0.0000000027313374}
+  m_LocalPosition: {x: 15.761423, y: -2.9655743, z: 1.299999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &795042946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795042944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 18.138973, y: -9.806053, z: -115.90272}
+      - {x: 18.166454, y: -9.809975, z: -82.05133}
+      - {x: 18.221413, y: -9.817817, z: -14.348549}
+      - {x: 18.248894, y: -9.821738, z: 19.502838}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &818699626
 GameObject:
   m_ObjectHideFlags: 0
@@ -7816,6 +9985,270 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+--- !u!1 &851899755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851899756}
+  - component: {fileID: 851899757}
+  m_Layer: 0
+  m_Name: Path 4 Living Asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851899756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851899755}
+  m_LocalRotation: {x: -0.30860144, y: -0.9511915, z: -5.9981514e-10, w: 0.0000000027313096}
+  m_LocalPosition: {x: 4.71, y: -12.82, z: 11.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &851899757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851899755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 10.202334, y: 17.06801, z: -116.563995}
+      - {x: 21.265797, y: 7.806632, z: -102.00005}
+      - {x: 32.329258, y: -1.4547467, z: -87.43611}
+      - {x: 31.320513, y: -1.0190978, z: -71.61911}
+      - {x: 30.457914, y: -0.64656544, z: -58.093674}
+      - {x: 10.322828, y: 14.859988, z: -50.04475}
+      - {x: 8.583496, y: 16.46804, z: -36.695248}
+      - {x: 6.9422483, y: 17.98541, z: -24.098553}
+      - {x: 23.910275, y: 10.281929, z: -8.718758}
+      - {x: 20.504715, y: 8.781073, z: 3.5214381}
+      - {x: 18.63217, y: 7.955827, z: 10.251705}
+      - {x: 10.991647, y: 8.14632, z: 14.876856}
+      - {x: 3.3511233, y: 8.336813, z: 19.502007}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &887886670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 887886671}
+  - component: {fileID: 887886672}
+  m_Layer: 0
+  m_Name: Path 6 Asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &887886671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887886670}
+  m_LocalRotation: {x: -0.30860484, y: -0.95119035, z: -5.9982197e-10, w: 0.0000000027313374}
+  m_LocalPosition: {x: 15.761423, y: -2.9655743, z: 1.299999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &887886672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887886670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -11.407195, y: 14.542219, z: -115.0451}
+      - {x: -4.966254, y: 8.241264, z: -81.436}
+      - {x: 7.9156275, y: -4.3606467, z: -14.217804}
+      - {x: 14.356568, y: -10.661602, z: 19.391296}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &913476164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 913476165}
+  - component: {fileID: 913476166}
+  m_Layer: 0
+  m_Name: Path 3 Asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &913476165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913476164}
+  m_LocalRotation: {x: -0.30860144, y: -0.9511915, z: -5.9981514e-10, w: 0.0000000027313096}
+  m_LocalPosition: {x: 15.756345, y: -2.9645982, z: 1.2999989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &913476166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913476164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 18.138973, y: -9.806053, z: -115.90272}
+      - {x: 18.166454, y: -9.809975, z: -82.05133}
+      - {x: 18.221413, y: -9.817817, z: -14.348549}
+      - {x: 18.248894, y: -9.821738, z: 19.502838}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &950897438
 GameObject:
   m_ObjectHideFlags: 0
@@ -7841,7 +10274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950897438}
   m_LocalRotation: {x: -0, y: 1, z: -0.0000000068102963, w: -0.00000001071021}
-  m_LocalPosition: {x: -10.568487, y: 26.888353, z: -1.5}
+  m_LocalPosition: {x: -10.598293, y: 26.966002, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1434403294}
@@ -7863,9 +10296,9 @@ MonoBehaviour:
     _bezierPath:
       points:
       - {x: 3.7999995, y: -0.000006811924, z: -80.017044}
-      - {x: -2.103574, y: -6.479626, z: -48.635284}
-      - {x: -13.910721, y: -19.438866, z: 14.128239}
-      - {x: -19.814295, y: -25.918486, z: 45.51}
+      - {x: -2.103576, y: -6.4796286, z: -48.635284}
+      - {x: -13.910727, y: -19.438873, z: 14.128239}
+      - {x: -19.814302, y: -25.918495, z: 45.51}
       isClosed: 0
       space: 0
       controlMode: 3
@@ -8039,7 +10472,7 @@ PrefabInstance:
     - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7976775186225171559, guid: 9a1ae6cd0f79d6a4f9163831acc2218b,
         type: 3}
@@ -8180,6 +10613,90 @@ MonoBehaviour:
   maximumX: 360
   minimumY: -60
   maximumY: 60
+--- !u!1 &965123973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 965123974}
+  - component: {fileID: 965123975}
+  m_Layer: 0
+  m_Name: Path 3 XL asteroid W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &965123974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965123973}
+  m_LocalRotation: {x: -0.30860484, y: -0.95119035, z: -5.9982197e-10, w: 0.0000000027313374}
+  m_LocalPosition: {x: 15.761423, y: -2.9655743, z: 1.299999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &965123975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965123973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 10.580554, y: -13.365408, z: -114.929504}
+      - {x: 11.55051, y: -11.7556095, z: -81.39039}
+      - {x: 13.490422, y: -8.536013, z: -14.312155}
+      - {x: 14.460379, y: -6.9262137, z: 19.226961}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1008666614
 GameObject:
   m_ObjectHideFlags: 0
@@ -8241,7 +10758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010955784}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -7.7567005, y: 0.66030216, z: 26.45}
+  m_LocalPosition: {x: -7.776381, y: 0.6618309, z: 26.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144151106}
@@ -8300,6 +10817,430 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+--- !u!1 &1026881252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026881253}
+  m_Layer: 0
+  m_Name: Paths W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1026881253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026881252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1524998201}
+  - {fileID: 497363002}
+  - {fileID: 913476165}
+  - {fileID: 1491683769}
+  - {fileID: 1691497706}
+  - {fileID: 1560112012}
+  - {fileID: 1087234550}
+  - {fileID: 94609379}
+  - {fileID: 851899756}
+  - {fileID: 208349932}
+  - {fileID: 1437608620}
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1046276959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046276960}
+  - component: {fileID: 1046276961}
+  m_Layer: 0
+  m_Name: Wave spawner W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1046276960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046276959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.7317624, y: -4.733759, z: 141.8542}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1046276961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046276959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ccc324d34860b428a8a85f88a1c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - waveName: '3XL '
+    enemies:
+    - name: XL 1
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent: []
+    - name: XL 2
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent: []
+    - name: XL 3
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent: []
+    rate: 0.4
+    pathCreator: {fileID: 2127648698}
+    timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
+  - waveName: 1 Rider
+    enemies:
+    - name: Rider
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    rate: 0.4
+    pathCreator: {fileID: 242425482}
+    timeTillWaveStarts: 4
+    spawnPoint: {fileID: 0}
+  - waveName: Living asteroids
+    enemies:
+    - name: Living 1
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Living 2
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    rate: 0.5
+    pathCreator: {fileID: 1320411170}
+    timeTillWaveStarts: 7
+    spawnPoint: {fileID: 0}
+  - waveName: 2 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    rate: 1
+    pathCreator: {fileID: 1396909894}
+    timeTillWaveStarts: 3.5
+    spawnPoint: {fileID: 0}
+  - waveName: 6 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 5
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 6
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    rate: 1
+    pathCreator: {fileID: 528072610}
+    timeTillWaveStarts: 5
+    spawnPoint: {fileID: 0}
+  - waveName: 6 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 5
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 6
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    rate: 1
+    pathCreator: {fileID: 1409958031}
+    timeTillWaveStarts: 6
+    spawnPoint: {fileID: 0}
+  - waveName: 1 XL
+    enemies:
+    - name: XL asteroid
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 1
+    pathCreator: {fileID: 17998598}
+    timeTillWaveStarts: 9
+    spawnPoint: {fileID: 0}
+  - waveName: 3 Riders 1
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Rider 3
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 0.5
+    pathCreator: {fileID: 1722551811}
+    timeTillWaveStarts: 11
+    spawnPoint: {fileID: 0}
+  - waveName: 3 Riders 2
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Rider 3
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 0.5
+    pathCreator: {fileID: 42809100}
+    timeTillWaveStarts: 12
+    spawnPoint: {fileID: 0}
+  timeStartSpawning: 45
 --- !u!1 &1055766353
 GameObject:
   m_ObjectHideFlags: 0
@@ -8422,6 +11363,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 1
       speed: 20
@@ -8429,10 +11371,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 950897440}
     timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
   - waveName: 4 asteroids top
     enemies:
     - name: Asteroid 1
@@ -8441,6 +11385,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -8448,6 +11393,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -8455,6 +11401,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -8462,10 +11409,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1728260366}
     timeTillWaveStarts: 2.5
+    spawnPoint: {fileID: 0}
   - waveName: 4 asteroids bottom
     enemies:
     - name: Asteroid 1
@@ -8474,6 +11423,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -8481,6 +11431,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -8488,6 +11439,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -8495,10 +11447,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1159430972}
     timeTillWaveStarts: 1.5
+    spawnPoint: {fileID: 0}
   - waveName: 1 asteroids bottom
     enemies:
     - name: Asteroid 1
@@ -8507,10 +11461,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 180159391}
     timeTillWaveStarts: 3
+    spawnPoint: {fileID: 0}
   - waveName: 2 asteroids top
     enemies:
     - name: Asteroid 1
@@ -8519,6 +11475,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -8526,10 +11483,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 2
     pathCreator: {fileID: 486154268}
     timeTillWaveStarts: 3.5
+    spawnPoint: {fileID: 0}
   - waveName: 2 Living astroids top
     enemies:
     - name: Living astroid 1
@@ -8537,6 +11496,7 @@ MonoBehaviour:
       body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 3
@@ -8545,12 +11505,14 @@ MonoBehaviour:
       body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent:
       - eventType: 0
         eventStart: 3
     rate: 0.15
     pathCreator: {fileID: 1585913127}
     timeTillWaveStarts: 4.5
+    spawnPoint: {fileID: 0}
   timeStartSpawning: 37
 --- !u!4 &1077657304
 Transform:
@@ -8566,6 +11528,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1087234549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087234550}
+  - component: {fileID: 1087234551}
+  m_Layer: 0
+  m_Name: Path 6 Asteroids W5 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087234550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087234549}
+  m_LocalRotation: {x: -0.30860144, y: -0.9511915, z: -5.9981514e-10, w: 0.0000000027313096}
+  m_LocalPosition: {x: -8.69, y: -4.24, z: 11.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1087234551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087234549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -1.7308939, y: 0.60700154, z: -115.91686}
+      - {x: -0.46322608, y: 2.6931903, z: -82.122406}
+      - {x: 2.0721092, y: 6.8655677, z: -14.533476}
+      - {x: 3.339777, y: 8.9517565, z: 19.260984}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1102527311
 GameObject:
   m_ObjectHideFlags: 0
@@ -8675,7 +11721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154727107}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 30.15221, y: -27.618622, z: 23}
+  m_LocalPosition: {x: 30.226822, y: -27.686539, z: 23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144151106}
@@ -8759,7 +11805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159430970}
   m_LocalRotation: {x: -0, y: 1, z: -0.0000000068102963, w: -0.00000001071021}
-  m_LocalPosition: {x: 19.87145, y: 12.4483795, z: -1.5000114}
+  m_LocalPosition: {x: 19.916082, y: 12.475972, z: -1.5000114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1434403294}
@@ -8902,6 +11948,194 @@ MonoBehaviour:
     showNormalsHelpInfo: 0
     tabIndex: 0
   initialized: 1
+--- !u!1 &1249952787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249952788}
+  - component: {fileID: 1249952789}
+  m_Layer: 0
+  m_Name: Path 2 Riders W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1249952788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249952787}
+  m_LocalRotation: {x: -0.3086447, y: -0.9511774, z: -5.9994154e-10, w: 0.0000000027320721}
+  m_LocalPosition: {x: 2.984185, y: 6.883194, z: 1.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1249952789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249952787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 8.244062, y: -10.589346, z: -118.462326}
+      - {x: 1.2422857, y: -10.927078, z: -98.57736}
+      - {x: -5.759491, y: -11.26481, z: -78.69239}
+      - {x: -7.710347, y: -10.467403, z: -60.895744}
+      - {x: -9.434199, y: -9.762785, z: -45.169937}
+      - {x: -8.296057, y: -5.357976, z: -23.84325}
+      - {x: -4.9455905, y: -5.9427567, z: -8.377108}
+      - {x: -2.9046426, y: -6.298978, z: 1.0441465}
+      - {x: 1.8974483, y: -8.662197, z: 11.1023445}
+      - {x: 6.699539, y: -11.025416, z: 21.160543}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &1320411168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320411169}
+  - component: {fileID: 1320411170}
+  m_Layer: 0
+  m_Name: Path 2 living W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1320411169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320411168}
+  m_LocalRotation: {x: -0.9903287, y: 0.13874112, z: -0.000000011551497, w: 0.0000000052584856}
+  m_LocalPosition: {x: -0.926, y: -0.05, z: -5.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1320411170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320411168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -30.317524, y: 13.332972, z: -147.4902}
+      - {x: -14.604018, y: -3.9017925, z: -136.24683}
+      - {x: 1.1094875, y: -21.136557, z: -125.00344}
+      - {x: 11.597056, y: -25.345968, z: -107.40639}
+      - {x: 21.2655, y: -29.226606, z: -91.18374}
+      - {x: 39.03546, y: -11.617299, z: -64.71917}
+      - {x: 30.775017, y: -12.8948555, z: -47.345474}
+      - {x: 26.387135, y: -13.5734825, z: -38.11671}
+      - {x: 6.1575403, y: -24.346014, z: -44.155464}
+      - {x: 0.06796691, y: -22.682379, z: -36.09113}
+      - {x: -7.522858, y: -20.60861, z: -26.038706}
+      - {x: -3.5122435, y: -10.375524, z: -13.019353}
+      - {x: 0.49837127, y: -0.14243715, z: 0.000000012615402}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1001 &1344760363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8952,7 +12186,7 @@ PrefabInstance:
     - target: {fileID: 4038318437499453051, guid: 28a7f314e9013d04f84d8a20e0f87845,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 4038318437499453051, guid: 28a7f314e9013d04f84d8a20e0f87845,
         type: 3}
@@ -8971,6 +12205,258 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28a7f314e9013d04f84d8a20e0f87845, type: 3}
+--- !u!1 &1393160709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1393160710}
+  - component: {fileID: 1393160711}
+  m_Layer: 0
+  m_Name: path 3 XL W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1393160710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393160709}
+  m_LocalRotation: {x: -0.99032885, y: 0.13874032, z: -0.0000000027939717, w: -1.1641543e-10}
+  m_LocalPosition: {x: 2.7845936, y: -28.884892, z: 29.480011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1393160711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393160709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 19.623064, y: -10.253334, z: -99.213326}
+      - {x: 11.222595, y: -14.612656, z: -63.792282}
+      - {x: -5.5783443, y: -23.331299, z: 7.049797}
+      - {x: -13.978813, y: -27.69062, z: 42.47084}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 1
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &1396909892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396909893}
+  - component: {fileID: 1396909894}
+  m_Layer: 0
+  m_Name: Path 2 asteroids W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1396909893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396909892}
+  m_LocalRotation: {x: -0.9903287, y: 0.13874112, z: -0.000000011551497, w: 0.0000000052584856}
+  m_LocalPosition: {x: -15.8, y: -2.6, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1396909894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396909892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 47.723743, y: -30.31658, z: -99.74474}
+      - {x: 36.244873, y: -21.155682, z: -70.02077}
+      - {x: 13.287131, y: -2.8338885, z: -10.572823}
+      - {x: 1.8082609, y: 6.3270087, z: 19.151152}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &1409958029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409958030}
+  - component: {fileID: 1409958031}
+  m_Layer: 0
+  m_Name: Path 6 2 asteroids W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1409958030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409958029}
+  m_LocalRotation: {x: -0.9903287, y: 0.13874112, z: -0.000000011551497, w: 0.0000000052584856}
+  m_LocalPosition: {x: 12.98, y: 4.79, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1409958031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409958029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -0.0000058266387, y: -0.00000026760165, z: -125.490654}
+      - {x: -0.0000043699793, y: -0.00000020070124, z: -89.3302}
+      - {x: -0.0000014566597, y: -0.00000006690041, z: -17.009298}
+      - {x: 0, y: 0, z: 19.151152}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1430954271
 GameObject:
   m_ObjectHideFlags: 0
@@ -9091,6 +12577,98 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 164.05}
+--- !u!1 &1437608619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437608620}
+  - component: {fileID: 1437608621}
+  m_Layer: 0
+  m_Name: Path 3 Riders W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1437608620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437608619}
+  m_LocalRotation: {x: -0.91194123, y: -0.41032085, z: -0.0000002561463, w: -0.000000115251034}
+  m_LocalPosition: {x: 9.1, y: -7.4, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: -228.45}
+--- !u!114 &1437608621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437608619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -19.54652, y: -27.019503, z: -118.82605}
+      - {x: -6.5488515, y: -10.31558, z: -98.75606}
+      - {x: 6.4488173, y: 6.3883414, z: -78.686066}
+      - {x: 7.9320326, y: 6.947728, z: -55.712585}
+      - {x: 9.00804, y: 7.3535385, z: -39.046333}
+      - {x: -1.5405803, y: -11.66652, z: -22.303879}
+      - {x: -5.8758774, y: -15.383402, z: -6.604311}
+      - {x: -8.115468, y: -17.303522, z: 1.5059996}
+      - {x: -10.762456, y: -16.862648, z: 11.32276}
+      - {x: -13.409444, y: -16.421772, z: 21.13952}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1455244992
 GameObject:
   m_ObjectHideFlags: 0
@@ -9125,6 +12703,98 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1491683768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491683769}
+  - component: {fileID: 1491683770}
+  m_Layer: 0
+  m_Name: Path 2 Riders W5 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1491683769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491683768}
+  m_LocalRotation: {x: -0.91194123, y: -0.41032085, z: -0.0000002561463, w: -0.000000115251034}
+  m_LocalPosition: {x: 9.1, y: -7.4, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: -228.45}
+--- !u!114 &1491683770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491683768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 15.927406, y: 8.0219145, z: -113.75628}
+      - {x: 13.656424, y: 9.36853, z: -93.14505}
+      - {x: 11.385441, y: 10.715147, z: -72.53383}
+      - {x: 7.9320326, y: 6.947728, z: -55.712585}
+      - {x: 4.650427, y: 3.367734, z: -39.72818}
+      - {x: -1.5405803, y: -11.66652, z: -22.303879}
+      - {x: -5.8758774, y: -15.383402, z: -6.604311}
+      - {x: -8.115468, y: -17.303522, z: 1.5059996}
+      - {x: -10.762456, y: -16.862648, z: 11.32276}
+      - {x: -13.409444, y: -16.421772, z: 21.13952}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1498286542
 GameObject:
   m_ObjectHideFlags: 0
@@ -9221,6 +12891,473 @@ Transform:
   m_Father: {fileID: 55161055}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1524998200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524998201}
+  - component: {fileID: 1524998202}
+  m_Layer: 0
+  m_Name: Path 6 Asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1524998201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524998200}
+  m_LocalRotation: {x: -0.30860144, y: -0.9511915, z: -5.9981514e-10, w: 0.0000000027313096}
+  m_LocalPosition: {x: 15.756345, y: -2.9645982, z: 1.2999989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1524998202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524998200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -11.407195, y: 14.542219, z: -115.0451}
+      - {x: -4.966254, y: 8.241264, z: -81.436}
+      - {x: 7.9156275, y: -4.3606467, z: -14.217804}
+      - {x: 14.356568, y: -10.661602, z: 19.391296}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &1540285206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540285208}
+  - component: {fileID: 1540285207}
+  m_Layer: 0
+  m_Name: Wave spawner W4 1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1540285207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540285206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ccc324d34860b428a8a85f88a1c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - waveName: '3XL '
+    enemies:
+    - name: XL 1
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent: []
+    - name: XL 2
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent: []
+    - name: XL 3
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent: []
+    rate: 0.4
+    pathCreator: {fileID: 1393160711}
+    timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
+  - waveName: 1 Rider
+    enemies:
+    - name: Rider
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    rate: 0.4
+    pathCreator: {fileID: 1864631192}
+    timeTillWaveStarts: 4
+    spawnPoint: {fileID: 0}
+  - waveName: Living asteroids
+    enemies:
+    - name: Living 1
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Living 2
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    rate: 0.5
+    pathCreator: {fileID: 2048503764}
+    timeTillWaveStarts: 7
+    spawnPoint: {fileID: 0}
+  - waveName: 2 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    rate: 1
+    pathCreator: {fileID: 726691706}
+    timeTillWaveStarts: 3.5
+    spawnPoint: {fileID: 0}
+  - waveName: 6 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 5
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 6
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    rate: 1
+    pathCreator: {fileID: 1694639586}
+    timeTillWaveStarts: 5
+    spawnPoint: {fileID: 0}
+  - waveName: 6 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 5
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    - name: Asteroid 6
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 1
+      - eventType: 0
+        eventStart: 5
+    rate: 1
+    pathCreator: {fileID: 107743868}
+    timeTillWaveStarts: 6
+    spawnPoint: {fileID: 0}
+  - waveName: 1 XL
+    enemies:
+    - name: XL asteroid
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 1
+    pathCreator: {fileID: 107743868}
+    timeTillWaveStarts: 9
+    spawnPoint: {fileID: 0}
+  - waveName: 3 Riders 1
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Rider 3
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 0.5
+    pathCreator: {fileID: 406375573}
+    timeTillWaveStarts: 11
+    spawnPoint: {fileID: 0}
+  - waveName: 3 Riders 2
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Rider 3
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 0.5
+    pathCreator: {fileID: 158388312}
+    timeTillWaveStarts: 12
+    spawnPoint: {fileID: 0}
+  timeStartSpawning: 60
+--- !u!4 &1540285208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540285206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.7317624, y: -4.733759, z: 141.8542}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541206580
 GameObject:
   m_ObjectHideFlags: 0
@@ -9305,6 +13442,102 @@ Transform:
   m_Father: {fileID: 1008666615}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1560112011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560112012}
+  - component: {fileID: 1560112013}
+  m_Layer: 0
+  m_Name: Path 2 Living asteroids W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1560112012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560112011}
+  m_LocalRotation: {x: -0.91194123, y: -0.41032085, z: -0.0000002561463, w: -0.000000115251034}
+  m_LocalPosition: {x: 9.1, y: -7.4, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: -228.45}
+--- !u!114 &1560112013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560112011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -23.16627, y: -31.357456, z: -119.69265}
+      - {x: -9.2451, y: -18.999594, z: -101.24713}
+      - {x: 4.676069, y: -6.641731, z: -82.801605}
+      - {x: 9.290076, y: -6.994686, z: -62.204117}
+      - {x: 12.660624, y: -7.252521, z: -47.157585}
+      - {x: 6.4641376, y: -28.794548, z: -29.91248}
+      - {x: 5.626378, y: -26.325203, z: -14.712948}
+      - {x: 5.1841106, y: -25.021593, z: -6.688861}
+      - {x: 8.891169, y: -10.440732, z: -1.047658}
+      - {x: 5.0418997, y: -8.696555, z: 5.9109297}
+      - {x: 1.4759288, y: -7.0807467, z: 12.35738}
+      - {x: -5.966758, y: -11.751259, z: 16.748451}
+      - {x: -13.409444, y: -16.421772, z: 21.13952}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1576778797
 GameObject:
   m_ObjectHideFlags: 0
@@ -9601,6 +13834,90 @@ Transform:
   m_Father: {fileID: 55161055}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1691497705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1691497706}
+  - component: {fileID: 1691497707}
+  m_Layer: 0
+  m_Name: Path 1 XL asteroid W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1691497706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691497705}
+  m_LocalRotation: {x: -0.30860144, y: -0.9511915, z: -5.9981514e-10, w: 0.0000000027313096}
+  m_LocalPosition: {x: 15.756345, y: -2.9645982, z: 1.2999989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026881253}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1691497707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691497705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 19.140238, y: -34.875637, z: -114.6624}
+      - {x: 17.754377, y: -27.175352, z: -81.19893}
+      - {x: 14.982658, y: -11.77478, z: -14.272001}
+      - {x: 13.596798, y: -4.0744953, z: 19.191465}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1692093693
 GameObject:
   m_ObjectHideFlags: 0
@@ -9685,6 +14002,90 @@ Transform:
   m_Father: {fileID: 1455244993}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1694639584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694639585}
+  - component: {fileID: 1694639586}
+  m_Layer: 0
+  m_Name: Path 6 asteroids W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1694639585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694639584}
+  m_LocalRotation: {x: -0.99032885, y: 0.13874032, z: -0.0000000027939717, w: -1.1641543e-10}
+  m_LocalPosition: {x: -15.848696, y: -2.6076508, z: 1.2999989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1694639586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694639584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -0.000005898966, y: -0.00000049251094, z: -125.17274}
+      - {x: -0.0000044242242, y: -0.0000003693832, z: -89.09177}
+      - {x: -0.0000014747415, y: -0.00000012312773, z: -16.92982}
+      - {x: 0, y: 0, z: 19.151152}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1708820530
 GameObject:
   m_ObjectHideFlags: 0
@@ -9819,6 +14220,98 @@ Transform:
   m_Father: {fileID: 55161055}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1722551809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722551810}
+  - component: {fileID: 1722551811}
+  m_Layer: 0
+  m_Name: Path 3  1 rider W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722551810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722551809}
+  m_LocalRotation: {x: -0.9903287, y: 0.13874112, z: -0.000000011551497, w: 0.0000000052584856}
+  m_LocalPosition: {x: -12, y: -4.7, z: 12.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1722551811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722551809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 49.50354, y: -18.493462, z: -102.035095}
+      - {x: 48.172768, y: -12.04547, z: -86.91525}
+      - {x: 46.84199, y: -5.5974793, z: -71.79542}
+      - {x: 41.540257, y: -3.783498, z: -59.18432}
+      - {x: 34.79929, y: -1.4770856, z: -43.149754}
+      - {x: 13.840487, y: -11.246499, z: -27.413286}
+      - {x: 8.530589, y: -7.728214, z: -11.064156}
+      - {x: 4.7961497, y: -5.253811, z: 0.4341545}
+      - {x: 6.770439, y: 2.5164247, z: 13.174297}
+      - {x: 8.744728, y: 10.28666, z: 25.91444}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &1728260365
 GameObject:
   m_ObjectHideFlags: 0
@@ -9897,7 +14390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728260365}
   m_LocalRotation: {x: 0.93969107, y: -0.34202448, z: 0.0000000012805684, w: 0.000000039115548}
-  m_LocalPosition: {x: -6.311635, y: 12.332611, z: -1.2000008}
+  m_LocalPosition: {x: -6.3257723, y: 12.360822, z: -1.2000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1434403294}
@@ -9941,10 +14434,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1692093694}
     timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
   - waveName: Wave XL asteroid BOTTOM
     enemies:
     - name: XL asteroid BOTTOM
@@ -9953,10 +14448,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1430954272}
     timeTillWaveStarts: 1.5
+    spawnPoint: {fileID: 0}
   - waveName: WAVE 2 ASTEROIDS
     enemies:
     - name: Asteroid 1
@@ -9965,6 +14462,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -9972,10 +14470,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1541206581}
     timeTillWaveStarts: 2.5
+    spawnPoint: {fileID: 0}
   - waveName: WAVE 4 ASTEROIDS
     enemies:
     - name: Asteroid 1
@@ -9984,6 +14484,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -9991,6 +14492,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -9998,6 +14500,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -10005,10 +14508,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1102527312}
     timeTillWaveStarts: 3.5
+    spawnPoint: {fileID: 0}
   - waveName: WAVE 5 ASTEROIDS BOTTOM
     enemies:
     - name: Asteroid 1
@@ -10017,6 +14522,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -10024,6 +14530,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -10031,6 +14538,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -10038,6 +14546,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 5
       speed: 20
@@ -10045,10 +14554,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 412954903}
     timeTillWaveStarts: 4
+    spawnPoint: {fileID: 0}
   - waveName: WAVE 5 ASTEROIDS TOP
     enemies:
     - name: Asteroid 1
@@ -10057,6 +14568,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 2
       speed: 20
@@ -10064,6 +14576,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 3
       speed: 20
@@ -10071,6 +14584,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 4
       speed: 20
@@ -10078,6 +14592,7 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     - name: Asteroid 5
       speed: 20
@@ -10085,10 +14600,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 0
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 54361622}
     timeTillWaveStarts: 5.5
+    spawnPoint: {fileID: 0}
   - waveName: Wave XL asteroid TOP
     enemies:
     - name: XL asteroid
@@ -10097,10 +14614,12 @@ MonoBehaviour:
         type: 3}
       health: 1
       damage: 1
+      type: 0
       enemyEvent: []
     rate: 1
     pathCreator: {fileID: 1055766354}
     timeTillWaveStarts: 5
+    spawnPoint: {fileID: 0}
   timeStartSpawning: 13
 --- !u!4 &1734249718
 Transform:
@@ -10115,6 +14634,702 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1853718707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853718708}
+  - component: {fileID: 1853718709}
+  m_Layer: 0
+  m_Name: Path 1XL W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1853718708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853718707}
+  m_LocalRotation: {x: -0.9903288, y: 0.13874032, z: -0.0000000027939715, w: -1.1641542e-10}
+  m_LocalPosition: {x: -7.6487846, y: 10.720104, z: 1.2999989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1853718709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853718707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -8.341887, y: 3.7424648, z: -126.243706}
+      - {x: -3.6706367, y: 5.2389235, z: -89.894745}
+      - {x: 5.671865, y: 8.231841, z: -17.196817}
+      - {x: 10.343116, y: 9.7283, z: 19.152143}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &1864631190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864631191}
+  - component: {fileID: 1864631192}
+  m_Layer: 0
+  m_Name: Path 1 Rider W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864631191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864631190}
+  m_LocalRotation: {x: -0.99032885, y: 0.13874032, z: -0.0000000027939717, w: -1.1641543e-10}
+  m_LocalPosition: {x: -0.4714789, y: -0.18054324, z: -5.699993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1864631192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864631190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -43.27252, y: 16.993153, z: -146.77686}
+      - {x: -32.45439, y: 12.744864, z: -110.08264}
+      - {x: -10.818134, y: 4.248288, z: -36.694214}
+      - {x: -0.0000066757216, y: -6.8212076e-13, z: 0}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &1894317403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1894317404}
+  - component: {fileID: 1894317405}
+  m_Layer: 0
+  m_Name: Path 3 Riders W5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1894317404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894317403}
+  m_LocalRotation: {x: -0.91195273, y: -0.41029537, z: -0.0000002561936, w: -0.00000011526266}
+  m_LocalPosition: {x: 9.712946, y: -7.905344, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 596108579}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: -228.45}
+--- !u!114 &1894317405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894317403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -19.54652, y: -27.019503, z: -118.82605}
+      - {x: -6.5488515, y: -10.31558, z: -98.75606}
+      - {x: 6.4488173, y: 6.3883414, z: -78.686066}
+      - {x: 7.9320326, y: 6.947728, z: -55.712585}
+      - {x: 9.00804, y: 7.3535385, z: -39.046333}
+      - {x: -1.5405803, y: -11.66652, z: -22.303879}
+      - {x: -5.8758774, y: -15.383402, z: -6.604311}
+      - {x: -8.115468, y: -17.303522, z: 1.5059996}
+      - {x: -10.762456, y: -16.862648, z: 11.32276}
+      - {x: -13.409444, y: -16.421772, z: 21.13952}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &1908147019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1908147021}
+  - component: {fileID: 1908147020}
+  m_Layer: 0
+  m_Name: Wave spawner W5 1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1908147020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908147019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ccc324d34860b428a8a85f88a1c15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - waveName: 6 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 5
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 6
+      speed: 20
+      body: {fileID: 0}
+      health: 0
+      damage: 0
+      type: 0
+      enemyEvent: []
+    rate: 1
+    pathCreator: {fileID: 887886672}
+    timeTillWaveStarts: 0
+    spawnPoint: {fileID: 0}
+  - waveName: 2 Riders
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    rate: 0.5
+    pathCreator: {fileID: 1249952789}
+    timeTillWaveStarts: 3.5
+    spawnPoint: {fileID: 0}
+  - waveName: 3 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent: []
+    rate: 1
+    pathCreator: {fileID: 795042946}
+    timeTillWaveStarts: 4
+    spawnPoint: {fileID: 0}
+  - waveName: 2 Riders
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent: []
+    rate: 1
+    pathCreator: {fileID: 104652055}
+    timeTillWaveStarts: 7.5
+    spawnPoint: {fileID: 0}
+  - waveName: 1 XL
+    enemies:
+    - name: XL asteroid
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent: []
+    rate: 1
+    pathCreator: {fileID: 81730156}
+    timeTillWaveStarts: 9
+    spawnPoint: {fileID: 0}
+  - waveName: 2 Living Asteroids
+    enemies:
+    - name: Living 1
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Living 2
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    rate: 0.5
+    pathCreator: {fileID: 695159129}
+    timeTillWaveStarts: 10
+    spawnPoint: {fileID: 0}
+  - waveName: 6 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 5
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 6
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    rate: 1
+    pathCreator: {fileID: 441123465}
+    timeTillWaveStarts: 13
+    spawnPoint: {fileID: 0}
+  - waveName: 4 Asteroids
+    enemies:
+    - name: Asteroid 1
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Asteroid 2
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 3
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Asteroid 4
+      speed: 20
+      body: {fileID: 3816732344787709510, guid: 51fc708d72aee8e438f6840288e4d7c0,
+        type: 3}
+      health: 1
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    rate: 1
+    pathCreator: {fileID: 82240104}
+    timeTillWaveStarts: 14
+    spawnPoint: {fileID: 0}
+  - waveName: 4 Living Asteroids
+    enemies:
+    - name: Living Asteroid 1
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Living Asteroid 2
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 4
+    - name: Living  Asteroid 3
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    - name: Living  Asteroid 4
+      speed: 20
+      body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 0
+    rate: 0.5
+    pathCreator: {fileID: 169962680}
+    timeTillWaveStarts: 17
+    spawnPoint: {fileID: 0}
+  - waveName: '3 XL '
+    enemies:
+    - name: XL 1
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: XL 2
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 4
+    - name: XL 3
+      speed: 15
+      body: {fileID: 3816732344787709510, guid: 134f23b6ee88c2a4583c978e66a38891,
+        type: 3}
+      health: 1
+      damage: 3
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 0.5
+    pathCreator: {fileID: 965123975}
+    timeTillWaveStarts: 20
+    spawnPoint: {fileID: 0}
+  - waveName: 3 Riders
+    enemies:
+    - name: Rider 1
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 6
+    - name: Rider 2
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 4
+    - name: Rider 3
+      speed: 20
+      body: {fileID: 8884102517134742041, guid: 40b3afc6b2afe0c428370341f2aa4bb7,
+        type: 3}
+      health: 2
+      damage: 1
+      type: 0
+      enemyEvent:
+      - eventType: 0
+        eventStart: 2
+    rate: 0.5
+    pathCreator: {fileID: 1894317405}
+    timeTillWaveStarts: 23
+    spawnPoint: {fileID: 0}
+  timeStartSpawning: 105
+--- !u!4 &1908147021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908147019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.868452, y: 3.769905, z: 37.92927}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917502637
 GameObject:
@@ -10141,7 +15356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917502637}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 16.073175, y: 0.20116806, z: 23}
+  m_LocalPosition: {x: 16.113503, y: 0.20121956, z: 23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144151106}
@@ -10234,6 +15449,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 240}
+--- !u!1 &2033197888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033197889}
+  m_Layer: 0
+  m_Name: Paths W4 1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2033197889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033197888}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9848078, w: 0.17364825}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1864631191}
+  - {fileID: 1393160710}
+  - {fileID: 2048503763}
+  - {fileID: 726691705}
+  - {fileID: 1694639585}
+  - {fileID: 107743867}
+  - {fileID: 1853718708}
+  - {fileID: 406375572}
+  - {fileID: 158388311}
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 160}
+--- !u!1 &2048503762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2048503763}
+  - component: {fileID: 2048503764}
+  m_Layer: 0
+  m_Name: Path 2 living W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2048503763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048503762}
+  m_LocalRotation: {x: -0.9903117, y: 0.13886285, z: 0.000008670239, w: -0.0000016275765}
+  m_LocalPosition: {x: -4.074144, y: -0.14526153, z: -5.699347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2033197889}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &2048503764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048503762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -30.317524, y: 13.332972, z: -147.4902}
+      - {x: -14.604018, y: -3.9017925, z: -136.24683}
+      - {x: 1.1094875, y: -21.136557, z: -125.00344}
+      - {x: 11.597056, y: -25.345968, z: -107.40639}
+      - {x: 21.2655, y: -29.226606, z: -91.18374}
+      - {x: 39.03546, y: -11.617299, z: -64.71917}
+      - {x: 30.775017, y: -12.8948555, z: -47.345474}
+      - {x: 26.387135, y: -13.5734825, z: -38.11671}
+      - {x: 6.1575403, y: -24.346014, z: -44.155464}
+      - {x: 0.06796691, y: -22.682379, z: -36.09113}
+      - {x: -7.522858, y: -20.60861, z: -26.038706}
+      - {x: -3.5122435, y: -10.375524, z: -13.019353}
+      - {x: 0.49837127, y: -0.14243715, z: 0.000000012615402}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &2071421933
 GameObject:
   m_ObjectHideFlags: 0
@@ -10259,7 +15609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071421933}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -10.351489, y: 0.202147, z: 23}
+  m_LocalPosition: {x: -10.377435, y: 0.20225525, z: 23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 144151106}
@@ -10284,6 +15634,90 @@ MonoBehaviour:
       - {x: 5.796584, y: 0.095652774, z: -48.415115}
       - {x: 9.937136, y: 0.28695834, z: 14.788723}
       - {x: 12.007412, y: 0.3826111, z: 46.390644}
+      isClosed: 0
+      space: 0
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 1
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 1
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 1
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!1 &2127648696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127648697}
+  - component: {fileID: 2127648698}
+  m_Layer: 0
+  m_Name: path 3 XL W4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2127648697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127648696}
+  m_LocalRotation: {x: -0.9903287, y: 0.13874112, z: -0.000000011551497, w: 0.0000000052584856}
+  m_LocalPosition: {x: 2.7762756, y: -28.797108, z: 29.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172391541}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &2127648698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127648696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: 19.623064, y: -10.253334, z: -99.213326}
+      - {x: 11.222595, y: -14.612656, z: -63.792282}
+      - {x: -5.5783443, y: -23.331299, z: 7.049797}
+      - {x: -13.978813, y: -27.69062, z: 42.47084}
       isClosed: 0
       space: 0
       controlMode: 3

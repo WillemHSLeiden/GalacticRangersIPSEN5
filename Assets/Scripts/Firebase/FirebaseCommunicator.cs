@@ -24,13 +24,13 @@ public class FirebaseCommunicator
         StartFirebaseConnection();
     }
 
-    GameLogger gameLogger;
     DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
     Boolean isLoggingStarted = false;
 
     void StartFirebaseConnection()
     {
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
+        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
+        {
             dependencyStatus = task.Result;
             if (dependencyStatus == DependencyStatus.Available)
             {
@@ -50,17 +50,14 @@ public class FirebaseCommunicator
         {
             Debug.Log("Logging Started");
             isLoggingStarted = true;
-            gameLogger = new GameLogger();
-            gameLogger.SetTestData();
         }
     }
 
     public void SaveGameData()
     {
-        Debug.Log("Going to try and save the game!");
         DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("GalaticRangers");
         DatabaseReference gameReference = reference.Child("Games").Push();
-
+        GameLogger gameLogger = GameLogger.GetInstance();
         string JSONGameLogger = JsonUtility.ToJson(gameLogger);
         Debug.Log("Json: " + JSONGameLogger);
 
@@ -76,12 +73,12 @@ public class FirebaseCommunicator
             }
         });
 
-        HighscoreModel model = new HighscoreModel("Ultimate_Gamer", 9999, gameReference.Key);
-        HighscoreService.GetInstance().SaveOverAllHighscore(model);
+        //HighscoreModel model = new HighscoreModel("Ultimate_Gamer", 9999, gameReference.Key);
+        //HighscoreService.GetInstance().SaveOverAllHighscore(model);
 
         Debug.Log("Logging Stopped");
         isLoggingStarted = false;
-        gameLogger = null;
+        gameLogger.Reset();
 
     }
 
