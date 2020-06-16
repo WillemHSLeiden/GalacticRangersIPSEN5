@@ -11,9 +11,9 @@ public class MissleBehavior : MonoBehaviour, BehaviourStrategy
     [SerializeField]
     private float damage;
     [SerializeField]
-    private float speed;
+    private float speed = 4f;
     [SerializeField]
-    public float lifeDuration = 20f;
+    public float lifeDuration = 100f;
 
     private float lifeTimer;
     private Transform player;
@@ -27,8 +27,8 @@ public class MissleBehavior : MonoBehaviour, BehaviourStrategy
     // Update is called once per frame
     void Update()
     {
- //       this.transform.LookAt(this.player.transform);
- //       this.transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
+        transform.LookAt(this.player.transform);
+        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
 
         // Remove the lifetime to see if the bullet should be removed.
         lifeTimer -= Time.deltaTime;
