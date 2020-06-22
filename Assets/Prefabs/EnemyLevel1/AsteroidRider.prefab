@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 7167050168895432389}
   - component: {fileID: 6404547697408450065}
   - component: {fileID: 1758602266953560058}
-  - component: {fileID: 7706360452011165273}
+  - component: {fileID: 1740122050878760780}
   m_Layer: 0
   m_Name: AsteroidRider
   m_TagString: Enemy
@@ -125,7 +125,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.6167036
   m_Center: {x: -0.16837038, y: 0.007889031, z: 0.4582813}
---- !u!114 &7706360452011165273
+--- !u!114 &1740122050878760780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,10 +134,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8884102517134742041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38ee12918a54a204f8210f3fe19b4e3c, type: 3}
+  m_Script: {fileID: 11500000, guid: d33f43adb3b5c2d47ada5d240eedc934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
+  missle: {fileID: 5566170356732496457, guid: bf356127c6631f7488e1bd935d62461e, type: 3}
+  attackSpeed: 5
 --- !u!1001 &3301651860126975162
 PrefabInstance:
   m_ObjectHideFlags: 0

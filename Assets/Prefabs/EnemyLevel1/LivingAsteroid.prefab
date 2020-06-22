@@ -4957,6 +4957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 341671762814831282}
+  _laserPrefab: {fileID: 8304319225527999780, guid: 6aa19d5653abe2044ab0553b86497519,
+    type: 3}
   particle: {fileID: 341671762814831286}
 --- !u!95 &341671762814831282
 Animator:
