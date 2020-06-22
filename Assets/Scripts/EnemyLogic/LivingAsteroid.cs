@@ -44,7 +44,6 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     public void shootLaser()
     {
         GameObject laser = Instantiate(_laserPrefab, transform.position, transform.localRotation);
-        laser.GetComponent<EnemyLaserBehavior>().setPlayerObject(player);
     }
 
     public void setInActive(){}

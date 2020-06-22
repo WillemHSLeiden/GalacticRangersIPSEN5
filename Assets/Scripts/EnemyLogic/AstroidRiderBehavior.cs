@@ -16,7 +16,6 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Astroid Rider shoots. pew!");
         attackTimer -= Time.deltaTime;
         if (attackTimer <= 0)
         {
