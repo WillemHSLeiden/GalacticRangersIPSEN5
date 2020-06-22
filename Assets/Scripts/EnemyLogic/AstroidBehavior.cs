@@ -13,6 +13,9 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
     private float speed;
     private Transform player;
 
+    [SerializeField]
+    private GameObject explosionObject;
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Laser")
@@ -24,6 +27,7 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
         if (health <= 0)
         {
             gameObject.GetComponent<Renderer>().material = flashMat;
+            explode();
             Invoke("setInActive", 0.05f);
             GameLogger.GetInstance().PlayerKilledEnemy();
         }
@@ -60,5 +64,9 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
     }
     public float getSpeed(){
         return this.speed;
+    }
+
+    private void explode() {
+        Instantiate(explosionObject, transform.position, Quaternion.identity);
     }
 }
