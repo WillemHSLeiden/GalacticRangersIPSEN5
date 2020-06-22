@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
+    [SerializeField] private int maxHealth, currentHealth;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private Text text;
+    [SerializeField] private Light damageLight;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         {
             GameObject collided = collider.gameObject;
             BehaviourStrategy enemy = collided.GetComponent<BehaviourStrategy>();
+            ChangeLightSettings(5.03f, 10.46f);
             TakeDamage((int)enemy.getDamage());
             Destroy(collider.gameObject);
             GameLogger.GetInstance().PlayerGotHit(new PlayerHitInfo(0, collided.name, enemy.getDamage()));
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         text.text = "Score: " + GameLogger.GetInstance().GetScore();
+        LerpChangeLightSettings(0, 0, 0.05f);
     }
 
     private void TakeDamage(int damage)
@@ -43,6 +45,17 @@ public class Player : MonoBehaviour
         {
             //Game Over todo
         }
+    }
+
+    private void ChangeLightSettings(float range, float intensity) 
+    {
+        damageLight.range = range;
+        damageLight.intensity = intensity;
+    }
+
+    private void LerpChangeLightSettings(float range, float intensity, float lerp) {
+        damageLight.range = Mathf.Lerp(damageLight.range, range, lerp);
+        damageLight.intensity = Mathf.Lerp(damageLight.intensity, intensity, lerp);
     }
 
     public void HealDamage(int health)
