@@ -24,6 +24,7 @@ public class MenuShipManager : MonoBehaviour
     }
 
     public void ChangeScene(string sceneName) {
+        FindObjectOfType<AudioManager>().Play("Knopdruk1");
         SceneManager.LoadScene(sceneName);
     }
 }

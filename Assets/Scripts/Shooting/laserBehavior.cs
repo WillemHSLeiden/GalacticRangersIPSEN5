@@ -22,6 +22,8 @@ public class laserBehavior : MonoBehaviour {
         // Make the bullet move
         transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
 
+        FindObjectOfType<AudioManager>().Play("Laser");
+
         // Remove the lifetime to see if the bullet should be removed.
         lifeTimer -= Time.deltaTime;
         if (lifeTimer <= 0f){
