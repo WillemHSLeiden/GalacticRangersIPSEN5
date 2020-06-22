@@ -14,6 +14,8 @@ public class MissleBehavior : MonoBehaviour, BehaviourStrategy
     private float speed = 4f;
     [SerializeField]
     public float lifeDuration = 100f;
+    [SerializeField]
+    public GameObject MissleModel;
 
     private float lifeTimer;
     private Transform player;
@@ -47,7 +49,7 @@ public class MissleBehavior : MonoBehaviour, BehaviourStrategy
         }
         if (health <= 0)
         {
-            gameObject.GetComponent<Renderer>().material = flashMat;
+            MissleModel.GetComponent<Renderer>().material = flashMat;
             Invoke("setInActive", 0.05f);
         }
     }
