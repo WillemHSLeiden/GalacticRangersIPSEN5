@@ -9,7 +9,7 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     private float speed;
     private Transform player;
     public Animator anim;
-    [SerializeField] private GameObject missle;
+    [SerializeField] private GameObject _laserPrefab;
     [SerializeField] private ParticleSystem particle;
 
     private bool keepUpdating;
@@ -43,7 +43,8 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
 
     public void shootLaser()
     {
-        //laser
+        GameObject laser = Instantiate(_laserPrefab, transform.position, transform.localRotation);
+        laser.GetComponent<EnemyLaserBehavior>().setPlayerObject(player);
     }
 
     public void setInActive(){}
