@@ -7,12 +7,15 @@ public class LevelLoader : MonoBehaviour
 {
     public void LoadLevel(int sceneIndex) 
     {
+        FindObjectOfType<AudioManager>().Play("Knoppie");
         StartCoroutine(LoadAsync(sceneIndex));
-       
+        
+
     }
 
     IEnumerator LoadAsync(int sceneIndex)
     {
+        
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         //operation.allowSceneActivation = false;
 

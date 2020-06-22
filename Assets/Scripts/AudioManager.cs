@@ -5,9 +5,22 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-    // Start is called before the first frame update
+
+    public static AudioManager instance; //only one instance
+    // play sounds in start
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+
         foreach (Sound s in sounds) {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -20,7 +33,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("MenuAudio");
+        Play("Thema");
     }
 
     public void Play(string name) 
