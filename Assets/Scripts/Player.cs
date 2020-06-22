@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -8,8 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
     [SerializeField] private HealthBar healthBar;
-
-
+    [SerializeField] private Text text;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +21,18 @@ public class Player : MonoBehaviour
     {
         if (collider.tag == "Enemy")
         {
-            BehaviourStrategy enemy = collider.gameObject.GetComponent<BehaviourStrategy>();
+            GameObject collided = collider.gameObject;
+            BehaviourStrategy enemy = collided.GetComponent<BehaviourStrategy>();
             TakeDamage((int)enemy.getDamage());
             Destroy(collider.gameObject);
+            GameLogger.GetInstance().PlayerGotHit(new PlayerHitInfo(0, collided.name, enemy.getDamage()));
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        text.text = "Score: " + GameLogger.GetInstance().GetScore();
     }
 
     private void TakeDamage(int damage)
