@@ -442,7 +442,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Knoppie
-    clip: {fileID: 8300000, guid: a57b90aebc2dd9047b8ece49285d0fce, type: 3}
+    clip: {fileID: 8300000, guid: 8c47842055fbfc744a62ec20e0b3613e, type: 3}
     volume: 1
     pitch: 1
     loop: 0
