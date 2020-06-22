@@ -10,8 +10,8 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevelAirlock(string sceneName) 
     {
+        Application.backgroundLoadingPriority = ThreadPriority.Low;
         StartCoroutine(LoadAsyncAirlock(sceneName));
-       
     }
 
     public void LoadLevel(string sceneName) {
@@ -20,7 +20,6 @@ public class LevelLoader : MonoBehaviour
 
     private IEnumerator LoadAsyncAirlock(string sceneName)
     {
-        yield return null;
 
         //Close airlocks
         closeAirlocks();
@@ -31,24 +30,16 @@ public class LevelLoader : MonoBehaviour
         //Don't allow scene to activate scene yet
         operation.allowSceneActivation = false;
 
-        while (!operation.isDone)// && !leftAirlock.GetCurrentAnimatorStateInfo(0).IsName("AirlockClosed")) 
+        while (!operation.isDone && !leftAirlock.GetCurrentAnimatorStateInfo(0).IsName("AirlockClosed"))
         {
             Debug.Log(operation.progress);
-
-            /*if (Input.GetKeyDown(KeyCode.Space)) {
-                operation.allowSceneActivation = true;
-            }*/
-
-            if (leftAirlock.GetCurrentAnimatorStateInfo(0).IsName("AirlockClosed") && operation.progress >= 0.9f) {
-                operation.allowSceneActivation = true;
-            }
-
-            yield return null; //wacht een frame
+            yield return null;
         }
+        Debug.Log("Finished loading");
+        operation.allowSceneActivation = true;
     }
 
     private IEnumerator LoadAsync(string sceneName) {
-        yield return null;
 
         //Begin to load specified scene
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
@@ -56,16 +47,12 @@ public class LevelLoader : MonoBehaviour
         //Don't allow scene to activate scene until it is loaded
         operation.allowSceneActivation = false;
 
-        while (!operation.isDone)// && !leftAirlock.GetCurrentAnimatorStateInfo(0).IsName("AirlockClosed")) 
+        while (!operation.isDone && operation.progress < 0.9f)// && !leftAirlock.GetCurrentAnimatorStateInfo(0).IsName("AirlockClosed")) 
         {
             Debug.Log(operation.progress);
-
-            if (operation.progress >= 0.9f) {
-                operation.allowSceneActivation = true;
-            }
-
-            yield return null; //wacht een frame
+            yield return null;
         }
+        operation.allowSceneActivation = true;
     }
 
     public void Quit()

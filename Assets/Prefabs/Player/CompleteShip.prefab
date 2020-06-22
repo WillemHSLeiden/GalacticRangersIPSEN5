@@ -1375,7 +1375,6 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 8981204064816483794}
   text: {fileID: 5054134860465979788}
-  i: 0
 --- !u!1 &8981204065643665830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,10 +1863,11 @@ MonoBehaviour:
     type: 3}
   chargedLaserPrefab: {fileID: 8304319225527999780, guid: 33bd833101a01a344b81917a465a0fa3,
     type: 3}
+  targetReticle: {fileID: 8981204065591761531}
   fire: 32
   initiateChargedLaserTime: 50
   controller: {fileID: 0}
   lockOnTag: Enemy
+  anim: {fileID: 8981204064532447160}
   target: {fileID: 0}
-  targetReticle: {fileID: 8981204065591761531}
   charging: 0

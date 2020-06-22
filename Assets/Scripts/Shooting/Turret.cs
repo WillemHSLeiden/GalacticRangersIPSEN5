@@ -6,18 +6,23 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
 
-    [SerializeField] private GameObject laserPrefab;
-    [SerializeField] private GameObject GreenLaserPrefab;
-    [SerializeField] private GameObject PurpleLaserPrefab;
-    [SerializeField] private GameObject chargedLaserPrefab;
+    [SerializeField] private GameObject laserPrefab, GreenLaserPrefab, PurpleLaserPrefab, chargedLaserPrefab, targetReticle;
+
     [SerializeField] private KeyCode fire = KeyCode.Space;
+
     [SerializeField] private float initiateChargedLaserTime = 0.5f;
+
     [SerializeField] private Transform controller;
+
     [SerializeField] private string lockOnTag = "Enemy";
+
+    [SerializeField] Animator anim;
+
     private float chargeTimer;
+
     public GameObject target;
-    [SerializeField] private GameObject targetReticle;
-    public Boolean charging = false;
+
+    public bool charging = false;
 
     void Update()
     {
@@ -113,6 +118,8 @@ public class Turret : MonoBehaviour
                 charging = false;
                 CancelChargedLaser();
             }
+
+        anim.SetTrigger("Fire");
         //}
     }
 
