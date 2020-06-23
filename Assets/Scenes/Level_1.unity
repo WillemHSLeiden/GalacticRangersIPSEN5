@@ -1479,7 +1479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &167933591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8732,7 +8732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &596108579
 Transform:
   m_ObjectHideFlags: 0
@@ -10832,7 +10832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1026881253
 Transform:
   m_ObjectHideFlags: 0
@@ -10968,7 +10968,7 @@ MonoBehaviour:
         eventStart: 1
       - eventType: 0
         eventStart: 5
-    rate: 0.5
+    rate: 0.3
     pathCreator: {fileID: 1320411170}
     timeTillWaveStarts: 7
     spawnPoint: {fileID: 0}
@@ -11166,7 +11166,7 @@ MonoBehaviour:
         eventStart: 2
     rate: 1
     pathCreator: {fileID: 17998598}
-    timeTillWaveStarts: 9
+    timeTillWaveStarts: 11
     spawnPoint: {fileID: 0}
   - waveName: 3 Riders 1
     enemies:
@@ -11200,9 +11200,9 @@ MonoBehaviour:
       enemyEvent:
       - eventType: 0
         eventStart: 2
-    rate: 0.5
+    rate: 0.3
     pathCreator: {fileID: 1722551811}
-    timeTillWaveStarts: 11
+    timeTillWaveStarts: 14
     spawnPoint: {fileID: 0}
   - waveName: 3 Riders 2
     enemies:
@@ -11236,11 +11236,11 @@ MonoBehaviour:
       enemyEvent:
       - eventType: 0
         eventStart: 2
-    rate: 0.5
+    rate: 0.3
     pathCreator: {fileID: 42809100}
-    timeTillWaveStarts: 12
+    timeTillWaveStarts: 15
     spawnPoint: {fileID: 0}
-  timeStartSpawning: 45
+  timeStartSpawning: 48
 --- !u!1 &1055766353
 GameObject:
   m_ObjectHideFlags: 0
@@ -11499,7 +11499,7 @@ MonoBehaviour:
       type: 0
       enemyEvent:
       - eventType: 0
-        eventStart: 3
+        eventStart: 6
     - name: Living astroid 1
       speed: 20
       body: {fileID: 341671762814831245, guid: 0a00b9353b8bffc4b9b08924b8540388, type: 3}
@@ -11509,7 +11509,7 @@ MonoBehaviour:
       enemyEvent:
       - eventType: 0
         eventStart: 3
-    rate: 0.15
+    rate: 0.3
     pathCreator: {fileID: 1585913127}
     timeTillWaveStarts: 4.5
     spawnPoint: {fileID: 0}
@@ -13071,7 +13071,7 @@ MonoBehaviour:
         eventStart: 1
       - eventType: 0
         eventStart: 5
-    rate: 0.5
+    rate: 0.3
     pathCreator: {fileID: 2048503764}
     timeTillWaveStarts: 7
     spawnPoint: {fileID: 0}
@@ -13269,7 +13269,7 @@ MonoBehaviour:
         eventStart: 2
     rate: 1
     pathCreator: {fileID: 107743868}
-    timeTillWaveStarts: 9
+    timeTillWaveStarts: 11
     spawnPoint: {fileID: 0}
   - waveName: 3 Riders 1
     enemies:
@@ -13303,9 +13303,9 @@ MonoBehaviour:
       enemyEvent:
       - eventType: 0
         eventStart: 2
-    rate: 0.5
+    rate: 0.3
     pathCreator: {fileID: 406375573}
-    timeTillWaveStarts: 11
+    timeTillWaveStarts: 14
     spawnPoint: {fileID: 0}
   - waveName: 3 Riders 2
     enemies:
@@ -13339,11 +13339,11 @@ MonoBehaviour:
       enemyEvent:
       - eventType: 0
         eventStart: 2
-    rate: 0.5
+    rate: 0.3
     pathCreator: {fileID: 158388312}
-    timeTillWaveStarts: 12
+    timeTillWaveStarts: 15
     spawnPoint: {fileID: 0}
-  timeStartSpawning: 60
+  timeStartSpawning: 71
 --- !u!4 &1540285208
 Transform:
   m_ObjectHideFlags: 0
@@ -14911,7 +14911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1908147020
 MonoBehaviour:
   m_ObjectHideFlags: 0
