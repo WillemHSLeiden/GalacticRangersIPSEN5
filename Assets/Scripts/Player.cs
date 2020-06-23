@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int maxHealth, currentHealth;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private Text text;
+    [SerializeField] private TextMeshProUGUI finalScoreText;
     [SerializeField] private Light damageLight;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +35,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "Score: " + GameLogger.GetInstance().GetScore();
+        int currentScore = GameLogger.GetInstance().GetScore();
+        text.text = "Score: " + currentScore;
+        finalScoreText.text = currentScore.ToString();
         LerpChangeLightSettings(0, 0, 0.05f);
     }
 
