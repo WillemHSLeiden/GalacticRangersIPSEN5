@@ -30,10 +30,6 @@ public class LeaderboardText : MonoBehaviour
         leaderboardText.text = leaderboardString;
     }
 
-    private void Update() {
-        setLeaderboardText();
-    }
-
     // Update is called once per frame
     void setLeaderboards()
     {
@@ -41,7 +37,7 @@ public class LeaderboardText : MonoBehaviour
         {
             models = task.Result;
 
-            int i = 0;
+            int i = 1;
             foreach (HighscoreModel model in models) {
                 leaderboardString += i + ". " + model.username + "\t-\t" + model.score + "\n";
                 i++;

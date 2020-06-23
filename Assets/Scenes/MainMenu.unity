@@ -787,7 +787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 52.5}
+  m_AnchoredPosition: {x: -0, y: 45.1}
   m_SizeDelta: {x: 258.34, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288457644
@@ -1668,11 +1668,31 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 92.2
       objectReference: {fileID: 0}
+    - target: {fileID: 3853615777125354393, guid: 0f37e4b9e55c5374f8931d58d5841949,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853615777125354393, guid: 0f37e4b9e55c5374f8931d58d5841949,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.55
+      objectReference: {fileID: 0}
     - target: {fileID: 4180377675527818862, guid: 0f37e4b9e55c5374f8931d58d5841949,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1642548206}
+    - target: {fileID: 4845076355831527202, guid: 0f37e4b9e55c5374f8931d58d5841949,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845076355831527202, guid: 0f37e4b9e55c5374f8931d58d5841949,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.52
+      objectReference: {fileID: 0}
     - target: {fileID: 5127097296463425724, guid: 0f37e4b9e55c5374f8931d58d5841949,
         type: 3}
       propertyPath: m_Camera
@@ -1693,6 +1713,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1184611933}
+    - target: {fileID: 6581714663079822474, guid: 0f37e4b9e55c5374f8931d58d5841949,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581714663079822474, guid: 0f37e4b9e55c5374f8931d58d5841949,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 9.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581714663079822474, guid: 0f37e4b9e55c5374f8931d58d5841949,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -3.93
+      objectReference: {fileID: 0}
     - target: {fileID: 6647849248388616872, guid: 0f37e4b9e55c5374f8931d58d5841949,
         type: 3}
       propertyPath: m_LocalPosition.x
