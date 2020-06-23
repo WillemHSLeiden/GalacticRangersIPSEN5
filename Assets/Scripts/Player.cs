@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
             BehaviourStrategy enemy = collided.GetComponent<BehaviourStrategy>();
             ChangeLightSettings(5.03f, 10.46f);
             TakeDamage((int)enemy.getDamage());
-            Destroy(collider.gameObject);
+            collider.gameObject.SetActive(false);
             GameLogger.GetInstance().PlayerGotHit(new PlayerHitInfo(0, collided.name, enemy.getDamage()));
         }
     }
