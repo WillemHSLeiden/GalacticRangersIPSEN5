@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLaserBehavior : MonoBehaviour
+public class EnemyLaserBehavior : MonoBehaviour, BehaviourStrategy
 {
     [SerializeField]
-    private float health;
+    private float health = 1f;
     [SerializeField]
-    private float damage;
+    private float damage = 1f;
     [SerializeField]
     private float speed = 4f;
     [SerializeField]
@@ -24,7 +24,6 @@ public class EnemyLaserBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(this.player.transform);
         transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
 
         // Remove the lifetime to see if the bullet should be removed.

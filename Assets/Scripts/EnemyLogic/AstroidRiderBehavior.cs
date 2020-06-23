@@ -9,7 +9,7 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
     private float speed;
     private Transform player;
     [SerializeField] private Material flashMat;
-    [SerializeField] private GameObject missle;
+    [SerializeField] private GameObject laser;
     [SerializeField] private float attackSpeed;
     private float attackTimer;
 
@@ -30,10 +30,9 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
     }
     public void attacking()
     {
-        GameObject enemyMissle = Instantiate(missle, transform.position, transform.localRotation);
-        BehaviourStrategy missleBehaviour = enemyMissle.GetComponent<BehaviourStrategy>();
-        missleBehaviour.setDamage(damage);
-        missleBehaviour.setPlayerObject(player);
+        GameObject enemyLaser = Instantiate(laser, transform.position, transform.localRotation);
+        BehaviourStrategy laserBehaviour = enemyLaser.GetComponent<BehaviourStrategy>();
+        laserBehaviour.setDamage(damage);
     }
     private void OnTriggerEnter(Collider collider)
     {

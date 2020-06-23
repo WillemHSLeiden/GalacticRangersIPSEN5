@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
-  missle: {fileID: 6017600832352333970, guid: a6c8af05fe4b54848b03f0612ae0c3f8, type: 3}
+  laser: {fileID: 6017600832352333970, guid: a6c8af05fe4b54848b03f0612ae0c3f8, type: 3}
   attackSpeed: 5
 --- !u!1001 &3301651860126975162
 PrefabInstance:

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomLaserBehavior : MonoBehaviour
+public class RandomLaserBehavior : MonoBehaviour, BehaviourStrategy
 {
     [SerializeField]
     private float health;
