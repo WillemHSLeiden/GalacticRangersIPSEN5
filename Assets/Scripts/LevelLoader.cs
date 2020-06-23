@@ -7,7 +7,9 @@ public class LevelLoader : MonoBehaviour
 {
     public void LoadLevel(int sceneIndex) 
     {
+        FindObjectOfType<AudioManager>().Stop("Thema");
         FindObjectOfType<AudioManager>().Play("Knoppie");
+        FindObjectOfType<AudioManager>().Play("LevelOne");
         StartCoroutine(LoadAsync(sceneIndex));
         
 

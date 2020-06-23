@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7667553520917661663
+--- !u!1 &7011568325951983046
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7667553520917661633}
-  - component: {fileID: 7667553520917661662}
+  - component: {fileID: 7011568325951983064}
+  - component: {fileID: 7011568325951983047}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7667553520917661633
+--- !u!4 &7011568325951983064
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7667553520917661663}
+  m_GameObject: {fileID: 7011568325951983046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7667553520917661662
+--- !u!114 &7011568325951983047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7667553520917661663}
+  m_GameObject: {fileID: 7011568325951983046}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de3667e551e48704389214e5a6c9b71a, type: 3}
@@ -45,14 +45,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Thema
-    clip: {fileID: 8300000, guid: 691dcb602fe97074d9f8458f304656c2, type: 3}
+    clip: {fileID: 8300000, guid: a9dd45e8ac2bae740aeb95ea25056b0f, type: 3}
     volume: 1
     pitch: 1
+    spatialBlend: 1
     loop: 1
     source: {fileID: 0}
   - name: Knoppie
     clip: {fileID: 8300000, guid: 8c47842055fbfc744a62ec20e0b3613e, type: 3}
     volume: 1
     pitch: 1
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: LevelOne
+    clip: {fileID: 8300000, guid: 1024962a61a19874383c63780eba3b19, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Laser
+    clip: {fileID: 8300000, guid: 7170f0c845f0248478af5ab1951ea0e8, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
     loop: 0
     source: {fileID: 0}
