@@ -24,7 +24,6 @@ public class EnemyLaserBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(this.player.transform);
         transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
 
         // Remove the lifetime to see if the bullet should be removed.

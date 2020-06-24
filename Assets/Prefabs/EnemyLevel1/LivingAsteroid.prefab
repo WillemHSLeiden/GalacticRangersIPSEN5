@@ -203,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 341671762814831245}
   m_LocalRotation: {x: 0.0025465393, y: 0.9939334, z: -0.023567062, w: 0.10739949}
   m_LocalPosition: {x: -5.26, y: 0.99, z: 31.06}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 341671761668691388}
   - {fileID: 341671762899594766}
@@ -4959,7 +4959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 341671762814831282}
-  _laserPrefab: {fileID: 8304319225527999780, guid: 6aa19d5653abe2044ab0553b86497519,
+  _laserPrefab: {fileID: 3897793774710551844, guid: c2754409fcdc8404ba10bdc7160d491a,
     type: 3}
   explosionObject: {fileID: 6057690929938439930, guid: a5e70b7d1368fb047a002c52c5cb8f66,
     type: 3}

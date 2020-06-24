@@ -9,7 +9,7 @@ public class UICameraFinder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Camera camera = GameObject.FindGameObjectWithTag("Camera").GetComponent<Camera>();
+        Camera camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         canvas.worldCamera = camera;
     }
 
