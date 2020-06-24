@@ -9,8 +9,9 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     private float speed;
     private Transform player;
     public Animator anim;
-    [SerializeField] private GameObject _laserPrefab;
+    [SerializeField] private GameObject _laserPrefab, explosionObject;
     [SerializeField] private ParticleSystem particle;
+    [SerializeField] private Material flashMat;
 
     private bool keepUpdating;
 
@@ -23,6 +24,23 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
         if (keepUpdating)
         {
             transform.LookAt(this.player.transform);
+        }
+    }
+
+    private void OnTriggerEnter(Collider collider) {
+        if (collider.tag == "Laser") {
+            Destroy(collider.gameObject);
+            laserBehavior laser = collider.gameObject.GetComponent<laserBehavior>();
+            health -= laser.GetDamage();
+        }
+        if (health <= 0) {
+            gameObject.GetComponent<Renderer>().material = flashMat;
+            explode();
+            Invoke("setInActive", 0.05f);
+            GameLogger.GetInstance().PlayerKilledEnemy();
+        }
+        if (collider.tag == "ObjectDestroyer") {
+            Invoke("setInActive", 0.05f);
         }
     }
     public void startAttacking()
@@ -46,7 +64,9 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
         GameObject laser = Instantiate(_laserPrefab, transform.position, transform.localRotation);
     }
 
-    public void setInActive(){}
+    public void setInActive(){
+        gameObject.SetActive(false);
+    }
     public void setHealth(float health){
         this.health = health;
     }
@@ -67,5 +87,8 @@ public class LivingAsteroid : MonoBehaviour, BehaviourStrategy, AttackStrategy
     }
     public float getSpeed(){
         return speed;
+    }
+    private void explode() {
+        Instantiate(explosionObject, transform.position, Quaternion.identity);
     }
 }

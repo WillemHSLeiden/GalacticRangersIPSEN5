@@ -39,6 +39,9 @@ public class HomingAsteroid : MonoBehaviour, BehaviourStrategy
             explode();
             Invoke("setInActive", 0.05f);
         }
+        if (collider.tag == "ObjectDestroyer") {
+            Invoke("setInActive", 0.05f);
+        }
     }
 
     private void createNewPath(){

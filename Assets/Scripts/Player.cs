@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Text text;
     [SerializeField] private TextMeshProUGUI finalScoreText;
     [SerializeField] private Light damageLight;
+    [SerializeField] private GameObject explosionObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
             ChangeLightSettings(5.03f, 10.46f);
             TakeDamage((int)enemy.getDamage());
             collider.gameObject.SetActive(false);
+            Instantiate(explosionObject, collider.gameObject.transform.position, Quaternion.identity);
             GameLogger.GetInstance().PlayerGotHit(new PlayerHitInfo(0, collided.name, enemy.getDamage()));
         }
     }
@@ -38,7 +40,7 @@ public class Player : MonoBehaviour
         int currentScore = GameLogger.GetInstance().GetScore();
         text.text = "Score: " + currentScore;
         finalScoreText.text = currentScore.ToString();
-        LerpChangeLightSettings(0, 0, 0.05f);
+        LerpChangeLightSettings(0, 0, 0.025f);
     }
 
     private void TakeDamage(int damage)

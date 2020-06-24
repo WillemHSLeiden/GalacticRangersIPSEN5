@@ -49,6 +49,9 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
             Invoke("setInActive", 0.05f);
             GameLogger.GetInstance().PlayerKilledEnemy();
         }
+        if (collider.tag == "ObjectDestroyer") {
+            Invoke("setInActive", 0.05f);
+        }
     }
     public void setInActive() { }
     public void setHealth(float health)

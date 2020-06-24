@@ -31,6 +31,9 @@ public class AstroidBehavior : MonoBehaviour, BehaviourStrategy{
             Invoke("setInActive", 0.05f);
             GameLogger.GetInstance().PlayerKilledEnemy();
         }
+        if (collider.tag == "ObjectDestroyer") {
+            Invoke("setInActive", 0.05f);
+        }
     }
 
     public void setDamage(float damage)

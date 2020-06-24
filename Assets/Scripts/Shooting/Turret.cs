@@ -12,7 +12,7 @@ public class Turret : MonoBehaviour
 
     [SerializeField] private float initiateChargedLaserTime = 0.5f;
 
-    [SerializeField] private Transform controller;
+    private Transform controller;
 
     [SerializeField] private string lockOnTag = "Enemy";
 
@@ -24,6 +24,10 @@ public class Turret : MonoBehaviour
 
     public bool charging = false;
 
+
+    private void Start() {
+        controller = GameObject.FindGameObjectWithTag("Controller").transform;
+    }
     void Update()
     {
         Vector3 relativePos = controller.position - transform.position;
