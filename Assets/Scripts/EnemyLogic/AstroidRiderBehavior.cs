@@ -9,8 +9,9 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
     private float speed;
     private Transform player;
     [SerializeField] private Material flashMat;
-    [SerializeField] private GameObject missle;
-    [SerializeField] private float attackSpeed;
+    [SerializeField] private GameObject missle, explosionObject;
+    [SerializeField] private float attackSpeed = 10;
+    [SerializeField] private Transform spawnPosition, spawnRotation;
     private float attackTimer;
 
     // Update is called once per frame
@@ -30,10 +31,7 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
     }
     public void attacking()
     {
-        GameObject enemyMissle = Instantiate(missle, transform.position, transform.localRotation);
-        BehaviourStrategy missleBehaviour = enemyMissle.GetComponent<BehaviourStrategy>();
-        missleBehaviour.setDamage(damage);
-        missleBehaviour.setPlayerObject(player);
+        Instantiate(missle, spawnPosition.position, spawnRotation.rotation);
     }
     private void OnTriggerEnter(Collider collider)
     {
@@ -45,7 +43,8 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
         }
         if (health <= 0)
         {
-            gameObject.GetComponent<Renderer>().material = flashMat;
+            gameObject.transform.GetChild(0).GetComponent<Renderer>().material = flashMat;
+            explode();
             Invoke("setInActive", 0.05f);
             GameLogger.GetInstance().PlayerKilledEnemy();
         }
@@ -53,7 +52,9 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
             Invoke("setInActive", 0.05f);
         }
     }
-    public void setInActive() { }
+    public void setInActive() {
+        gameObject.SetActive(false);
+    }
     public void setHealth(float health)
     {
         this.health = health;
@@ -81,5 +82,8 @@ public class AstroidRiderBehavior : MonoBehaviour, BehaviourStrategy, AttackStra
     public float getSpeed()
     {
         return speed;
+    }
+    private void explode() {
+        Instantiate(explosionObject, transform.position, Quaternion.identity);
     }
 }

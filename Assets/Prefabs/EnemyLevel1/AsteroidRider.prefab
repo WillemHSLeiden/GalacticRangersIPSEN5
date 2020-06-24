@@ -1,6 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1426812913382482964
+--- !u!1 &2456737859675284419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4451187673383965831}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4451187673383965831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2456737859675284419}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.51120496, y: -0.7545319, z: 1.3966751}
+  m_LocalScale: {x: 0.5455759, y: 0.5455759, z: 0.5455759}
+  m_Children: []
+  m_Father: {fileID: 7542234225093242784}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8044798466348480324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,10 +39,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6841037970136309171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38ee12918a54a204f8210f3fe19b4e3c, type: 3}
+  m_Script: {fileID: 11500000, guid: a5193ca67588be64297c89567b77bc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashMat: {fileID: 0}
+  rotationSpeed: 20
 --- !u!1 &8884102517134742041
 GameObject:
   m_ObjectHideFlags: 0
@@ -22,8 +52,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5553490242611093514}
-  - component: {fileID: 3479861172535138876}
-  - component: {fileID: 7167050168895432389}
   - component: {fileID: 6404547697408450065}
   - component: {fileID: 1758602266953560058}
   - component: {fileID: 1740122050878760780}
@@ -49,53 +77,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 157.5, z: 0}
---- !u!33 &3479861172535138876
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8884102517134742041}
-  m_Mesh: {fileID: 289301614986012343, guid: 29c03f7e28e426340bf552a2a64fb956, type: 3}
---- !u!23 &7167050168895432389
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8884102517134742041}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!54 &6404547697408450065
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -107,8 +88,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -138,8 +119,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
-  missle: {fileID: 5566170356732496457, guid: bf356127c6631f7488e1bd935d62461e, type: 3}
-  attackSpeed: 5
+  missle: {fileID: 2745705937956462826, guid: 72175a408cf560b409f5fb6b6695e5df, type: 3}
+  explosionObject: {fileID: 6057690929938439930, guid: a5e70b7d1368fb047a002c52c5cb8f66,
+    type: 3}
+  attackSpeed: 2
+  spawnPosition: {fileID: 4451187673383965831}
+  spawnRotation: {fileID: 7542234225093242784}
 --- !u!1001 &3301651860126975162
 PrefabInstance:
   m_ObjectHideFlags: 0
