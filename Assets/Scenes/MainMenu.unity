@@ -758,7 +758,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Ultimate_Gamer\t-\t9999\n2. Ultimate_Gamer\t-\t9999\n"
+  m_text: "1. Ultimate_Gamer\t-\t9600\n2. Baljit\t\t\t-\t8300\n3. Beau\t\t\t-\t8200\n4.
+    Cyriel\t\t\t-\t7800\n5. Jan Willem\t\t-\t6600\n6. Jesse\t\t\t-\t4400\n7. Mike\t\t\t-\t3800\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -803,7 +804,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 61
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -827,12 +828,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1288457645}
-    characterCount: 50
+    characterCount: 137
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 10
+    spaceCount: 40
+    wordCount: 30
     linkCount: 0
-    lineCount: 2
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
