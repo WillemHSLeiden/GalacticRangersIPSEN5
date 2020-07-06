@@ -20,7 +20,6 @@ public class LevelLoader : MonoBehaviour
 
     private IEnumerator LoadAsyncAirlock(string sceneName)
     {
-
         //Close airlocks
         closeAirlocks();
 
