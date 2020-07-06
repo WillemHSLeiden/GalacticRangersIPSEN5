@@ -5,37 +5,64 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public void LoadLevel(int sceneIndex) 
-    {
-        FindObjectOfType<AudioManager>().Play("Knoppie");
-        StartCoroutine(LoadAsync(sceneIndex));
-        
+    [SerializeField]
+    private Animator leftAirlock, rightAirlock;
 
+    public void LoadLevelAirlock(string sceneName) 
+    {
+        Application.backgroundLoadingPriority = ThreadPriority.Low;
+        StartCoroutine(LoadAsyncAirlock(sceneName));
     }
 
-    IEnumerator LoadAsync(int sceneIndex)
+    public void LoadLevel(string sceneName) {
+        StartCoroutine(LoadAsync(sceneName));
+    } 
+
+    private IEnumerator LoadAsyncAirlock(string sceneName)
     {
-        
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-        //operation.allowSceneActivation = false;
+        //Close airlocks
+        closeAirlocks();
 
-        while (!operation.isDone) 
+        //Begin to load specified scene
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+
+        //Don't allow scene to activate scene yet
+        operation.allowSceneActivation = false;
+
+        while (!operation.isDone && !leftAirlock.GetCurrentAnimatorStateInfo(0).IsName("AirlockClosed"))
         {
-            //luiken dicht maybe
-
-
-            /*if (Input.GetKeyDown(KeyCode.Space)) {
-                operation.allowSceneActivation = true;
-            }*/
-            yield return null; //wacht een frame
-            
+            Debug.Log(operation.progress);
+            yield return null;
         }
+        Debug.Log("Finished loading");
+        operation.allowSceneActivation = true;
+    }
+
+    private IEnumerator LoadAsync(string sceneName) {
+
+        //Begin to load specified scene
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+
+        //Don't allow scene to activate scene until it is loaded
+        operation.allowSceneActivation = false;
+
+        while (!operation.isDone && operation.progress < 0.9f)// && !leftAirlock.GetCurrentAnimatorStateInfo(0).IsName("AirlockClosed")) 
+        {
+            Debug.Log(operation.progress);
+            yield return null;
+        }
+        operation.allowSceneActivation = true;
     }
 
     public void Quit()
     {
         //Om te testen binnen Unity
         Debug.Log("Spel Afgesloten");
-        SceneManager.LoadSceneAsync("Menu");
+        SceneManager.LoadSceneAsync("MainMenu");
+    }
+
+    private void closeAirlocks() {
+        leftAirlock.SetTrigger("Close");
+        rightAirlock.SetTrigger("Close");
     }
 }

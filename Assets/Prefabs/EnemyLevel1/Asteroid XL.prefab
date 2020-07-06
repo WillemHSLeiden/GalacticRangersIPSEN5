@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3816732344787709510}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0.07, y: -0.5, z: 11.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f54ccd68a892ca40a8c0e8d61f51828, type: 2}
+  - {fileID: 2100000, guid: 09bec0cb840ca6e4aa40f57b64100525, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,6 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidXlPrefab: {fileID: 3816732344787709510}
   asteroidPrefab: {fileID: 3816732344787709510, guid: 7e2c0e9623194ac4cb1727c6655efb35,
+    type: 3}
+  explosionObject: {fileID: 6057690929938439930, guid: a5e70b7d1368fb047a002c52c5cb8f66,
     type: 3}
   flashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
 --- !u!135 &4423666551332181692

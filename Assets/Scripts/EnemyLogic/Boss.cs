@@ -87,7 +87,7 @@ public class Boss : MonoBehaviour, BehaviourStrategy {
                 break;
 
             case BossState.DYING:
-                transform.GetChild(0).Translate(Vector3.forward * 5 * Time.deltaTime);
+                transform.Translate(Vector3.forward * 5 * Time.deltaTime);
                 break;
         }
     }

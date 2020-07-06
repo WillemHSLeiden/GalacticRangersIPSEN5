@@ -22,12 +22,12 @@ public class SerpentiamBody : MonoBehaviour {
 
     public GameObject projectile;
 
-    private GameObject resultScreen;
+    private GameObject playerShip;
 
     public Material vulnerableMat, asteroidMat, hitFlashMat;
 
     private void Start() {
-        resultScreen = GameObject.FindGameObjectWithTag("Results");
+        playerShip = GameObject.FindGameObjectWithTag("Player");
 
         for (int i = 0; i < startingSize - 1; i++) {
             AddBodyPart();
@@ -188,6 +188,6 @@ public class SerpentiamBody : MonoBehaviour {
         }
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
-        resultScreen.transform.position = new Vector3(0, 0, 17);
+        playerShip.GetComponent<Animator>().SetTrigger("FrontMonitor");
     }
 }

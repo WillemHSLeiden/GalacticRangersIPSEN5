@@ -110,6 +110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
+  explosionObject: {fileID: 6057690929938439930, guid: a5e70b7d1368fb047a002c52c5cb8f66,
+    type: 3}
 --- !u!54 &8268297260003853022
 Rigidbody:
   m_ObjectHideFlags: 0

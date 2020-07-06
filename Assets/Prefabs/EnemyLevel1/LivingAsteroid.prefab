@@ -185,6 +185,8 @@ GameObject:
   - component: {fileID: 341671762814831280}
   - component: {fileID: 341671762814831281}
   - component: {fileID: 341671762814831282}
+  - component: {fileID: 3564214853542384385}
+  - component: {fileID: 7558278155854886974}
   m_Layer: 0
   m_Name: LivingAsteroid
   m_TagString: Enemy
@@ -201,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 341671762814831245}
   m_LocalRotation: {x: 0.0025465393, y: 0.9939334, z: -0.023567062, w: 0.10739949}
   m_LocalPosition: {x: -5.26, y: 0.99, z: 31.06}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 341671761668691388}
   - {fileID: 341671762899594766}
@@ -4957,7 +4959,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 341671762814831282}
+  _laserPrefab: {fileID: 3897793774710551844, guid: c2754409fcdc8404ba10bdc7160d491a,
+    type: 3}
+  explosionObject: {fileID: 6057690929938439930, guid: a5e70b7d1368fb047a002c52c5cb8f66,
+    type: 3}
   particle: {fileID: 341671762814831286}
+  flashMat: {fileID: 2100000, guid: 62f074376a23edf4db4036549c5242fe, type: 2}
 --- !u!95 &341671762814831282
 Animator:
   serializedVersion: 3
@@ -4977,6 +4984,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &3564214853542384385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341671762814831245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7558278155854886974
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341671762814831245}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &341671762899594767
 GameObject:
   m_ObjectHideFlags: 0

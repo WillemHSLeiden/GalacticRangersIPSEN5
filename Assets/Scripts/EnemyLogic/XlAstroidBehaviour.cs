@@ -56,6 +56,9 @@ public class XlAstroidBehaviour : MonoBehaviour, BehaviourStrategy
             splitMeteorite();
             Invoke("setInActive", 0.05f);
         }
+        if (collider.tag == "ObjectDestroyer") {
+            Invoke("setInActive", 0.05f);
+        }
     }
 
     private void splitMeteorite(){

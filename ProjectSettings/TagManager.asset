@@ -10,6 +10,9 @@ TagManager:
   - Cyllinder
   - Enemy
   - Results
+  - Controller
+  - XRInteractionManager
+  - ObjectDestroyer
   layers:
   - Default
   - TransparentFX
